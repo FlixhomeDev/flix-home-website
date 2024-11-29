@@ -5,9 +5,9 @@ export default function Page() {
   return (
     <div className="min-h-screen w-full">
       <header className="">
-        <div className="container mx-auto lg:px-16 py-3 flex justify-between items-center">
+        <div className="lg:container lg:mx-auto w-full lg:w-[1000px] py-3 flex justify-start items-center">
           <a
-            className="text-xl p-4 font-medium font-yrsa flex items-center justify-center text-gray-800"
+            className="text-xl p-4 lg:mx-0 lg:p-0 lg:py-4 font-medium font-yrsa flex items-center justify-start text-gray-800"
             href="/"
           >
             {" "}
@@ -16,8 +16,8 @@ export default function Page() {
         </div>
       </header>
 
-      <main className="mx-4 lg:mx-20">
-        <h1 className="font-medium font-fredoka text-xl lg:text-5xl text-primaryColor">
+      <main className="mx-4 flex flex-col items-center justify-center">
+        <h1 className="font-medium font-fredoka text-xl lg:text-5xl self-center w-full lg:w-[1000px] text-primaryColor">
           Termos de Uso da Flix Home
         </h1>
         <Section title="1. Introdução">
