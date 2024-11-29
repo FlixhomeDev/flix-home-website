@@ -1,25 +1,59 @@
-// "use client"
+"use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Input } from "@/components/ui/Input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export const categories: string[] = [
-    "All",
-    "Administrador",
-    "Advogado",
-    "Analista de Dados",
-    "Analista de Marketing",
-    "Analista de Recursos Humanos",
-    "Analista de Sistemas",
-    "Arquiteto",
-  ];
+  "All",
+  "Administrador",
+  "Advogado",
+  "Analista de Dados",
+  "Analista de Marketing",
+  "Analista de Recursos Humanos",
+  "Analista de Sistemas",
+  "Arquiteto",
+];
 export default function FormCareers() {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (form.current) {
+      console.log(form.current)
+      emailjs
+        .sendForm(
+          "service_m7vdbcl",
+          "template_dxjlhlg",
+          form.current,
+          "fWoEzDovfuMGK6Mii"
+        )
+        .then(
+          (result) => {
+            console.log("E-mail enviado com sucesso:", result.text);
+            alert("E-mail enviado com sucesso!");
+          },
+          (error) => {
+            console.error("Erro ao enviar o e-mail:", error.text);
+            alert("Erro ao enviar o e-mail. Tente novamente.");
+          }
+        );
+    }
+  };
   return (
     <div className="flex flex-col w-full lg:w-[550px] lg:h-[509px] mt-14 lg:mr-16 items-center justify-center lg:items-start lg:justify-start">
       <div className="w-full h-full flex gap-4 flex-col items-center lg:items-center">
         <h1 className="text-start lg:text-center text-primaryColor text-4xl font-roboto font-black">
           Trabalhe Conosco
         </h1>
-        <form className="space-y-4 font-poppins">
+        <form ref={form} onSubmit={sendEmail} className="space-y-4 font-poppins">
           <div className="w-[350px] flex flex-col lg:gap-2">
             <label
               htmlFor="name"

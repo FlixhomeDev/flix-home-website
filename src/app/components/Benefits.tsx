@@ -24,7 +24,7 @@ export default function Benefits() {
               <h3 className="text-3xl text-secondaryColor font-medium font-fredoka">
                 Confiança
               </h3>
-              <p className="text-gray-600 text-lg font-normal font-yrsa">
+              <p className="text-gray-600 mt-4 text-lg font-normal font-yrsa">
                 Relacionamento transparente com clientes e prestadores.
               </p>
             </div>
@@ -32,7 +32,7 @@ export default function Benefits() {
               <h3 className="text-3xl text-primaryColor font-medium font-fredoka">
                 Qualidade
               </h3>
-              <p className="text-gray-600 text-lg font-normal font-yrsa">
+              <p className="text-gray-600 mt-4 text-lg font-normal font-yrsa">
                 Compromisso com excelência.
               </p>
             </div>
@@ -40,7 +40,7 @@ export default function Benefits() {
               <h3 className="text-3xl text-primaryColor font-medium font-fredoka">
                 Inovação
               </h3>
-              <p className="text-gray-600 text-lg font-normal font-yrsa">
+              <p className="text-gray-600 mt-4 text-lg font-normal font-yrsa">
                 Tecnologia para melhorar a experiência do cliente.
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function Benefits() {
               <h3 className="text-3xl text-secondaryColor font-medium font-fredoka">
                 Simplicidade
               </h3>
-              <p className="text-gray-600 text-lg font-normal font-yrsa">
+              <p className="text-gray-600 mt-4 text-lg font-normal font-yrsa">
                 Agendamento fácil e rápido.
               </p>
             </div>
