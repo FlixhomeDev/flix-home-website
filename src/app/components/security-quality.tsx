@@ -1,0 +1,36 @@
+import Image from 'next/image'
+import { security } from '../assets/images'
+
+export default function SecurityAndQuality() {
+  return (
+    <div className="w-full flex items-center flex-col  pt-8 lg:flex-row px-8 mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
+      <div className="relative">
+
+        <div className="w-[500px] h-[510px] bg-primaryColor rounded-[35px] " />
+        <Image src={security} alt='image banner' className='absolute pt-[180px] z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[899px]' />
+      </div>
+
+      <div className="max-w-[644px] flex flex-col gap-4 justify-center lg:justify-start">
+        <h1 className="text-2xl font-medium lg:text-5xl lg:font-bold text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
+          A segurança e <span className="text-primaryColor">qualidade</span> são as nossas maiores prioridades.
+        </h1>
+        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left mt-4 leading-normal tracking-wide text-[#3D3D3D]">
+        Na Flix Home, priorizamos sua segurança e a qualidade dos serviços. 
+        </p>
+        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
+        Todos os profissionais passam por uma rigirosa seleção e treinamento, além de serem avaliados regularmente
+        </p>
+        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
+        Conosco, você pode ficar tranquilo sabendo que sua casa está em boas mãos.
+        </p>
+        <button
+          type="button"
+          className="bg-primaryColor mt-11 text-white rounded-[14px] w-[200px] mx-auto lg:w-[235px] h-[46px] lg:h-[61px] lg:ml-0"
+        >
+          Experimente Agora
+        </button>
+      </div>
+
+    </div>
+  )
+}

@@ -1,12 +1,26 @@
-
+import Banner from './components/Banner'
+import FAQs from './components/FAQs'
+import Footer from './components/footer'
+import Header from './components/Header'
+import HowWorks from './components/how-works'
+import Partners from './components/partners'
+import SecurityAndQuality from './components/security-quality'
+import Services from './components/Services'
+import StartNow from './components/start-now'
+import Testimonials from './components/testimonials'
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <h1>FLIX HOME EM DESENVOLVIMENTO</h1>
-        </div>
-      </main>
-    </div>
-  );
+    <main className="flex-1 overflow-x-hidden">
+      <Header />
+      <Banner />
+      <Services />
+      <Testimonials />
+      <SecurityAndQuality />
+      <HowWorks />
+      <FAQs />
+      <Partners />
+      <StartNow />
+      <Footer />
+    </main>
+  )
 }
