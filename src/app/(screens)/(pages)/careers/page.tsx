@@ -1,6 +1,7 @@
 import { Logo } from "@/app/assets/svgs";
 import FormCareers from "@/app/components/FormCareers";
 import Image from "next/image";
+import Header from '../../../components/Header';
 
 export const categories: string[] = [
   "All",
@@ -15,6 +16,9 @@ export const categories: string[] = [
 export default function Page() {
   return (
     <div className="w-full h-full bg-white">
+      <div className="lg:hidden flex">
+      <Header />
+      </div>
       <div className="container mx-auto h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between font-[family-name:var(--font-geist-sans)]">
         <div className="hidden lg:flex relative flex-col w-[600px] h-[600px] bg-[url('/careers.png')] bg-cover bg-no-repeat bg-[bottom_0rem_center]">
           <Image

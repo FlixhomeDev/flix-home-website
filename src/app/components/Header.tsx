@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full my-4">
+    <header className="w-full my-4 h-full">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
           <Image

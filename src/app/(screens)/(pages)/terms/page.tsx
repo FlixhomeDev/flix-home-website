@@ -3,7 +3,7 @@ import Section from "@/app/components/Section";
 
 export default function Page() {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-white">
       <header className="">
         <div className="lg:container lg:mx-auto w-full lg:w-[1000px] py-3 flex justify-start items-center">
           <a
