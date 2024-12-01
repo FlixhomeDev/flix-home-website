@@ -64,12 +64,20 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  href="/terms"
+                  target="_blank"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Termos de Uso
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  target="_blank"
+                  href="/politics-and-privacy"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Políticas de privacidade
                 </Link>
               </li>

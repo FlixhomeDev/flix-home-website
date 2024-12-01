@@ -5,10 +5,13 @@ import { logo } from '../assets/images'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const pathname = usePathname()
+  console.log(pathname)
   return (
     <header className="w-full px-8 relative z-50 lg:px-[112px] mt-[52px] h-[81px] flex flex-row justify-between items-center mx-auto">
       <Link href={'/'}>
@@ -33,16 +36,27 @@ export default function Header() {
         p-4 lg:p-0
       `}
       >
-        <Link href={'/about'} className="text-lg px-5 py-6">
+        <Link
+          href={'#'}
+          // href={'/about'}
+          className={`text-lg px-5 py-6 ${pathname === '/about' && 'text-primaryColor'}`}
+        >
           Quem somos
         </Link>
-        <Link href={'#services'} className="text-lg px-5 py-6">
+        <Link
+          href={'#'}
+          // href={'/our-services'}
+          className={`text-lg px-5 py-6 ${pathname === '/our-services' && 'text-primaryColor'}`}
+        >
           Serviços
         </Link>
         <Link href={'#how-work'} className="text-lg px-5 py-6">
           Como funciona
         </Link>
-        <Button variant={'default'} className="max-w-[196px]">
+        <Button
+          variant={'default'}
+          className="max-w-full w-full lg:w-auto lg:max-w-[196px]"
+        >
           Experimente Agora
         </Button>
       </nav>

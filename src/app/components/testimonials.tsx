@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Avatar from './avatar'
 import Image from 'next/image'
 import { DotSvg } from '../assets/svgs'
+import { star } from '../assets/images'
 
 interface Testimonial {
   id: number
@@ -12,6 +13,7 @@ interface Testimonial {
   image: string | null
   text: string
   createdAt: string
+  star: number
 }
 
 const testimonials: Testimonial[] = [
@@ -21,6 +23,7 @@ const testimonials: Testimonial[] = [
     role: 'Proprietário',
     image: '/avatars/avatar1.png',
     text: 'Incrível como o FlixHome facilitou a gestão do meu imóvel. Recomendo fortemente!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -29,6 +32,7 @@ const testimonials: Testimonial[] = [
     role: 'Inquilina',
     image: '/avatars/avatar2.png',
     text: 'Interface intuitiva e suporte excepcional. Simplificou muito minha vida!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -37,6 +41,7 @@ const testimonials: Testimonial[] = [
     role: 'Corretor',
     image: '/avatars/avatar3.png',
     text: 'Ferramenta essencial para qualquer profissional imobiliário. Muito satisfeito!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -45,6 +50,7 @@ const testimonials: Testimonial[] = [
     role: 'Proprietária',
     image: '/avatars/avatar4.png',
     text: 'Gestão de múltiplos imóveis sem dor de cabeça. Excelente plataforma!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -53,6 +59,7 @@ const testimonials: Testimonial[] = [
     role: 'Investidor',
     image: '/avatars/avatar5.png',
     text: 'O FlixHome revolucionou a forma como gerencio meus investimentos imobiliários.',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -61,6 +68,7 @@ const testimonials: Testimonial[] = [
     role: 'Síndica',
     image: '/avatars/avatar6.png',
     text: 'Controle total e transparência na gestão. Recomendo para todos os síndicos!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -69,6 +77,7 @@ const testimonials: Testimonial[] = [
     role: 'Administrador',
     image: '/avatars/avatar7.png',
     text: 'A melhor solução para gestão de propriedades que já utilizei. Simplesmente perfeita!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -77,6 +86,7 @@ const testimonials: Testimonial[] = [
     role: 'Corretora',
     image: '/avatars/avatar8.png',
     text: 'Fechamento de contratos muito mais ágil. Meus clientes adoram a praticidade!',
+    star: 2,
     createdAt: '3',
   },
   {
@@ -85,6 +95,7 @@ const testimonials: Testimonial[] = [
     role: 'Investidor',
     image: '/avatars/avatar9.png',
     text: 'Consigo acompanhar todos os meus investimentos em um só lugar. Fantástico!',
+    star: 2,
     createdAt: '3',
   },
 ]
@@ -136,9 +147,16 @@ export default function Testimonials() {
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-600 text-right">
-                Há 2 {testimonial.createdAt} semanas
-              </p>
+              <div className="w-full flex justify-between items-center flex-wrap">
+                <div className="flex items-center gap-1">
+                  <Image src={star} alt="star" width={18} height={18} />
+                  <Image src={star} alt="star" width={18} height={18} />
+                  <Image src={star} alt="star" width={18} height={18} />
+                </div>
+                <p className="text-xs text-gray-600 text-right">
+                  Há 2 {testimonial.createdAt} semanas
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -148,6 +166,7 @@ export default function Testimonials() {
           {[...Array(totalSlides)].map((_, index) => (
             <button
               type="button"
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-[30px] h-3 rounded-full transition-all ${

@@ -10,5 +10,6 @@ import imageBenefits from "./image-benefits.png";
 import imgBanner from "./img-banner.png";
 import security from "./security.png";
 import user01 from "./user-01.png";
+import star from "./star.png";
 
-export { logo, Careers, UserAbout, FemaleAbout, Layer4, Vector, imageBenefits, ContactUs, imgBanner, security, user01 };
+export { logo, Careers, UserAbout, FemaleAbout, Layer4, Vector, imageBenefits, ContactUs, imgBanner, security, user01, star };

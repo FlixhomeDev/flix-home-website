@@ -23,17 +23,17 @@ export default function Banner() {
       </div>
 
       <div className="relative lg:mr-6">
-        <div className="w-[444px] h-[570px] bg-secondaryColor rounded-[35px] rounded-tr-[191px]" />
+        <div className="h-[370px] w-[444px] lg:h-[570px] bg-secondaryColor rounded-[35px] rounded-tr-[191px]" />
         <Image
           src={imgBanner}
           alt="image banner"
-          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[650px] xl:max-w-[899px]"
+          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[510px] md:max-w-[650px] xl:max-w-[899px]"
         />
       </div>
       <Image
         src={VectorSvg}
         alt="Vector svg"
-        className="absolute z-40 bottom-[150px] w-[200px] lg:w-auto  lg:top-[500px] md:bottom-0 right-0 "
+        className="absolute z-10 md:bottom-[150px] hidden md:flex md:w-[200px] lg:w-auto  lg:top-[500px] -bottom-10 right-0 "
       />
     </div>
   )

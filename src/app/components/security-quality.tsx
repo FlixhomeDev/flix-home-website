@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 
 export default function SecurityAndQuality() {
   return (
-    <div className="w-full flex items-center flex-col  pt-8 xl:flex-row px-8 mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
-      <div className="relative">
+    <div className="w-full flex items-center flex-col-reverse  pt-8 xl:flex-row px-8 mt-20 lg:mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
+      <div className="relative mt-56 lg:mt-auto">
         <div className="w-[500px] h-[510px] bg-primaryColor rounded-[35px] " />
         <Image
           src={security}

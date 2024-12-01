@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 
 export default function HowWorks() {
   return (
-    <div className="w-full flex items-center flex-col pt-8 xl:flex-row px-8 mt-[180px] gap-[94px] md:px-[112px] mx-auto justify-between">
+    <div className="w-full flex items-center flex-col pt-8 xl:flex-row px-8 mt-20 lg:mt-[180px] gap-[94px] md:px-[112px] mx-auto justify-between">
       <div className="max-w-[644px] flex flex-col gap-4 justify-center lg:justify-start">
         <h1 className="text-2xl font-medium lg:text-5xl lg:font-bold text-center lg:text-left leading-relaxed tracking-wide text-[#3D3D3D]">
           Veja como é <span className="text-primaryColor">simples cuidar</span>{' '}
