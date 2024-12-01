@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Input } from "@/components/ui/Input";
 import {
@@ -11,23 +11,26 @@ import {
 } from "@/components/ui/select";
 
 export const categories: string[] = [
-  "All",
-  "Administrador",
-  "Advogado",
-  "Analista de Dados",
-  "Analista de Marketing",
-  "Analista de Recursos Humanos",
-  "Analista de Sistemas",
-  "Arquiteto",
+  "Montagem",
+  "Assistência técnica Eletrodomésticos",
+  "Limpeza Residencial",
+  "Mudanças e transporte",
+  "Reparação Gerais",
+  "Decoração",
+  "Instalação",
+  "Impermeabilização",
+  "Serviço Personalizado",
+  "Outros",
 ];
 export default function FormCareers() {
   const form = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (form.current) {
-      console.log(form.current)
       emailjs
         .sendForm(
           "service_m7vdbcl",
@@ -36,13 +39,11 @@ export default function FormCareers() {
           "fWoEzDovfuMGK6Mii"
         )
         .then(
-          (result) => {
-            console.log("E-mail enviado com sucesso:", result.text);
-            alert("E-mail enviado com sucesso!");
+          () => {
+            setIsLoading(false);
           },
-          (error) => {
-            console.error("Erro ao enviar o e-mail:", error.text);
-            alert("Erro ao enviar o e-mail. Tente novamente.");
+          () => {
+            setIsLoading(false);
           }
         );
     }
@@ -53,7 +54,11 @@ export default function FormCareers() {
         <h1 className="text-start lg:text-center text-primaryColor text-4xl font-roboto font-black">
           Trabalhe Conosco
         </h1>
-        <form ref={form} onSubmit={sendEmail} className="space-y-4 font-poppins">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="space-y-4 font-poppins"
+        >
           <div className="w-[350px] flex flex-col lg:gap-2">
             <label
               htmlFor="name"
@@ -120,7 +125,10 @@ export default function FormCareers() {
             <button className="hidden lg:flex justify-center items-center bg-white text-base text-primaryColor font-medium w-[264px] h-14 rounded-lg border border-primaryColor">
               Voltar
             </button>
-            <button className="bg-primaryColor text-base text-white font-medium w-[264px] h-14 rounded-lg border border-white">
+            <button
+              disabled={isLoading}
+              className="bg-primaryColor text-base text-white font-medium w-[264px] h-14 rounded-lg border border-white"
+            >
               Continuar
             </button>
           </div>
