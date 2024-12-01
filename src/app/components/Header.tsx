@@ -11,7 +11,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const pathname = usePathname()
-  console.log(pathname)
   return (
     <header className="w-full px-8 relative z-50 lg:px-[112px] mt-[52px] h-[81px] flex flex-row justify-between items-center mx-auto">
       <Link href={'/'}>
