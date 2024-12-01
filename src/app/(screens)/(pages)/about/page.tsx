@@ -1,5 +1,5 @@
 import { playCircle } from "@/app/assets/icon";
-import { FemaleAbout, Vector } from "@/app/assets/images";
+import { FemaleAbout, UserAbout, Vector, Vector1 } from "@/app/assets/images";
 import Benefits from "@/app/components/Benefits";
 import Header from "@/app/components/Header";
 import Image from "next/image";
@@ -9,30 +9,32 @@ export default function Page() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <section className="w-full h-auto p-6 lg:p-0 m-0 ">
+      <section className="w-full h-auto p-6 lg:p-0 m-0">
         <div className="container flex flex-col lg:flex-row items-center">
           <div className="relative flex items-center justify-center  w-full lg:w-[479px] h-auto lg:h-[800px]">
-            <div className="absolute lg:mt-30 mb-[321px] lg:mb-0 right-0 w-full h-[349px] lg:w-[450px] lg:h-[440px] bg-secondaryColor rounded-tl-[50px] rounded-tr-[120px]"></div>
-
-            <div className="relative flex w-full h-[600px] mb-[270px] lg:pt-[250px] lg:mb-40 items-start justify-start bg-[url('/userAbout.png')] bg-no-repeat bg-contain lg:bg-center bg-top rounded-[34px] overflow-hidden">
+            <div className="relative mt-28 lg:mt-0 ">
+              <div className="lg:w-[444px] w-[330px] z-40 h-[350px] lg:h-[500px] bg-secondaryColor rounded-[35px] rounded-tr-[191px]" />
               <Image
-                src={Vector}
-                alt="Vector"
-                className="absolute bottom-0 right-0 lg:mr-[250px] hidden lg:flex lg:w-[250px] h-auto"
+                src={UserAbout}
+                alt="image banner"
+                className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 lg:max-w-[899px]"
               />
             </div>
-          </div>
-          <div className="lg:hidden flex w-full h-[600px] mb-[270px]">
+            <Image
+              src={Vector1}
+              alt="Vector svg"
+              className="flex lg:hidden absolute z-40 lg:top-[420px] rotate-[25deg] lg:rotate-[10deg] top-[320px] w-[250px] mr-44 lg:w-[500px] lg:bottom-0 right-0 lg:mr-32 "
+            />
             <Image
               src={Vector}
-              alt="Vector"
-              className="bottom-0 mr-32 lg:w-[250px] h-auto"
+              alt="Vector svg"
+              className="hidden lg:flex absolute z-40 lg:top-[420px] lg:w-[500px] lg:bottom-0 right-0 lg:mr-32 "
             />
           </div>
 
-          <div className="lg:flex-1 w-full lg:w-[100px] h-auto ml-3 mr-3 pl-3 pr-3 mt-8 lg:pt-[0px] font-normal font-yrsa lg:text-lg text-base text-gray-600">
+          <div className="lg:flex-1 w-full lg:w-[100px] h-auto ml-3 mr-3 pl-3 pr-3 mt-36 lg:pt-[0px] font-normal font-yrsa lg:text-lg text-base text-gray-600">
             <div className="lg:w-full h-[80px] lg:h-[90px] lg:px-8 lg:mt-20 mb-5 lg:bg-[url('/Layer2.png')] bg-[url('/layerMobile.png')] bg-no-repeat bg-center lg:bg-[center_right_16rem]">
-              <h1 className="lg:text-5xl text-2xl font-medium font-fredoka pt-[15px] lg:pt-0">
+              <h1 className="lg:text-5xl text-center text-2xl font-medium font-fredoka pt-[15px] lg:pt-0">
                 Sobre à Flix Home:
               </h1>
             </div>
@@ -65,7 +67,7 @@ export default function Page() {
         id="about"
         className="lg:py-12 py-6 lg:px-8 px-6 lg:mt-10 flex flex-col items-center justify-center w-full"
       >
-        <div className="container mx-auto  text-center flex flex-col items-center justify-center">
+        <div className="container mx-auto text-center flex flex-col items-center justify-center">
           <div className="w-full h-auto bg-[url('/layerMobile.png')] lg:bg-[url('/Layer2.png')] bg-no-repeat bg-center lg:bg-[center_right_24rem]">
             <h2 className="lg:text-5xl text-2xl text-gray-600 font-medium font-fredoka pt-[40px] lg:pt-0 mb-16">
               Como funciona?
@@ -90,15 +92,15 @@ export default function Page() {
 
       <Benefits />
 
-      <section className="w-full flex flex-col text-center items-center justify-center py-8">
-        <div className="container mx-auto w-[854px] px-4 text-center space-y-4 self-center">
-          <div className="w-full h-auto bg-[url('/Layer2.png')] bg-no-repeat bg-[center_right_8rem]">
-            <h2 className="text-5xl text-gray-600 font-medium font-fredoka pb-14">
+      <section className="w-full flex flex-col lg:mt-10 text-center items-center justify-center py-8 p-6 lg:p-0">
+        <div className="container mx-auto lg:w-[854px] px-4 text-center space-y-4 self-center">
+          <div className="w-full h-auto bg-[url('/layerMobile.png')] lg:bg-[url('/Layer2.png')] bg-no-repeat bg-[top_10px_right_165px] lg:bg-[center_right_8rem]">
+            <h2 className="lg:text-5xl text-2xl text-gray-600 font-medium font-fredoka pb-14">
               Comece agora mesmo!
             </h2>
           </div>
 
-          <p className="text-lg w-[650px] lg:ml-20 text-gray-600 font-normal font-yrsa mt-4">
+          <p className="text-base lg:text-lg w-[310px] lg:w-[650px] lg:ml-20 text-gray-600 font-normal font-yrsa lg:mt-4 mt-0">
             A Flix Home é mais do que uma plataforma de serviços domésticos –
             somos seu parceiro confiável para facilitar o dia a dia.
           </p>

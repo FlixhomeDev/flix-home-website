@@ -14,6 +14,10 @@ export default {
         poppins: "Poppins",
         yrsa: ["Yrsa"],
       },
+      rotate: {
+        '15': '15deg',
+        '-15': '-15deg',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
