@@ -55,17 +55,22 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link href="/" className="text-gray-600 hover:text-gray-900">
-                  Fale connosco
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="text-gray-600 hover:text-gray-900">
-                  Trabalhe connosco
+                  Fale conosco
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeTY-18Zi3QxhUQv7vWsIBlIh_IsdFWgge2rusq22paNvfKbQ/viewform"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Trabalhe conosco
+                </Link>
+              </li>
+              <li>
+                <Link
+                  // href="/terms"
+                  href={'#'}
                   target="_blank"
                   className="text-gray-600 hover:text-gray-900"
                 >
@@ -75,7 +80,8 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href="/politics-and-privacy"
+                  href={'#'}
+                  // href="/politics-and-privacy"
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Políticas de privacidade

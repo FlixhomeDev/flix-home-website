@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
 import { imgBanner } from '../assets/images'
 import { VectorSvg } from '../assets/svgs'
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Banner() {
   return (
@@ -19,7 +18,13 @@ export default function Banner() {
           A Flix Home oferece serviços residenciais sob demanda, com
           profissionais qualificados e preços fixos.
         </p>
-        <Button variant={'secondary'}>Experimente Agora</Button>
+        <Link
+          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          target="_blank"
+          className="bg-secondaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-green-400 transition-all active:scale-95"
+        >
+          Experimente Agora
+        </Link>
       </div>
 
       <div className="relative lg:mr-6">

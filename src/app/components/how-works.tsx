@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function HowWorks() {
   return (
@@ -12,7 +12,13 @@ export default function HowWorks() {
           Agende agora e experimente a facilidade da Flix Home!
         </p>
         <div className="mt-8 mx-auto xl:ml-0">
-          <Button>Agendar Serviço</Button>
+          <Link
+            href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+            target="_blank"
+            className="bg-primaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
+          >
+            Agendar Serviço
+          </Link>
         </div>
       </div>
 

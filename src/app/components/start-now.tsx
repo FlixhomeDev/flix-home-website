@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function StartNow() {
   return (
@@ -12,7 +12,13 @@ export default function StartNow() {
           somos seu parceiro confiável para facilitar o dia a dia.
         </p>
         <div className="mt-11">
-          <Button>Experimente Agora</Button>
+          <Link
+            href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+            target="_blank"
+            className="bg-primaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
+          >
+            Experimente Agora
+          </Link>
         </div>
       </div>
     </div>

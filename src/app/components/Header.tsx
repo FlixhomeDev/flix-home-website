@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import { logo } from '../assets/images'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { usePathname } from 'next/navigation'
 
 export default function Header() {
@@ -52,12 +51,13 @@ export default function Header() {
         <Link href={'#how-work'} className="text-lg px-5 py-6">
           Como funciona
         </Link>
-        <Button
-          variant={'default'}
-          className="max-w-full w-full lg:w-auto lg:max-w-[196px]"
+        <Link
+          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          target="_blank"
+          className="bg-primaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
         >
           Experimente Agora
-        </Button>
+        </Link>
       </nav>
     </header>
   )

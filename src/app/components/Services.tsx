@@ -1,5 +1,5 @@
 import React from 'react'
-import { GardenSvg, HomeSvg, SettingsSvg } from '../assets/svgs'
+import { GardenSvg, HomeSvg, Montagem, SettingsSvg } from '../assets/svgs'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,7 +10,7 @@ const SERVICES = [
     description:
       'Limpeza profunda de todas as áreas comuns e quartos da residência, focada em eliminar sujeiras e higienizar o ambiente...',
     icon: HomeSvg,
-    url: 'https://fixo.pt/Fixo/s/servicos-para-casa/limpeza-de-casas-particulares',
+    url: 'https://wa.me/c/351939936372',
   },
   {
     id: '64d01e0f-d91b-51b7-afe6-37c5279daf55',
@@ -18,15 +18,15 @@ const SERVICES = [
     description:
       'Serviços de manutenção e pequenos reparos domésticos, como conserto de portas, janelas, e pintura de pequenas áreas.',
     icon: SettingsSvg,
-    url: '',
+    url: 'https://wa.me/c/351939936372',
   },
   {
     id: '5ee5aa34-8d5b-5468-a6c7-454c082013d3',
     name: 'Montagem',
     description:
       'Montagem de móveis variados, com eficiência e seguindo as instruções de segurança.',
-    icon: HomeSvg,
-    url: '',
+    icon: Montagem,
+    url: 'https://wa.me/c/351939936372',
   },
   {
     id: '930732c0-48e2-5827-b94a-8f230f5619a2',
@@ -42,7 +42,7 @@ const SERVICES = [
     description:
       'Organização de áreas específicas da casa, como armários, despensas e closets.',
     icon: HomeSvg,
-    url: '',
+    url: 'https://wa.me/c/351939936372',
   },
   {
     id: '4f7aac6a-ae30-5710-948b-93b2f293a3a0',
@@ -50,7 +50,7 @@ const SERVICES = [
     description:
       'Manutenção de jardins e quintais, incluindo poda de plantas e remoção de ervas daninhas.',
     icon: GardenSvg,
-    url: '',
+    url: 'https://wa.me/c/351939936372',
   },
 ]
 

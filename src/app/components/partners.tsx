@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { user01 } from '../assets/images'
 import { CircleCheck, HeartIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Partners() {
   return (
@@ -17,7 +17,13 @@ export default function Partners() {
           hoje e seja parte de uma comunidade que valoriza o profissionalismo e
           a excelência!
         </p>
-        <Button variant={'secondary'}>Torna-se parceiro</Button>
+        <Link
+          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          target="_blank"
+          className="bg-primaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
+        >
+          Torna-se parceiro
+        </Link>
       </div>
 
       <div className="flex flex-col gap-6 items-center">

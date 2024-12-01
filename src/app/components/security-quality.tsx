@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { security } from '../assets/images'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function SecurityAndQuality() {
   return (
@@ -30,7 +31,13 @@ export default function SecurityAndQuality() {
           Conosco, você pode ficar tranquilo sabendo que sua casa está em boas
           mãos.
         </p>
-        <Button variant={'secondary'}> Experimente Agora</Button>
+        <Link
+          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          target="_blank"
+          className="bg-secondaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-green-400 transition-all active:scale-95"
+        >
+          Experimente Agora
+        </Link>
       </div>
     </div>
   )
