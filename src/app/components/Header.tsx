@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { logo } from '../assets/images'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,7 +27,7 @@ export default function Header() {
         className={`
         lg:flex lg:flex-row lg:gap-x-[14px] lg:items-center
         ${isMenuOpen ? 'flex' : 'hidden'}
-        flex-col absolute top-[133px] left-0 right-0
+        flex-col absolute items-center top-[133px] left-0 right-0
         bg-white shadow-lg lg:shadow-none
         lg:static lg:bg-transparent
         p-4 lg:p-0
@@ -41,12 +42,9 @@ export default function Header() {
         <Link href={'#how-work'} className="text-lg px-5 py-6">
           Como funciona
         </Link>
-        <button
-          type="button"
-          className="bg-primaryColor text-white px-5 py-6 rounded-[14px]"
-        >
+        <Button variant={'default'} className="max-w-[196px]">
           Experimente Agora
-        </button>
+        </Button>
       </nav>
     </header>
   )
