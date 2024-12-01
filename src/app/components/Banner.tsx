@@ -27,7 +27,7 @@ export default function Banner() {
         <Image
           src={imgBanner}
           alt="image banner"
-          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[899px]"
+          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[650px] xl:max-w-[899px]"
         />
       </div>
       <Image
