@@ -1,36 +1,44 @@
 import Image from 'next/image'
 import { security } from '../assets/images'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function SecurityAndQuality() {
   return (
-    <div className="w-full flex items-center flex-col  pt-8 lg:flex-row px-8 mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
-      <div className="relative">
-
+    <div className="w-full flex items-center flex-col-reverse  pt-8 xl:flex-row px-8 mt-20 lg:mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
+      <div className="relative mt-56 lg:mt-auto">
         <div className="w-[500px] h-[510px] bg-primaryColor rounded-[35px] " />
-        <Image src={security} alt='image banner' className='absolute pt-[180px] z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[899px]' />
+        <Image
+          src={security}
+          alt="image banner"
+          className="absolute pt-[180px] z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[899px]"
+        />
       </div>
 
       <div className="max-w-[644px] flex flex-col gap-4 justify-center lg:justify-start">
-        <h1 className="text-2xl font-medium lg:text-5xl lg:font-bold text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
-          A segurança e <span className="text-primaryColor">qualidade</span> são as nossas maiores prioridades.
+        <h1 className="text-3xl font-medium lg:text-5xl lg:font-bold text-center xl:text-left leading-relaxed tracking-wide text-[#3D3D3D]">
+          A segurança e <span className="text-primaryColor">qualidade</span> são
+          as nossas maiores prioridades.
         </h1>
-        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left mt-4 leading-normal tracking-wide text-[#3D3D3D]">
-        Na Flix Home, priorizamos sua segurança e a qualidade dos serviços. 
+        <p className="text-lg lg:text-[28px] font-yrsa text-center xl:text-left mt-4 leading-normal tracking-wide text-[#3D3D3D]">
+          Na Flix Home, priorizamos sua segurança e a qualidade dos serviços.
         </p>
-        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
-        Todos os profissionais passam por uma rigirosa seleção e treinamento, além de serem avaliados regularmente
+        <p className="text-lg lg:text-[28px] font-yrsa text-center xl:text-left leading-normal tracking-wide text-[#3D3D3D]">
+          Todos os profissionais passam por uma rigirosa seleção e treinamento,
+          além de serem avaliados regularmente
         </p>
-        <p className="text-base lg:text-[28px] font-yrsa text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
-        Conosco, você pode ficar tranquilo sabendo que sua casa está em boas mãos.
+        <p className="text-lg lg:text-[28px] font-yrsa text-center xl:text-left leading-normal tracking-wide text-[#3D3D3D]">
+          Conosco, você pode ficar tranquilo sabendo que sua casa está em boas
+          mãos.
         </p>
-        <button
-          type="button"
-          className="bg-primaryColor mt-11 text-white rounded-[14px] w-[200px] mx-auto lg:w-[235px] h-[46px] lg:h-[61px] lg:ml-0"
+        <Link
+          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          target="_blank"
+          className="bg-secondaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-green-400 transition-all active:scale-95"
         >
           Experimente Agora
-        </button>
+        </Link>
       </div>
-
     </div>
   )
 }
