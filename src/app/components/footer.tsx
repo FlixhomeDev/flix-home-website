@@ -95,19 +95,22 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Redes Sociais</h3>
             <div className="flex gap-4">
               <Link
-                href="/"
+                href="https://www.facebook.com/flixhomeapp"
+                target="_blank"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
               >
                 <FaFacebookF size={20} />
               </Link>
               <Link
-                href="/"
+                href="https://www.linkedin.com/company/flixhome-app/"
+                target="_blank"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
               >
                 <FaLinkedinIn size={20} />
               </Link>
               <Link
-                href="/"
+                href="https://www.instagram.com/flixhome.app/"
+                target="_blank"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
               >
                 <FaInstagram size={20} />

@@ -1,4 +1,5 @@
 import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import Section from "@/app/components/Section";
 
 export default function Page() {
@@ -6,13 +7,13 @@ export default function Page() {
     <div className="min-h-screen w-full">
       <header className="">
         <div className="lg:container lg:mx-auto w-full lg:w-[1000px] py-3 flex justify-start items-center">
-          <a
+          <Link
             className="text-xl p-4 lg:mx-0 lg:p-0 lg:py-4 font-medium font-yrsa flex items-center justify-start text-gray-800"
             href="/"
           >
             {" "}
             <ArrowLeft /> Voltar
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -172,26 +173,26 @@ export default function Page() {
         <div className="container mx-auto text-center">
           <p>© 2024 Flix Home. Todos os direitos reservados.</p>
           <div className="mt-4 flex justify-center space-x-4">
-            <a href="#" className="hover:text-gray-400">
+            <Link href="#" className="hover:text-gray-400">
               Sobre
-            </a>
-            <a href="#" className="hover:text-gray-400">
+            </Link>
+            <Link href="#" className="hover:text-gray-400">
               Contato
-            </a>
-            <a href="#" className="hover:text-gray-400">
+            </Link>
+            <Link href="#" className="hover:text-gray-400">
               Termos de Serviço
-            </a>
+            </Link>
           </div>
           <div className="mt-4">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <Link href="#" className="text-gray-400 hover:text-white">
               Facebook
-            </a>
-            <a href="#" className="ml-4 text-gray-400 hover:text-white">
+            </Link>
+            <Link href="#" className="ml-4 text-gray-400 hover:text-white">
               Twitter
-            </a>
-            <a href="#" className="ml-4 text-gray-400 hover:text-white">
+            </Link>
+            <Link href="#" className="ml-4 text-gray-400 hover:text-white">
               Instagram
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

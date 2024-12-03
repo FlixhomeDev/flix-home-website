@@ -4,7 +4,6 @@ import Benefits from '@/app/components/Benefits'
 import Footer from '@/app/components/footer'
 import Header from '@/app/components/Header'
 import StartNow from '@/app/components/start-now'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export default function Page() {
