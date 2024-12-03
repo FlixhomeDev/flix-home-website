@@ -1,14 +1,14 @@
-import Image from 'next/image'
-import { user01 } from '../assets/images'
-import { CircleCheck, HeartIcon } from 'lucide-react'
-import Link from 'next/link'
+import Image from "next/image";
+import { user01 } from "../assets/images";
+import { CircleCheck, HeartIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function Partners() {
   return (
     <div className="w-full flex items-center flex-col  pt-8 lg:flex-row px-8 mt-20 lg:mt-[180px] gap-[94px] md:px-[112px] mx-auto justify-between">
       <div className="max-w-[644px] flex flex-col gap-4 justify-center lg:justify-start">
         <h1 className="text-3xl font-medium lg:text-5xl lg:font-bold text-center lg:text-left leading-normal tracking-wide text-[#3D3D3D]">
-          Junte-se à <span className="text-secondaryColor">FlixHome:</span>
+          Junte-se à <span className="text-primaryColor">FlixHome:</span>
           Transforme seu Talento em Oportunidade!
         </h1>
         <p className="text-lg lg:text-[28px] mb-4 font-yrsa text-center lg:text-left mt-4 leading-normal tracking-wide text-[#3D3D3D]">
@@ -18,7 +18,7 @@ export default function Partners() {
           a excelência!
         </p>
         <Link
-          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeTY-18Zi3QxhUQv7vWsIBlIh_IsdFWgge2rusq22paNvfKbQ/viewform"
           target="_blank"
           className="bg-primaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
         >
@@ -70,5 +70,5 @@ export default function Partners() {
         </div>
       </div>
     </div>
-  )
+  );
 }

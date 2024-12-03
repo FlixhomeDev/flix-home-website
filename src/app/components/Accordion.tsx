@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
+} from "@/components/ui/accordion";
 
 export function AccordionFaqs() {
   return (
@@ -62,7 +62,7 @@ export function AccordionFaqs() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
-        value="item-4"
+        value="item-5"
         className="px-[40px] py-1 border-[3px] mb-6 border-gray-400 rounded-xl"
       >
         <AccordionTrigger className="text-base lg:text-[24px] text-left text-[#3D3D3D]">
@@ -74,7 +74,7 @@ export function AccordionFaqs() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
-        value="item-4"
+        value="item-6"
         className="px-[40px] py-1 border-[3px] mb-6 border-gray-400 rounded-xl"
       >
         <AccordionTrigger className="text-base lg:text-[24px] text-left text-[#3D3D3D]">
@@ -99,7 +99,7 @@ export function AccordionFaqs() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
-        value="item-4"
+        value="item-7"
         className="px-[40px] py-1 border-[3px] mb-6 border-gray-400 rounded-xl"
       >
         <AccordionTrigger className="text-base lg:text-[24px] text-left text-[#3D3D3D]">
@@ -113,5 +113,5 @@ export function AccordionFaqs() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }
