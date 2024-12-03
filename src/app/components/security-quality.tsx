@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import { security } from '../assets/images'
-import Link from 'next/link'
+import Image from "next/image";
+import { security } from "../assets/images";
+import Link from "next/link";
 
 export default function SecurityAndQuality() {
   return (
     <div className="w-full flex items-center flex-col-reverse  pt-8 xl:flex-row px-8 mt-20 lg:mt-[220px] gap-[94px] md:px-[112px] mx-auto justify-between">
-      <div className="relative mt-56 lg:mt-auto">
-        <div className="w-[500px] h-[510px] bg-primaryColor rounded-[35px] " />
+      <div className="relative mt-56 lg:mt-auto  mx-auto w-full max-w-[444px]">
+        <div className="lg:w-[500px] h-[300px] w-full lg:h-[510px] bg-primaryColor rounded-[35px] " />
         <Image
           src={security}
           alt="image banner"
-          className="absolute pt-[180px] z-40 bottom-0 right-1/2 translate-x-1/2 max-w-[899px]"
+          className="absolute lg:pt-[180px] z-40 bottom-0 right-1/2 translate-x-1/2 max-md:w-full max-md:h-[450px] max-w-[899px]"
         />
       </div>
 
@@ -31,7 +31,7 @@ export default function SecurityAndQuality() {
           mãos.
         </p>
         <Link
-          href={'https://wa.me/message/PHDJAIL6RKWZC1'}
+          href={"https://wa.me/message/PHDJAIL6RKWZC1"}
           target="_blank"
           className="bg-secondaryColor max-w-full lg:w-auto lg:max-w-[196px] text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-green-400 transition-all active:scale-95"
         >
@@ -39,5 +39,5 @@ export default function SecurityAndQuality() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

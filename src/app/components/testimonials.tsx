@@ -1,113 +1,113 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import Avatar from './avatar'
-import Image from 'next/image'
-import { DotSvg } from '../assets/svgs'
-import { star } from '../assets/images'
+import React, { useState } from "react";
+import Avatar from "./avatar";
+import Image from "next/image";
+import { DotSvg } from "../assets/svgs";
+import { star } from "../assets/images";
 
 interface Testimonial {
-  id: number
-  name: string
-  role: string
-  image: string | null
-  text: string
-  createdAt: string
-  star: number
+  id: number;
+  name: string;
+  role: string;
+  image: string | null;
+  text: string;
+  createdAt: string;
+  star: number;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'João Silva',
-    role: 'Proprietário',
-    image: '/avatars/avatar1.png',
-    text: 'Incrível como o FlixHome facilitou a gestão do meu imóvel. Recomendo fortemente!',
+    name: "João Silva",
+    role: "Proprietário",
+    image: "/avatars/avatar1.png",
+    text: "Incrível como o FlixHome facilitou a gestão do meu imóvel. Recomendo fortemente!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 2,
-    name: 'Maria Santos',
-    role: 'Inquilina',
-    image: '/avatars/avatar2.png',
-    text: 'Interface intuitiva e suporte excepcional. Simplificou muito minha vida!',
+    name: "Maria Santos",
+    role: "Inquilina",
+    image: "/avatars/avatar2.png",
+    text: "Interface intuitiva e suporte excepcional. Simplificou muito minha vida!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 3,
-    name: 'Pedro Costa',
-    role: 'Corretor',
-    image: '/avatars/avatar3.png',
-    text: 'Ferramenta essencial para qualquer profissional imobiliário. Muito satisfeito!',
+    name: "Pedro Costa",
+    role: "Corretor",
+    image: "/avatars/avatar3.png",
+    text: "Ferramenta essencial para qualquer profissional imobiliário. Muito satisfeito!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 4,
-    name: 'Ana Oliveira',
-    role: 'Proprietária',
-    image: '/avatars/avatar4.png',
-    text: 'Gestão de múltiplos imóveis sem dor de cabeça. Excelente plataforma!',
+    name: "Ana Oliveira",
+    role: "Proprietária",
+    image: "/avatars/avatar4.png",
+    text: "Gestão de múltiplos imóveis sem dor de cabeça. Excelente plataforma!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 5,
-    name: 'Carlos Mendes',
-    role: 'Investidor',
-    image: '/avatars/avatar5.png',
-    text: 'O FlixHome revolucionou a forma como gerencio meus investimentos imobiliários.',
+    name: "Carlos Mendes",
+    role: "Investidor",
+    image: "/avatars/avatar5.png",
+    text: "O FlixHome revolucionou a forma como gerencio meus investimentos imobiliários.",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 6,
-    name: 'Lucia Ferreira',
-    role: 'Síndica',
-    image: '/avatars/avatar6.png',
-    text: 'Controle total e transparência na gestão. Recomendo para todos os síndicos!',
+    name: "Lucia Ferreira",
+    role: "Síndica",
+    image: "/avatars/avatar6.png",
+    text: "Controle total e transparência na gestão. Recomendo para todos os síndicos!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 7,
-    name: 'Roberto Almeida',
-    role: 'Administrador',
-    image: '/avatars/avatar7.png',
-    text: 'A melhor solução para gestão de propriedades que já utilizei. Simplesmente perfeita!',
+    name: "Roberto Almeida",
+    role: "Administrador",
+    image: "/avatars/avatar7.png",
+    text: "A melhor solução para gestão de propriedades que já utilizei. Simplesmente perfeita!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 8,
-    name: 'Patricia Lima',
-    role: 'Corretora',
-    image: '/avatars/avatar8.png',
-    text: 'Fechamento de contratos muito mais ágil. Meus clientes adoram a praticidade!',
+    name: "Patricia Lima",
+    role: "Corretora",
+    image: "/avatars/avatar8.png",
+    text: "Fechamento de contratos muito mais ágil. Meus clientes adoram a praticidade!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
   {
     id: 9,
-    name: 'Fernando Gomes',
-    role: 'Investidor',
-    image: '/avatars/avatar9.png',
-    text: 'Consigo acompanhar todos os meus investimentos em um só lugar. Fantástico!',
+    name: "Fernando Gomes",
+    role: "Investidor",
+    image: "/avatars/avatar9.png",
+    text: "Consigo acompanhar todos os meus investimentos em um só lugar. Fantástico!",
     star: 2,
-    createdAt: '3',
+    createdAt: "3",
   },
-]
+];
 
 export default function Testimonials() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const totalSlides = Math.ceil(testimonials.length / 3)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = Math.ceil(testimonials.length / 3);
 
   const getCurrentSlideTestimonials = () => {
-    const start = currentSlide * 3
-    return testimonials.slice(start, start + 3)
-  }
+    const start = currentSlide * 3;
+    return testimonials.slice(start, start + 3);
+  };
 
   return (
     <section className="w-full bg-[#3C91E6] py-16 overflow-hidden mt-[180px]">
@@ -122,19 +122,19 @@ export default function Testimonials() {
           Mais de 5 mil avaliações
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[78px]">
-          {getCurrentSlideTestimonials().map(testimonial => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-16 mx-3 lg:grid-cols-3 gap-6 mt-[78px]">
+          {getCurrentSlideTestimonials().map((testimonial) => (
             <div
               key={testimonial.id}
               className="bg-white rounded-2xl p-6 h-full"
             >
               <div className="flex items-start gap-4">
                 <Image src={DotSvg} alt="DotSvg" />
-                <p className="text-gray-700 font-yrsa leading-tight text-2xl">
+                <p className="text-gray-400 italic font-yrsa lg:text-[20px] leading-tight text-lg">
                   {`"${testimonial.text}"`}
                 </p>
               </div>
-              <div className="flex items-center gap-4 mb-4 mx-auto justify-center">
+              <div className="flex items-center gap-4 mb-4 mt-4 mx-auto justify-center">
                 <Avatar
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -144,7 +144,7 @@ export default function Testimonials() {
                   <h3 className="font-semibold text-gray-900">
                     {testimonial.name}
                   </h3>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  {/* <p className="text-sm text-gray-600">{testimonial.role}</p> */}
                 </div>
               </div>
               <div className="w-full flex justify-between items-center flex-wrap">
@@ -171,8 +171,8 @@ export default function Testimonials() {
               onClick={() => setCurrentSlide(index)}
               className={`w-[30px] h-3 rounded-full transition-all ${
                 currentSlide === index
-                  ? 'bg-white'
-                  : 'bg-white/50 hover:bg-white/70'
+                  ? "bg-white"
+                  : "bg-white/50 hover:bg-white/70"
               }`}
               aria-label={`Ir para slide ${index + 1}`}
             />
@@ -180,5 +180,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

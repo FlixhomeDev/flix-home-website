@@ -1,17 +1,17 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
   FaWhatsapp,
-} from 'react-icons/fa'
-import { logo } from '../assets/images'
+} from "react-icons/fa";
+import { logo } from "../assets/images";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Seção 1 - Logo e Descrição */}
           <div className="flex flex-col gap-4">
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   // href="/terms"
-                  href={'#'}
+                  href={"#"}
                   target="_blank"
                   className="text-gray-600 hover:text-gray-900"
                 >
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href={'#'}
+                  href={"#"}
                   // href="/politics-and-privacy"
                   className="text-gray-600 hover:text-gray-900"
                 >
@@ -116,7 +116,8 @@ export default function Footer() {
                 <FaInstagram size={20} />
               </Link>
               <Link
-                href="/"
+                target="_blank"
+                href="https://whatsapp.com/channel/0029VaryGtBHgZWXvSafix3I"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
               >
                 <FaWhatsapp size={20} />
@@ -132,5 +133,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

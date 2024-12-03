@@ -1,58 +1,65 @@
-import React from 'react'
-import { GardenSvg, HomeSvg, Montagem, SettingsSvg } from '../assets/svgs'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  AssTecn,
+  CustomiseService,
+  Install,
+  Jard,
+  Limp,
+  Repar,
+} from "../assets/images";
 
 const SERVICES = [
   {
-    id: '53a3dde9-1b8e-5583-b4aa-7455822dde8d',
-    name: 'Limpeza residencial',
+    id: "53a3dde9-1b8e-5583-b4aa-7455822dde8d",
+    name: "Limpeza residencial",
     description:
-      'Limpeza profunda de todas as áreas comuns e quartos da residência, focada em eliminar sujeiras e higienizar o ambiente...',
-    icon: HomeSvg,
-    url: 'https://wa.me/c/351939936372',
+      "Limpeza profunda de todas as áreas comuns e quartos da residência, focada em eliminar sujeiras e higienizar o ambiente...",
+    icon: Limp,
+    url: "https://wa.me/c/351939936372",
   },
   {
-    id: '64d01e0f-d91b-51b7-afe6-37c5279daf55',
-    name: 'Reparos Gerais',
+    id: "64d01e0f-d91b-51b7-afe6-37c5279daf55",
+    name: "Reparos Gerais",
     description:
-      'Serviços de manutenção e pequenos reparos domésticos, como conserto de portas, janelas, e pintura de pequenas áreas.',
-    icon: SettingsSvg,
-    url: 'https://wa.me/c/351939936372',
+      "Serviços de manutenção e pequenos reparos domésticos, como conserto de portas, janelas, e pintura de pequenas áreas.",
+    icon: Repar,
+    url: "https://wa.me/c/351939936372",
   },
   {
-    id: '5ee5aa34-8d5b-5468-a6c7-454c082013d3',
-    name: 'Montagem',
+    id: "5ee5aa34-8d5b-5468-a6c7-454c082013d3",
+    name: "Montagem",
     description:
-      'Montagem de móveis variados, com eficiência e seguindo as instruções de segurança.',
-    icon: Montagem,
-    url: 'https://wa.me/c/351939936372',
+      "Montagem de móveis variados, com eficiência e seguindo as instruções de segurança.",
+    icon: Install,
+    url: "https://wa.me/c/351939936372",
   },
   {
-    id: '930732c0-48e2-5827-b94a-8f230f5619a2',
-    name: 'Assistência Técnica para Eletrodomésticos ',
+    id: "930732c0-48e2-5827-b94a-8f230f5619a2",
+    name: "Assistência Técnica para Eletrodomésticos ",
     description:
-      'Reparos em eletrodomésticos de pequeno e médio porte para residências, como geladeiras. ',
-    icon: HomeSvg,
-    url: 'https://www.oscar-app.com/pt/reparacoes-eletrodomesticos-maquina-lavar-loica',
+      "Reparos em eletrodomésticos de pequeno e médio porte para residências, como geladeiras. ",
+    icon: AssTecn,
+    url: "https://www.oscar-app.com/pt/reparacoes-eletrodomesticos-maquina-lavar-loica",
   },
   {
-    id: '0c3cf831-99b8-552f-9939-2a1277090dfc',
-    name: 'Serviço de Organização de Ambientes',
+    id: "0c3cf831-99b8-552f-9939-2a1277090dfc",
+    name: "Serviço de Organização de Ambientes",
     description:
-      'Organização de áreas específicas da casa, como armários, despensas e closets.',
-    icon: HomeSvg,
-    url: 'https://wa.me/c/351939936372',
+      "Organização de áreas específicas da casa, como armários, despensas e closets.",
+    icon: CustomiseService,
+    url: "https://wa.me/c/351939936372",
   },
   {
-    id: '4f7aac6a-ae30-5710-948b-93b2f293a3a0',
-    name: 'Serviço de Jardinagem',
+    id: "4f7aac6a-ae30-5710-948b-93b2f293a3a0",
+    name: "Serviço de Jardinagem",
     description:
-      'Manutenção de jardins e quintais, incluindo poda de plantas e remoção de ervas daninhas.',
-    icon: GardenSvg,
-    url: 'https://wa.me/c/351939936372',
+      "Manutenção de jardins e quintais, incluindo poda de plantas e remoção de ervas daninhas.",
+    icon: Jard,
+    url: "https://wa.me/c/351939936372",
   },
-]
+];
 
 export default function Services() {
   return (
@@ -69,24 +76,30 @@ export default function Services() {
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-11 mt-16 justify-center items-center">
-        {SERVICES.map(service => (
+        {SERVICES.map((service) => (
           <div
             key={service.id}
-            className="flex-1 w-full p-6 gap-4 flex flex-col rounded-[30px] border border-[#3C91E6]"
+            className="flex-1 w-full h-[430px] p-6 gap-4 flex flex-col rounded-[30px] border border-[#3C91E6]"
           >
             <div className="w-[94px] h-[94px] rounded-[30px] flex justify-center items-center bg-primaryColor/50">
-              <Image src={service.icon} alt="Settings svg" />
+              <Image
+                src={service.icon}
+                className="w-[54px] h-[54px] "
+                alt="Settings svg"
+              />
             </div>
-            <span className="font-fredoka text-xl xl:text-4xl">
-              {service.name}
-            </span>
-            <p className="font-yrsa text-base xl:text-xl">
-              {service.description}
-            </p>
+            <div className="h-[200px]">
+              <span className="font-fredoka font-medium text-xl text-[#3D3D3D] xl:text-[34px]">
+                {service.name}
+              </span>
+              <p className="mt-3 font-yrsa text-lg xl:text-xl">
+                {service.description}
+              </p>
+            </div>
             <Link
               href={service.url}
               target="_blank"
-              className="bg-primaryColor text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[61px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
+              className="bg-primaryColor text-white rounded-[14px] mx-auto xl:ml-0 h-[46px]  lg:h-[51px] w-full justify-center px-6 flex items-center hover:bg-blue-400 transition-all active:scale-95"
             >
               Ver Serviço
             </Link>
@@ -94,5 +107,5 @@ export default function Services() {
         ))}
       </div>
     </div>
-  )
+  );
 }
