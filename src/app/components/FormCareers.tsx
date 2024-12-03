@@ -10,16 +10,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export const categories: string[] = [
-  "All",
-  "Administrador",
-  "Advogado",
-  "Analista de Dados",
-  "Analista de Marketing",
-  "Analista de Recursos Humanos",
-  "Analista de Sistemas",
-  "Arquiteto",
-];
+// export const categories: string[] = [
+//   "All",
+//   "Administrador",
+//   "Advogado",
+//   "Analista de Dados",
+//   "Analista de Marketing",
+//   "Analista de Recursos Humanos",
+//   "Analista de Sistemas",
+//   "Arquiteto",
+// ];
 export default function FormCareers() {
   const form = useRef<HTMLFormElement>(null);
 
@@ -100,11 +100,21 @@ export default function FormCareers() {
                 <SelectValue placeholder="Área de atuação" />
               </SelectTrigger>
               <SelectContent>
-                {categories.map((item) => (
-                  <SelectItem key={item} value={item}>
-                    {item}
+                  <SelectItem value="Administrador">
+                  Administrador
                   </SelectItem>
-                ))}
+                  <SelectItem value="Advogado">
+                  Advogado
+                  </SelectItem>
+                  <SelectItem value="Administrador">
+                  Administrador
+                  </SelectItem>
+                  <SelectItem value="Administrador">
+                  Administrador
+                  </SelectItem>
+                  <SelectItem value="Administrador">
+                  Administrador
+                  </SelectItem>
               </SelectContent>
             </Select>
           </div>

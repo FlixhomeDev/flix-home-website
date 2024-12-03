@@ -2,16 +2,6 @@ import { Logo } from "@/app/assets/svgs";
 import FormCareers from "@/app/components/FormCareers";
 import Image from "next/image";
 
-export const categories: string[] = [
-  "All",
-  "Administrador",
-  "Advogado",
-  "Analista de Dados",
-  "Analista de Marketing",
-  "Analista de Recursos Humanos",
-  "Analista de Sistemas",
-  "Arquiteto",
-];
 export default function Page() {
   return (
     <div className="w-full h-full bg-white">
