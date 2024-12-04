@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <div
       className="w-full flex items-center flex-col-reverse overflow-hidden mt-28 pt-8 xl:flex-row px-8 gap-[94px]
-     mx-auto md:px-[162px] justify-between"
+     mx-auto md:px-[162px] justify-between mb-12"
     >
       <div className="max-w-[644px] flex flex-col gap-4 justify-center lg:justify-start">
         <h1 className="text-3xl font-medium  lg:text-5xl lg:font-bold text-center xl:text-left leading-tight tracking-wide text-[#3D3D3D]">
@@ -32,7 +32,7 @@ export default function Banner() {
         <Image
           src={imgBanner}
           alt="image banner"
-          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-md:w-full max-md:h-[360px] lg:max-w-[510px] md:max-w-[650px] xl:max-w-[899px]"
+          className="absolute z-40 bottom-0 right-1/2 translate-x-1/2 max-md:w-full max-md:h-[360px] lg:max-w-[510px] md:max-w-[auto] xl:max-w-[899px]"
         />
       </div>
       <Image

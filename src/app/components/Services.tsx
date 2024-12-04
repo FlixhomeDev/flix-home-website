@@ -65,7 +65,7 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="relative z-40 mt-24 mx-auto px-6 md:px-[112px]"
+      className="relative z-40 mt-24 mx-auto px-6 md:px-[112px] mt-12"
     >
       <h2 className="text-3xl xl:text-5xl font-medium text-center font-fredoka">
         Serviços disponíveis
