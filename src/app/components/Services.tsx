@@ -41,7 +41,7 @@ const SERVICES = [
     description:
       "Reparos em eletrodomésticos de pequeno e médio porte para residências, como geladeiras. ",
     icon: AssTecn,
-    url: "https://www.oscar-app.com/pt/reparacoes-eletrodomesticos-maquina-lavar-loica",
+    url: "#",
   },
   {
     id: "0c3cf831-99b8-552f-9939-2a1277090dfc",
