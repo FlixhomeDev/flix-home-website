@@ -17,6 +17,7 @@ import UserTickSvg from "./user-tick.svg";
 import FlashSvg from "./flash.svg";
 import MoneysSvg from "./moneys.svg";
 import BookSvg from "./book.svg";
+import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
 
 export {
   Logo,
@@ -38,4 +39,5 @@ export {
   FlashSvg,
   MoneysSvg,
   BookSvg,
+  NoPictureIllustrationSvg,
 };

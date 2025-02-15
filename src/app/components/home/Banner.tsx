@@ -6,7 +6,7 @@ import React from 'react'
 
 export function Banner() {
   return (
-    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center justify-between mx-auto mt-7">
+    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center justify-between mx-auto mt-7 px-4 md:px-8">
       <div className="flex flex-col">
         <h1 className="text-[32px] font-bold max-w-[521px] w-full text-center lg:text-left">
           Prevenir é sempre mais barato do que corrigir
@@ -16,13 +16,13 @@ export function Banner() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 mx-auto lg:mx-0">
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center lg:items-start">
             <span className="text-lg font-bold text-primaryColor">+2.000</span>
             <span className="text-lg text-primaryColor">
               Famílias atendidas
             </span>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center lg:items-start">
             <span className="text-lg font-bold text-primaryColor">+150</span>
             <span className="text-lg text-primaryColor">
               Serviços para sua casa

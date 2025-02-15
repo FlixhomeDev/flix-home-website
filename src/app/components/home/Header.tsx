@@ -35,32 +35,32 @@ export function Header() {
       `}
       >
         <Link
-          href={'#'}
-          className={`text-lg px-5 py-6 ${pathname === '/' && 'text-primaryColor'}`}
+          href={'/'}
+          className={`text-base px-1 py-6 ${pathname === '/' && 'text-primaryColor'}`}
         >
           Início
         </Link>
         <Link
-          href={'#'}
-          className={`text-lg px-5 py-6 ${pathname === '/#services' && 'text-primaryColor'}`}
+          href={'/services'}
+          className={`text-base px-1 py-6 ${pathname === '/#services' && 'text-primaryColor'}`}
         >
           Serviços
         </Link>
         <Link
-          href={'#plans'}
-          className={`text-lg px-5 py-6 ${pathname === '/#plans' && 'text-primaryColor'}`}
+          href={'/'}
+          className={`text-base px-1 py-6 ${pathname === '/#plans' && 'text-primaryColor'}`}
         >
           Planos Preventivos
         </Link>
         <Link
-          href={'#about-us'}
-          className={`text-lg px-5 py-6 ${pathname === '/#about-us' && 'text-primaryColor'}`}
+          href={'/'}
+          className={`text-base px-1 py-6 ${pathname === '/#about-us' && 'text-primaryColor'}`}
         >
           Sobre Nós
         </Link>
         <Link
-          href={'#contacts'}
-          className={`text-lg px-5 py-6 ${pathname === '/#contacts' && 'text-primaryColor'}`}
+          href={'/'}
+          className={`text-base px-1 py-6 ${pathname === '/#contacts' && 'text-primaryColor'}`}
         >
           Contatos
         </Link>

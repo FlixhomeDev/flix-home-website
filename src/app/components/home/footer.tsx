@@ -20,7 +20,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor pb-6">
+    <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor pb-6 px-4 md:px-8 mx-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {/* Seção 1 - Logo e Descrição */}
@@ -119,8 +119,8 @@ export function Footer() {
           </div>
 
           {/* Seção 5 - App Platform */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Disponível</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="font-semibold text-lg mb-4 text-left">Disponível</h3>
             <div className="flex lg:flex-col gap-4">
               <Link href="/" target="_blank">
                 <Image src={AppleStoreSvg} alt="Apple Store" />

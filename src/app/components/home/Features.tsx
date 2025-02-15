@@ -10,7 +10,7 @@ import React from 'react'
 export function Features() {
   return (
     <div
-      className="max-w-[1256px] w-full mx-auto flex items-center justify-between gap-x-10 mt-8 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal px-4"
+      className="max-w-[1256px] w-full mx-auto flex items-center justify-between gap-x-10 mt-8 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal px-4 md:px-8"
       style={{ scrollbarWidth: 'none' }}
     >
       <div className="flex items-center gap-4">

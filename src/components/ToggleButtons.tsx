@@ -1,7 +1,10 @@
 'use client'
-import { useState } from 'react'
+
 import { Button } from '@/components/ui/button'
 import { BroomSvg } from '@/app/assets/svgs/broom'
+import { HomeTrendUpSvg } from '@/app/assets/svgs/home-trend-up'
+import { BrushSvg } from '@/app/assets/svgs/brush'
+import { BuildingSvg } from '@/app/assets/svgs/building'
 
 const buttonOptions = [
   { id: 'cleaning', label: 'Cleaning', color: '#4094e4' },
@@ -10,11 +13,21 @@ const buttonOptions = [
   { id: 'flights', label: 'Flights', color: '#4094e4' },
 ]
 
-export default function ToggleButtons() {
-  const [active, setActive] = useState('cleaning')
+type Props = {
+  active: string
+  setActive: React.Dispatch<
+    React.SetStateAction<
+      'cleaning' | 'repairs' | 'gardening' | 'flights' | string
+    >
+  >
+}
 
+export default function ToggleButtons({ active, setActive }: Props) {
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div
+      className="flex justify-center items-center gap-4 mt-10 overflow-x-scroll pl-8 whitespace-nowrap"
+      style={{ scrollbarWidth: 'none' }}
+    >
       {buttonOptions.map(({ id, label, color }) => (
         <Button
           key={id}
@@ -26,13 +39,13 @@ export default function ToggleButtons() {
             <BroomSvg fill={active === id ? '#FFF' : color} />
           )}
           {label === 'Repairs' && (
-            <BroomSvg fill={active === id ? '#FFF' : color} />
+            <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
           )}
           {label === 'Gardening' && (
-            <BroomSvg fill={active === id ? '#FFF' : color} />
+            <BrushSvg fill={active === id ? '#FFF' : color} />
           )}
           {label === 'Flights' && (
-            <BroomSvg fill={active === id ? '#FFF' : color} />
+            <BuildingSvg fill={active === id ? '#FFF' : color} />
           )}
           {label}
         </Button>

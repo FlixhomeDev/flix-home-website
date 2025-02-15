@@ -5,24 +5,29 @@ import React from 'react'
 
 export default function HowWork() {
   return (
-    <div className="max-w-[1256px] w-full mx-auto flex justify-between gap-20 mt-14">
+    <div className="max-w-[1256px] w-full mx-auto flex flex-col lg:flex-row px-4 overflow-hidden justify-between gap-20 mt-14">
       <Image
         src={Payment01}
         alt="Payment"
         width={453}
         height={560}
-        className="hover:scale-110 hover:rounded-lg transition-all"
+        className="lx:hover:scale-110 hover:rounded-lg transition-all hidden xl:flex"
       />
 
       <div className="flex flex-col gap-y-6">
-        <h2 className="text-2xl font-bold">Como funciona</h2>
-        <p className="max-w-[634px] w-full text-gray-500">
-          A Flix Home é uma plataforma que facilita o cuidado com a casa,
-          oferecendo serviços como manutenção preventiva, reparos e limpeza com
-          profissionais confiáveis e preços fixos.
-        </p>
+        <div className="mx-auto">
+          <h2 className="text-2xl font-bold text-center">Como funciona</h2>
+          <p className="max-w-[634px] w-full text-gray-500 text-center">
+            A Flix Home é uma plataforma que facilita o cuidado com a casa,
+            oferecendo serviços como manutenção preventiva, reparos e limpeza
+            com profissionais confiáveis e preços fixos.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div
+          className="flex w-full lg:grid grid-cols-2 gap-3 lg:overflow-hidden whitespace-nowrap overflow-x-auto lg:whitespace-normal px-4"
+          style={{ scrollbarWidth: 'none' }}
+        >
           <div className="bg-slate-50 p-5 rounded border hover:border-primaryColor transition-all">
             <Image src={BookSvg} alt="Book Svg" width={40} height={40} />
             <h3 className="mt-3 font-bold">Escolha o Serviço</h3>

@@ -13,6 +13,9 @@ import user01 from "./user-01.png";
 import star from "./star.png";
 import backgroundImage from "./background.png";
 import Payment01 from "./payments-01.png";
+import WeTake01 from "./we-take-01.png";
+import WeTake02 from "./we-take-02.png";
+import WantBeImage from "./want-be-image.png";
 
 export {
   logo,
@@ -29,4 +32,7 @@ export {
   star,
   backgroundImage,
   Payment01,
+  WeTake01,
+  WeTake02,
+  WantBeImage,
 };
