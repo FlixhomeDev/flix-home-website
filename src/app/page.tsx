@@ -1,25 +1,20 @@
-import Banner from './components/Banner'
-import FAQs from './components/FAQs'
-import Footer from './components/footer'
-import Header from './components/Header'
-import HowWorks from './components/how-works'
-import Partners from './components/partners'
-import SecurityAndQuality from './components/security-quality'
-import Services from './components/Services'
-import StartNow from './components/start-now'
-import Testimonials from './components/testimonials'
+import { Banner } from './components/home/Banner'
+import { Features } from './components/home/Features'
+import { Footer } from './components/home/footer'
+import { Header } from './components/home/Header'
+import HowWork from './components/home/How-work'
+import { OurServices } from './components/home/Our-services'
+import { Paterners } from './components/home/Paterners'
+
 export default function Home() {
   return (
-    <main className="flex-1 overflow-x-hidden">
+    <main className="">
       <Header />
       <Banner />
-      <Services />
-      <Testimonials />
-      <SecurityAndQuality />
-      <HowWorks />
-      <FAQs />
-      <Partners />
-      <StartNow />
+      <Paterners />
+      <Features />
+      <HowWork />
+      <OurServices />
       <Footer />
     </main>
   )

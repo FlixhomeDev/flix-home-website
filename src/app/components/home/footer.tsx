@@ -1,18 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaInstagram,
-  FaWhatsapp,
-} from 'react-icons/fa'
-import { logo } from '../assets/images'
+import { logo } from '../../assets/images'
+import { AppleStoreSvg, PlayStoreSvg } from '../../assets/svgs'
 
-export default function Footer() {
+export function Footer() {
+  const socials = [
+    {
+      name: 'facebook',
+      url: 'https://www.facebook.com/flixhomeapp',
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/flixhome-app/',
+    },
+    {
+      name: 'Whatsapp',
+      url: '/',
+    },
+  ]
+
   return (
-    <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor">
+    <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {/* Seção 1 - Logo e Descrição */}
           <div className="flex flex-col gap-4">
             <Image src={logo} alt="FlixHome logo" width={140} height={41} />
@@ -93,43 +103,35 @@ export default function Footer() {
           {/* Seção 4 - Redes Sociais */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Redes Sociais</h3>
-            <div className="flex gap-4">
-              <Link
-                href="https://www.facebook.com/flixhomeapp"
-                target="_blank"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
-              >
-                <FaFacebookF size={20} />
+            <div className="flex flex-col gap-4">
+              {socials.map(social => (
+                <Link
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  className="flex items-center gap-x-2"
+                >
+                  <span className="w-2 h-2 bg-primary rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors" />
+                  <span className="text-black">{social.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Seção 5 - App Platform */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Disponível</h3>
+            <div className="flex lg:flex-col gap-4">
+              <Link href="/" target="_blank">
+                <Image src={AppleStoreSvg} alt="Apple Store" />
               </Link>
-              <Link
-                href="https://www.linkedin.com/company/flixhome-app/"
-                target="_blank"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
-              >
-                <FaLinkedinIn size={20} />
-              </Link>
-              <Link
-                href="https://www.instagram.com/flixhome.app/"
-                target="_blank"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
-              >
-                <FaInstagram size={20} />
-              </Link>
-              <Link
-                href="/"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
-              >
-                <FaWhatsapp size={20} />
+
+              <Link href="/" target="_blank">
+                <Image src={PlayStoreSvg} alt="Play Store" />
               </Link>
             </div>
           </div>
         </div>
-      </div>
-      {/* Copyright */}
-      <div className="border-t border-gray-200 mt-12 pt-8 text-center pb-8 bg-secondaryColor/20 flex justify-center items-center text-gray-600 text-sm">
-        <p>
-          © {new Date().getFullYear()} FlixHome. Todos os direitos reservados.
-        </p>
       </div>
     </footer>
   )
