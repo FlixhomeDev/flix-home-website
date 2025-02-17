@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { Fredoka } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
 
 // Fonte local variável
 const fredokaLocal = localFont({
