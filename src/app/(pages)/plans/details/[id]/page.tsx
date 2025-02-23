@@ -132,7 +132,7 @@ export default function Details() {
                 <Link href={"#"} className="text-sm text-[#FFFFFF] font-medium font-inter">Label CTA</Link>
                 <ArrowRightIcon color="#FFFFFF" size={9} />
             </div>
-            <div className="mt-[70px] md:px-10 w-full max-w-[350px] md:w-auto self-center md:max-w-full">
+            <div className="mt-[70px] md:px-10 w-full max-w-[350px] md:w-full self-center md:max-w-full">
                 <FaqsPlans />
             </div>
             <div className="hidden w-[712px] h-[69px] mt-[29px] self-center border border-[#DEE2E7] rounded-[12px] py-[14px] px-[16px] md:flex items-center gap-[16px]">

@@ -36,35 +36,35 @@ export function Header() {
       >
         <Link
           href={"/"}
-          className={`text-base px-1 py-6 ${pathname === "/" && "text-primaryColor"
+          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/" && "text-primaryColor"
             }`}
         >
           Início
         </Link>
         <Link
           href={"/services"}
-          className={`text-base px-1 py-6 ${pathname === "/#services" && "text-primaryColor"
+          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#services" && "text-primaryColor"
             }`}
         >
           Serviços
         </Link>
         <Link
           href={"/plans"}
-          className={`text-base px-1 py-6 ${pathname === "/#plans" && "text-primaryColor"
+          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#plans" && "text-primaryColor"
             }`}
         >
           Planos Preventivos
         </Link>
         <Link
           href={"/about-us"}
-          className={`text-base px-1 py-6 ${pathname === "/about-us" && "text-primaryColor"
+          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/about-us" && "text-primaryColor"
             }`}
         >
           Sobre Nós
         </Link>
         <Link
           href={"/"}
-          className={`text-base px-1 py-6 ${pathname === "/#contacts" && "text-primaryColor"
+          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#contacts" && "text-primaryColor"
             }`}
         >
           Contatos
@@ -73,7 +73,7 @@ export function Header() {
       <Link
         href={"https://wa.me/message/PHDJAIL6RKWZC1"}
         target="_blank"
-        className="bg-primaryColor max-w-full hidden xl:flex lg:w-auto lg:max-w-[196px] gap-x-1 text-white rounded-[14px] h-[46px]  lg:h-[61px] w-full justify-center px-2 items-center hover:bg-blue-400  text-sm transition-all active:scale-95"
+        className="bg-primaryColor max-w-full hidden xl:flex lg:w-auto lg:max-w-[196px] gap-x-1 text-white rounded-[14px] h-[46px]  lg:h-[46px] w-full justify-center px-2 items-center hover:bg-blue-400  text-sm transition-all active:scale-95 font-inter font-medium"
       >
         Agendar Serviço
         <ArrowRightIcon size={14} />

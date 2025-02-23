@@ -122,7 +122,7 @@ export default function Details() {
                 <div className="relative w-[340px] md:w-[358px] h-[258px] top-10 md:-top-32">
                     <div className="w-full h-[215px] border border-[#E5E7EB] rounded-[7px] p-[23px] bg-[#FFFFFF] shadow-[0px_9.7px_9.7px_rgba(31,41,55,0.04),0px_19.39px_24.24px_rgba(31,41,55,0.1)]">
                         <div className="bg-[#3C91E6] shadow-[#1F293714] px-[15px] py-[11px] rounded-[7px] w-full h-[43px] flex items-center justify-center">
-                            <Link href={"/#"} className="md:text-[13px] text-sm text-[#FFFFFF] font-medium font-inter">Agendar Serviço</Link>
+                            <Link href={"https://wa.me/message/PHDJAIL6RKWZC1"} target="_blank" className="md:text-[13px] text-sm text-[#FFFFFF] font-medium font-inter">Agendar Serviço</Link>
                         </div>
                         <div className="w-full flex items-center justify-between mt-[15px]">
                             <span className="text-[15px] text-[#000000] font-normal font-inter">Serviço</span>

@@ -25,14 +25,14 @@ type Props = {
 export default function ToggleButtons({ active, setActive }: Props) {
   return (
     <div
-      className="flex justify-center items-center gap-4 mt-10 overflow-x-scroll pl-8 whitespace-nowrap"
+      className="flex md:justify-center justify-start items-center gap-4 mt-10 overflow-x-scroll md:pl-8 whitespace-nowrap"
       style={{ scrollbarWidth: 'none' }}
     >
       {buttonOptions.map(({ id, label, color }) => (
         <Button
           key={id}
           variant={active === id ? 'default' : 'outline'}
-          className={`mx-0 ${active === id ? 'text-white' : 'text-primaryColor'}`}
+          className={`mx-0 text-[13px] font-normal font-inter ${active === id ? 'text-white' : 'text-primaryColor'}`}
           onClick={() => setActive(id)}
         >
           {label === 'Cleaning' && (
