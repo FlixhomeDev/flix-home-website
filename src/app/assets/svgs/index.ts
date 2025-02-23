@@ -17,12 +17,18 @@ import UserTickSvg from "./user-tick.svg";
 import FlashSvg from "./flash.svg";
 import MoneysSvg from "./moneys.svg";
 import BookSvg from "./book.svg";
+import Call from "./call.svg";
+import Whatsapp from "./whatsapp.svg";
+import HomePlansSvg from "./home-plans-svg.svg";
 import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
 
 export {
   Logo,
+  HomePlansSvg,
   SettingsSvg,
   DotSvg,
+  Whatsapp,
+  Call,
   VectorSvg,
   GardenSvg,
   HomeSvg,
