@@ -8,12 +8,14 @@ import HowWork from '@/app/components/home/How-work'
 import { OurServices } from '@/app/components/home/Our-services'
 import { Paterners } from '@/app/components/home/Paterners'
 import StartNow from '@/app/components/home/Start-now'
+import { TopHeader } from '@/app/components/home/TopHeader'
 import { WantToBe } from '@/app/components/home/Want-to-be'
 import { WeTake } from '@/app/components/home/We-take'
 
 export default function Home() {
   return (
     <main className="">
+      <TopHeader />
       <Header />
       <Banner />
       <Paterners />

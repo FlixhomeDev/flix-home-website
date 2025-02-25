@@ -10,20 +10,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-primaryColor text-white rounded-[10px] mx-auto xl:ml-0 hover:bg-blue-400 transition-all active:scale-95',
+          'bg-primaryColor text-white rounded-[5px] mx-auto xl:ml-0 hover:bg-blue-400 transition-all active:scale-95',
         destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-[10px]',
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-[5px]',
         outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-[10px]',
+          'border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-[5px]',
         secondary:
-          'bg-secondaryColor text-white rounded-[10px] w-[200px] mx-auto lg:w-[235px] h-[46px] hover:bg-green-400 transition-all active:scale-95 lg:h-[61px] xl:ml-0',
-        ghost: 'hover:bg-accent hover:text-accent-foreground rounded-[10px]',
-        link: 'text-primary underline-offset-4 hover:underline rounded-[10px]',
+          'bg-secondaryColor text-white rounded-[5px] w-[200px] mx-auto lg:w-[235px] h-[46px] hover:bg-green-400 transition-all active:scale-95 lg:h-[61px] xl:ml-0',
+        ghost: 'hover:bg-accent hover:text-accent-foreground rounded-[5px]',
+        link: 'text-primary underline-offset-4 hover:underline rounded-[5px]',
       },
       size: {
-        default: 'h-[46px]  lg:h-[40px] px-6',
-        sm: 'h-[46px]  lg:h-[40px]',
-        lg: 'h-[40px] rounded-[10px] px-8',
+        default: 'h-[46px]  lg:h-[41px] px-6',
+        sm: 'h-[46px]  lg:h-[41px]',
+        lg: 'h-[41px] rounded-[5px] px-8',
         icon: 'h-10 w-10',
       },
     },

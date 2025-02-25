@@ -1,19 +1,19 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { logo } from "../../assets/images";
 import Link from "next/link";
 import { ArrowRightIcon, MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/app/assets/svgs";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
   return (
-    <header className="w-full shadow px-8 relative z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center">
-      <Link href={"/"}>
-        <Image src={logo} alt="FlixHome logo" width={140} height={41} />
+    <header className="w-full shadow px-8 relative z-50 lg:px-[112px] h-[41px] flex flex-row justify-between items-center">
+      <Link href={"/"} className="w-[154px] h-[32px]">
+        <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>
 
       <button
@@ -36,35 +36,35 @@ export function Header() {
       >
         <Link
           href={"/"}
-          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/" && "text-primaryColor"
+          className={`text-base font-inter font-semibold px-1 py-6 ${pathname === "/" ? "text-[#3C91E6]" : "text-[#484848]"
             }`}
         >
           Início
         </Link>
         <Link
           href={"/services"}
-          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#services" && "text-primaryColor"
+          className={`text-base font-inter font-semibold px-1 py-6 ${pathname === "/services" ? "text-[#3C91E6]" : "text-[#484848]"
             }`}
         >
           Serviços
         </Link>
         <Link
           href={"/plans"}
-          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#plans" && "text-primaryColor"
+          className={`text-base font-inter font-semibold px-1 py-6 ${pathname === "/plans" ? "text-[#3C91E6]" : "text-[#484848]"
             }`}
         >
           Planos Preventivos
         </Link>
         <Link
           href={"/about-us"}
-          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/about-us" && "text-primaryColor"
+          className={`text-base font-inter font-semibold px-1 py-6 ${pathname === "/about-us" ? "text-[#3C91E6]" : "text-[#484848]"
             }`}
         >
           Sobre Nós
         </Link>
         <Link
           href={"/"}
-          className={`text-base text-[#484848] font-inter font-medium px-1 py-6 ${pathname === "/#contacts" && "text-primaryColor"
+          className={`text-base font-inter font-semibold px-1 py-6 ${pathname === "/contacts" ? "text-[#3C91E6]" : "text-[#484848]"
             }`}
         >
           Contatos
@@ -73,7 +73,7 @@ export function Header() {
       <Link
         href={"https://wa.me/message/PHDJAIL6RKWZC1"}
         target="_blank"
-        className="bg-primaryColor max-w-full hidden xl:flex lg:w-auto lg:max-w-[196px] gap-x-1 text-white rounded-[14px] h-[46px]  lg:h-[46px] w-full justify-center px-2 items-center hover:bg-blue-400  text-sm transition-all active:scale-95 font-inter font-medium"
+        className="bg-[#3C91E6] hidden xl:flex gap-x-1 rounded-[5px] h-full w-[151px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
       >
         Agendar Serviço
         <ArrowRightIcon size={14} />

@@ -44,24 +44,23 @@ export function OurServices() {
   ];
 
   return (
-    <div className="max-w-[1256px] w-full mx-auto mt-8 lg:mt-20">
+    <div className="max-w-[1256px] w-full mx-auto mt-8 lg:mt-[78px]">
       <div className="w-full max-w-[468px] mx-auto">
-        <h2 className="text-center font-bold text-2xl">
+        <h2 className="text-center font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-2xl text-[#292D33]">
           Serviços que cuidam de tudo para você.
         </h2>
-        <p className="text-center text-gray-500 mt-3">
+        <p className="text-center text-[#6F6F6F] font-normal font-inter leading-[21.78px] -tracking-[1.5%] mt-[5px]">
           Tudo o que você precisa para manter sua casa em ordem. Somos seu
           parceiro confiável para facilitar o dia a dia.
         </p>
       </div>
 
       <ToggleButtons active={active} setActive={setActive} />
-      <div className="w-full items-center justify-between flex mt-8 px-4 md:px-8">
-        <h3 className="text-lg md:text-2xl font-bold">Promoções</h3>
+      {/* <div className="w-full items-center justify-between flex mt-8 px-4 md:px-8">
         <Link href={"/"} className="text-primaryColor">
           Ver todas
         </Link>
-      </div>
+      </div> */}
       <div
         className="flex gap-x-1 px-4 md:px-8 mt-3 overflow-x-auto xl:overflow-x-hidden pl-8"
         style={{ scrollbarWidth: "none" }}

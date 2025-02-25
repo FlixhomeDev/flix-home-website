@@ -25,7 +25,8 @@ export default {
 				],
 				inter: "Inter",
 				manrope: "Manrope",
-				rubik: "Rubik"
+				rubik: "Rubik",
+				"helvetica": "Helvetica"
 			},
 			letterSpacing: {
 				'-1.5': '-0.015em',
