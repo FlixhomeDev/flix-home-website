@@ -1,3 +1,8 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { AppointmentCard } from '@/components/AppointmentCard'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
@@ -52,14 +57,45 @@ const appointments = [
 export function Appointments() {
   return (
     <div className="max-w-[1256px] w-full mx-auto mt-[48px] lg:mt-20 px-4 md:px-8 overflow-hidden">
-      <h2 className="text-lg text-[#292D33] md:text-2xl font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-center">
+      <h2 className="hidden md:block text-lg text-[#292D33] md:text-2xl font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-center">
         Depoimentos de quem experimentou!
       </h2>
+      <div className='flex flex-col md:hidden'>
+        <h2 className="text-lg text-[#292D33] font-bold font-inter leading-[21.78px] -tracking-[1.5%] text-center">
+          Serviços que cuidam de tudo para você
+        </h2>
+        <span className='text-[10px] text-[#6F6F6F] text-center mt-[5px] font-normal font-inter leading-[21.1px] -tracking-[1.5%]'>Tudo o que você precisa para manter a sua casa em ordem. Somos seu parceiro confiável para facilitar o dia a dia.</span>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px] mt-[26px] px-[30px]">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px] mt-[26px] px-[30px]">
         {appointments.map(appoint => (
           <AppointmentCard key={appoint?.id} {...appoint} />
         ))}
+      </div>
+
+      <div className="flex md:hidden gap-[10px] mt-[26px] w-full">
+        <Swiper
+          spaceBetween={12}
+          slidesPerView={1.2}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full flex items-center gap-10"
+        >
+          {
+            appointments.map((appoint, key) => (
+              <SwiperSlide key={key}>
+                <AppointmentCard key={key} {...appoint} />
+              </SwiperSlide>
+            ))
+          }
+          <div className="w-full mt-5">
+            <button className="w-2 h-2 bg-transparent"></button>
+          </div>
+        </Swiper>
       </div>
 
       <div className="w-full justify-normal items-center mt-[26px] hidden md:flex">

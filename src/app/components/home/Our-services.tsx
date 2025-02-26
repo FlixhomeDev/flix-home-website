@@ -71,27 +71,27 @@ export function OurServices() {
       </div>
 
       <div
-        className="md:hidden flex items-center justify-center gap-5 mt-[10px]"
+        className="md:hidden flex items-center justify-center w-full px-[15px] gap-5 mt-[10px]"
       >
         <Swiper
           spaceBetween={12}
-          slidesPerView={1.3}
+          slidesPerView={1.8}
           pagination={{ clickable: true }}
           modules={[Pagination]}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="w-full flex items-center gap-20"
+          className="w-full flex items-center gap-10"
         >
           {
             servicesData.map((item, key) => (
-              <SwiperSlide key={key} >
+              <SwiperSlide key={key}>
                 <ServiceCard key={key} {...item} />
               </SwiperSlide>
             ))
           }
-          <div className="w-full mt-10">
+          <div className="w-full mt-5">
             <button className="w-2 h-2 bg-transparent"></button>
           </div>
         </Swiper>

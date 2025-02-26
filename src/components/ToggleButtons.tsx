@@ -25,7 +25,7 @@ type Props = {
 export default function ToggleButtons({ active, setActive }: Props) {
   return (
     <div
-      className="flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] bg-red-400 md:pl-8 whitespace-nowrap"
+      className="flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] md:pl-8 whitespace-nowrap"
       style={{ scrollbarWidth: 'none' }}
     >
       {buttonOptions.map(({ id, label, color }) => (
