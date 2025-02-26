@@ -25,14 +25,14 @@ type Props = {
 export default function ToggleButtons({ active, setActive }: Props) {
   return (
     <div
-      className="flex md:justify-center justify-start items-center gap-4 mt-[30px] overflow-x-scroll md:pl-8 whitespace-nowrap"
+      className="flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] bg-red-400 md:pl-8 whitespace-nowrap"
       style={{ scrollbarWidth: 'none' }}
     >
       {buttonOptions.map(({ id, label, color }) => (
         <Button
           key={id}
           variant={active === id ? 'default' : 'outline'}
-          className={`mx-0 text-[13px] font-normal font-inter ${active === id ? 'text-white' : 'text-primaryColor'}`}
+          className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
           onClick={() => setActive(id)}
         >
           {label === 'Cleaning' && (

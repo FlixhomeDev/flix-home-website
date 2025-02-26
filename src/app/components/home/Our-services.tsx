@@ -1,4 +1,8 @@
 "use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { ServiceCard } from "@/components/ServiceCard";
 import ToggleButtons from "@/components/ToggleButtons";
 import { ArrowRight } from "lucide-react";
@@ -44,25 +48,21 @@ export function OurServices() {
   ];
 
   return (
-    <div className="max-w-[1256px] w-full mx-auto mt-8 lg:mt-[78px]">
-      <div className="w-full max-w-[468px] mx-auto">
-        <h2 className="text-center font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-2xl text-[#292D33]">
+    <div className="max-w-[1256px] w-full mx-auto mt-[15px] md:mt-8 lg:mt-[78px]">
+      <div className="w-full max-w-[340px] md:max-w-[468px] mx-auto">
+        <h2 className="text-center font-bold font-inter leading-[21.78px] md:leading-[29.05px] -tracking-[1.5%] text-lg md:text-2xl text-[#292D33]">
           Serviços que cuidam de tudo para você.
         </h2>
-        <p className="text-center text-[#6F6F6F] font-normal font-inter leading-[21.78px] -tracking-[1.5%] mt-[5px]">
+        <p className="text-center text-[#6F6F6F] text-xs md:text-lg font-normal font-inter leading-[14.52px] md:leading-[21.78px] -tracking-[1.5%] mt-[5px]">
           Tudo o que você precisa para manter sua casa em ordem. Somos seu
           parceiro confiável para facilitar o dia a dia.
         </p>
       </div>
 
       <ToggleButtons active={active} setActive={setActive} />
-      {/* <div className="w-full items-center justify-between flex mt-8 px-4 md:px-8">
-        <Link href={"/"} className="text-primaryColor">
-          Ver todas
-        </Link>
-      </div> */}
+      <h3 className="block md:hidden ml-[15px] mt-[27px] text-[#000000] text-[15px] font-semibold font-inter leading-[26px] tracking-[2%]">Promoções</h3>
       <div
-        className="flex gap-x-1 px-4 md:px-8 mt-3 overflow-x-auto xl:overflow-x-hidden pl-8"
+        className="hidden md:flex items-center justify-center gap-5 mt-[27px]"
         style={{ scrollbarWidth: "none" }}
       >
         {servicesData.map((service) => (
@@ -70,15 +70,42 @@ export function OurServices() {
         ))}
       </div>
 
+      <div
+        className="md:hidden flex items-center justify-center gap-5 mt-[10px]"
+      >
+        <Swiper
+          spaceBetween={12}
+          slidesPerView={1.3}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full flex items-center gap-20"
+        >
+          {
+            servicesData.map((item, key) => (
+              <SwiperSlide key={key} >
+                <ServiceCard key={key} {...item} />
+              </SwiperSlide>
+            ))
+          }
+          <div className="w-full mt-10">
+            <button className="w-2 h-2 bg-transparent"></button>
+          </div>
+        </Swiper>
+      </div>
+
       <div className="w-full justify-normal items-center mt-5 hidden md:flex">
-        <div className="max-w-[712px] w-full mx-auto border h-[69px] p-2 rounded-md bg-white shadow-sm flex justify-between items-center">
-          <span className="">Não encontrou o que procura? </span>
+        <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
+          <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">Não encontrou o que procura? </span>
           <Link
-            href={"/"}
-            className="text-primaryColor flex items-center gap-x-1 border border-primaryColor p-1 rounded px-4 py-2"
+            href={"/services"}
+            className="text-[#3C91E6] text-sm font-medium font-inter leading-[16.94px] w-[186px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
             Ver todos os Serviços
-            <ArrowRight />
+            <ArrowRight size={9} color="#3C91E6" />
           </Link>
         </div>
       </div>

@@ -6,45 +6,45 @@ import React from 'react'
 
 export function Banner() {
   return (
-    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center px-[132px] mt-7">
+    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center px-[27px] md:px-[132px] mt-7">
       <div className="flex flex-col">
-        <h1 className="text-[32px] text-[#000000] leading-[38.73px] font-bold font-inter max-w-[521px] w-full text-center lg:text-left">
+        <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-inter  md:max-w-[521px] w-full text-center md:text-left">
           Prevenir é sempre mais barato do que corrigir
         </h1>
-        <p className="text-[#6F6F6F] text-2xl leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[410px] mt-4 text-center lg:text-left">
+        <p className="text-[#6F6F6F] text-lg md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center lg:text-left">
           Simplifique o cuidado com o seu lar com a Flix Home!
         </p>
 
-        <div className="flex items-center gap-[14px] mt-5">
-          <div className="flex items-center gap-[11px] w-[141.8px]">
-            <span className="text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">+2.000</span>
-            <span className="text-base text-[#3C91E6] font-normal font-inter tracking-[2%] leading-[19.36px]">
+        <div className="flex items-center justify-center md:justify-normal gap-[14px] mt-[10px] md:mt-5">
+          <div className="flex items-center gap-[8px] md:gap-[11px] w-[89.85px] md:w-[141.8px]">
+            <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">+2.000</span>
+            <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
               Famílias atendidas
             </span>
           </div>
-          <div className="flex items-center gap-[11px] w-[161.8px]">
-            <span className="text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">+150</span>
-            <span className="text-base font-normal font-inter text-[#3C91E6] tracking-[2%] leading-[19.36px]">
+          <div className="flex items-center gap-[8px] md:gap-[11px] w-[94.85px] md:w-[161.8px]">
+            <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">+150</span>
+            <span className="text-[8px] leading-[9.68px] md:text-base font-normal font-inter text-[#3C91E6] tracking-[2%] md:leading-[19.36px]">
               Serviços <br /> para sua casa
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-[10px] mt-5 mx-auto lg:mx-0">
-          <Button variant={'ghost'} className="flex items-center gap-[10px] px-[10px] py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-sm font-medium font-inter leading-[16.94px] w-[215px]">
+        <div className="flex items-center gap-[7.5px] md:gap-[10px] mt-[10px] md:mt-5 mx-auto lg:mx-0">
+          <Button variant={'ghost'} className="flex items-center gap-[5.44px] md:gap-[10px] py-[6px] px-[5.44px] md:px-[10px] md:py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-[9px] md:text-sm font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px] md:w-[215px] w-[144px] h-[23.25px] md:h-[41px]">
             Solicite um Serviço Agora!
-            <ArrowRightIcon size={9} />
+            <ArrowRightIcon size={2} />
           </Button>
           <Button
             variant={'outline'}
-            className="w-[128px] border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 text-sm font-medium font-inter leading-[16.94px]"
+            className="md:w-[128px] w-[90.23px] h-[23.25px] md:h-[41px] py-[6px] px-[5px] md:py-auto md:px-auto border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 md:text-sm text-[9px] font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px]"
           >
             Fale conosco
             <ArrowRightIcon size={9} />
           </Button>
         </div>
       </div>
-      <div className='w-[584px] h-[456px] mt-[29px]'>
+      <div className='w-[272px] h-[212px] md:w-[584px] md:h-[456px] mt-[29px]'>
         <Image
           src={backgroundImage}
           alt="Background Image"

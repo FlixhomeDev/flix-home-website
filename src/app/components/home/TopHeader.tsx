@@ -5,7 +5,7 @@ import Link from "next/link";
 export function TopHeader() {
 
   return (
-    <div className="w-full bg-[#3C91E6] px-10 py-3 h-[40px] flex flex-row justify-between items-center mb-[4px]">
+    <div className="hidden w-full bg-[#3C91E6] px-10 py-3 h-[40px] md:flex flex-row justify-between items-center mb-[4px]">
       <nav
         className="w-full h-full flex items-center justify-around"
       >

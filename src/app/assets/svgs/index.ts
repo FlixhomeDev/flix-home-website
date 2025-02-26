@@ -21,12 +21,16 @@ import Call from "./call.svg";
 import Whatsapp from "./whatsapp.svg";
 import HomePlansSvg from "./home-plans-svg.svg";
 import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
+import Facebook from "./Facebook.svg";
+import Insta from "./Insta.svg";
 
 export {
   Logo,
   HomePlansSvg,
   SettingsSvg,
   DotSvg,
+  Insta,
+  Facebook,
   Whatsapp,
   Call,
   VectorSvg,
