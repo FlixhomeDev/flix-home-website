@@ -1,5 +1,8 @@
-'use client'
-
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { Button } from '@/components/ui/button'
 import { BroomSvg } from '@/app/assets/svgs/broom'
 import { HomeTrendUpSvg } from '@/app/assets/svgs/home-trend-up'
@@ -24,32 +27,80 @@ type Props = {
 
 export default function ToggleButtons({ active, setActive }: Props) {
   return (
-    <div
-      className="flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] md:pl-8 whitespace-nowrap"
-      style={{ scrollbarWidth: 'none' }}
-    >
-      {buttonOptions.map(({ id, label, color }) => (
-        <Button
-          key={id}
-          variant={active === id ? 'default' : 'outline'}
-          className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
-          onClick={() => setActive(id)}
+    <div className="w-full">
+      <div
+        className="hidden md:flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] md:pl-8 whitespace-nowrap"
+        style={{ scrollbarWidth: 'none' }}
+      >
+        {buttonOptions.map(({ id, label, color }) => (
+          <Button
+            key={id}
+            variant={active === id ? 'default' : 'outline'}
+            className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
+            onClick={() => setActive(id)}
+          >
+            {label === 'Cleaning' && (
+              <BroomSvg fill={active === id ? '#FFF' : color} />
+            )}
+            {label === 'Repairs' && (
+              <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
+            )}
+            {label === 'Gardening' && (
+              <BrushSvg fill={active === id ? '#FFF' : color} />
+            )}
+            {label === 'Flights' && (
+              <BuildingSvg fill={active === id ? '#FFF' : color} />
+            )}
+            {label}
+          </Button>
+        ))}
+      </div>
+      <div
+        className="md:hidden flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[8px] md:pl-8 whitespace-nowrap"
+        style={{ scrollbarWidth: 'none' }}
+      >
+        <Swiper
+          spaceBetween={7}
+          slidesPerView={2.5}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          breakpoints={{
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+          className="w-full flex items-center gap-[0px]"
         >
-          {label === 'Cleaning' && (
-            <BroomSvg fill={active === id ? '#FFF' : color} />
-          )}
-          {label === 'Repairs' && (
-            <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
-          )}
-          {label === 'Gardening' && (
-            <BrushSvg fill={active === id ? '#FFF' : color} />
-          )}
-          {label === 'Flights' && (
-            <BuildingSvg fill={active === id ? '#FFF' : color} />
-          )}
-          {label}
-        </Button>
-      ))}
+          {
+            buttonOptions.map(({ id, label, color }) => (
+              <SwiperSlide key={id} >
+                <Button
+                  key={id}
+                  variant={active === id ? 'default' : 'outline'}
+                  className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
+                  onClick={() => setActive(id)}
+                >
+                  {label === 'Cleaning' && (
+                    <BroomSvg fill={active === id ? '#FFF' : color} />
+                  )}
+                  {label === 'Repairs' && (
+                    <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
+                  )}
+                  {label === 'Gardening' && (
+                    <BrushSvg fill={active === id ? '#FFF' : color} />
+                  )}
+                  {label === 'Flights' && (
+                    <BuildingSvg fill={active === id ? '#FFF' : color} />
+                  )}
+                  {label}
+                </Button>
+              </SwiperSlide>
+            ))
+          }
+          <div className="w-full mt-3">
+            <button className="w-2 h-2 bg-transparent"></button>
+          </div>
+        </Swiper>
+      </div>
     </div>
   )
 }

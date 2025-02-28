@@ -46,7 +46,7 @@ export default function Services() {
   return (
     <div className="px-4 md:px-8">
       <div className="max-w-[1256px] w-full mx-auto mt-[48px] md:mt-[100px]">
-        <div className="mb-4 hidden md:block">
+        <div className="mb-4 hidden md:block ml-9">
           <BreadcrumbBar
             items={[
               { label: "Serviços", href: "/services" },
@@ -54,11 +54,11 @@ export default function Services() {
             ]}
           />
         </div>
-        <h2 className=" hidden md:block text-lg md:text-[32px] text-[#292D33] font-bold font-inter">
+        <h2 className="ml-9 hidden md:block text-lg md:text-[32px] text-[#292D33] font-bold font-inter">
           Serviços que cuidam de tudo para você.
         </h2>
 
-        <div className="max-w-[714px] mx-auto mt-8 flex flex-col">
+        <div className="max-w-[714px] mx-auto mt-16 md:mt-8 flex flex-col">
           <label htmlFor="services" className="text-[13px] text-[#000000] font-inter font-medium">Que serviço deseja?</label>
           <div className="flex items-center w-full gap-x-2 mt-2 border px-3 py-1 h-[40px] rounded-md">
             <label htmlFor="services">
@@ -74,7 +74,7 @@ export default function Services() {
 
         <span className="text-xs text-[#000000] font-inter font-medium mt-[19px] block md:hidden">Tópicos Populares</span>
 
-        <div className="w-full md:max-w-[714px] mx-auto mt-8 ">
+        <div className="w-full md:max-w-[714px] mx-auto mt-[10px] md:mt-8 ">
           <ToggleButtons active={active} setActive={setActive} />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-1 gap-y-4 px-0 md:px-8 mt-8 w-full">
