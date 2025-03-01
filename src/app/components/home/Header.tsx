@@ -11,7 +11,7 @@ export function Header() {
 
   const pathname = usePathname();
   return (
-    <header className={`w-full px-8 py-[4px] fixed top-0 md:top-10 bg-[#fff] z-50 lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 `}>
+    <header className={"w-full px-8 py-[4px] fixed top-0 md:top-10 bg-[#fff] z-50 lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0"}>
       <Link href={"/"} className="w-[154px] h-[32px]">
         <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>
