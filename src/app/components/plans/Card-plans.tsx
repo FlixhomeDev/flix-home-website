@@ -16,7 +16,7 @@ interface CardPlansProps {
 
 export default function CardPlans(item: CardPlansProps) {
     return (
-        <div className="w-[252px] h-[500px] md:w-[380px] md:h-[735px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
+        <div className="w-[252px] h-[520px] md:w-[380px] md:h-[740px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
             <div className="w-full h-[152px] rounded-t-[10px]">
                 <Image
                     src={ImagePlans}
