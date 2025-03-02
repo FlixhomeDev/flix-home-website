@@ -1,23 +1,13 @@
 "use client";
-import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 // import { useLocale } from "next-intl";
 
 export function TopHeader() {
-  const pathname = usePathname();
-  // const router = useRouter();
-  // const locale = useLocale();
-
-  // const handleLanguageChange = (event: any) => {
-  //   const newLocale = event.target.value;
-  //   router.push(`/${newLocale}${pathname}`);
-  // };
 
   return (
-    <div className={`z-50 hidden w-full fixed top-0 ${pathname === "/" ? "bg-[#3C91E6] h-10" : "bg-[#fff] h-4"} px-10 py-3 md:flex flex-row justify-between items-center mb-[4px]`}>
+    <div className={"z-50 w-full fixed top-0 bg-[#3C91E6] h-10 px-10 py-3 md:flex flex-row justify-between items-center mb-[4px]"}>
       <nav
-        className={`w-full h-full ${pathname === "/" ? "flex" : "hidden"} items-center justify-around`}
+        className={"w-full h-full flex items-center justify-around"}
       >
         <nav className="flex items-center gap-4">
           <Link

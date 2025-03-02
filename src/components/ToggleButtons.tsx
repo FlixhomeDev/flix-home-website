@@ -10,46 +10,49 @@ import { BrushSvg } from '@/app/assets/svgs/brush'
 import { BuildingSvg } from '@/app/assets/svgs/building'
 
 const buttonOptions = [
-  { id: 'cleaning', label: 'Cleaning', color: '#4094e4' },
-  { id: 'repairs', label: 'Repairs', color: '#4094e4' },
-  { id: 'gardening', label: 'Gardening', color: '#4094e4' },
-  { id: 'flights', label: 'Flights', color: '#4094e4' },
+  { label: 'Limpeza' },
+  { label: 'Pintura' },
+  { label: 'Jardinagem' },
+  { label: 'Elétrica' },
 ]
 
 type Props = {
-  active: string
+  buttonOptions?: {
+    id: string;
+  }[]
+  active: 'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
   setActive: React.Dispatch<
     React.SetStateAction<
-      'cleaning' | 'repairs' | 'gardening' | 'flights' | string
+      'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
     >
   >
 }
 
-export default function ToggleButtons({ active, setActive }: Props) {
+export default function ToggleButtons({ active = "cleaning", setActive }: Props) {
   return (
     <div className="w-full">
       <div
         className="hidden md:flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[10px] md:pl-8 whitespace-nowrap"
         style={{ scrollbarWidth: 'none' }}
       >
-        {buttonOptions.map(({ id, label, color }) => (
+        {buttonOptions.map(({ label }) => (
           <Button
-            key={id}
-            variant={active === id ? 'default' : 'outline'}
-            className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
-            onClick={() => setActive(id)}
+            key={label}
+            variant={active === label ? 'default' : 'outline'}
+            className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
+            onClick={() => setActive(label)}
           >
-            {label === 'Cleaning' && (
-              <BroomSvg fill={active === id ? '#FFF' : color} />
+            {label === 'Limpeza' && (
+              <BroomSvg fill={active === label ? '#FFF' : "#4094e4"} />
             )}
-            {label === 'Repairs' && (
-              <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
+            {label === 'Pintura' && (
+              <HomeTrendUpSvg fill={active === label ? '#FFF' : "#4094e4"} />
             )}
-            {label === 'Gardening' && (
-              <BrushSvg fill={active === id ? '#FFF' : color} />
+            {label === 'Jardinagem' && (
+              <BrushSvg fill={active === label ? '#FFF' : "#4094e4"} />
             )}
-            {label === 'Flights' && (
-              <BuildingSvg fill={active === id ? '#FFF' : color} />
+            {label === 'Elétrica' && (
+              <BuildingSvg fill={active === label ? '#FFF' : "#4094e4"} />
             )}
             {label}
           </Button>
@@ -62,7 +65,6 @@ export default function ToggleButtons({ active, setActive }: Props) {
         <Swiper
           spaceBetween={7}
           slidesPerView={2.5}
-          pagination={{ clickable: true }}
           modules={[Pagination]}
           breakpoints={{
             768: { slidesPerView: 3 },
@@ -71,34 +73,31 @@ export default function ToggleButtons({ active, setActive }: Props) {
           className="w-full flex items-center gap-[0px]"
         >
           {
-            buttonOptions.map(({ id, label, color }) => (
-              <SwiperSlide key={id} >
+            buttonOptions.map(({ label }) => (
+              <SwiperSlide key={label} className="!w-[119px]" >
                 <Button
-                  key={id}
-                  variant={active === id ? 'default' : 'outline'}
-                  className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
-                  onClick={() => setActive(id)}
+                  key={label}
+                  variant={active === label ? 'default' : 'outline'}
+                  className={`mx-0 w-[119px] h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
+                  onClick={() => setActive(label)}
                 >
-                  {label === 'Cleaning' && (
-                    <BroomSvg fill={active === id ? '#FFF' : color} />
+                  {label === 'Limpeza' && (
+                    <BroomSvg fill={active === label ? '#FFF' : "#4094e4"} />
                   )}
-                  {label === 'Repairs' && (
-                    <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
+                  {label === 'Pintura' && (
+                    <HomeTrendUpSvg fill={active === label ? '#FFF' : "#4094e4"} />
                   )}
-                  {label === 'Gardening' && (
-                    <BrushSvg fill={active === id ? '#FFF' : color} />
+                  {label === 'Jardinagem' && (
+                    <BrushSvg fill={active === label ? '#FFF' : "#4094e4"} />
                   )}
-                  {label === 'Flights' && (
-                    <BuildingSvg fill={active === id ? '#FFF' : color} />
+                  {label === 'Elétrica' && (
+                    <BuildingSvg fill={active === label ? '#FFF' : "#4094e4"} />
                   )}
                   {label}
                 </Button>
               </SwiperSlide>
             ))
           }
-          <div className="w-full mt-3">
-            <button className="w-2 h-2 bg-transparent"></button>
-          </div>
         </Swiper>
       </div>
     </div>

@@ -22,8 +22,9 @@ export function ServiceCard({
 }: Props) {
   const router = useRouter()
   return (
+    // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
-      onClick={() => router.push('/services/details')} className="cursor-pointer py-[13px] px-[9px] rounded-[7px] max-w-[195px] md:max-w-[258px] w-full h-[254px] md:h-[336px] border border-[#DEE2E7] bg-[#FFFFFF]">
+      onClick={() => router.push('/services/details')} className="cursor-pointer py-[13px] px-[9px] rounded-[7px] max-w-[195px] md:max-w-[258px] w-full h-[254px] md:h-[336px] border border-[#DEE2E7] bg-[#FFFFFF] ">
       <div className="relative flex justify-center items-center w-full h-[141px] md:h-[187px] bg-[#F8F8F8] rounded-[7px]">
         {!image ? (
           <Image src={image} alt={'image service'} width={107} height={107} />
