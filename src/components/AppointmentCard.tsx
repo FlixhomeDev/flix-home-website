@@ -13,7 +13,7 @@ type Props = {
   rating?: number
 }
 
-export function AppointmentCard({ appointment, createdAt, user }: Props) {
+export function AppointmentCard({ appointment, user }: Props) {
   return (
     <div className="flex flex-col bg-[#FFFFFF] w-full max-w-[293px] h-[106px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
       <div className="w-full flex items-center justify-between gap-[6px]">

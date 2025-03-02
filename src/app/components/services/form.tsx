@@ -39,6 +39,7 @@ export default function FormService() {
     })
 
     const onSubmit = (data: FormSchema) => {
+        console.log({ data })
     }
 
     return (
