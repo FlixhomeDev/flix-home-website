@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRightIcon, MenuIcon } from "lucide-react";
+import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/app/assets/svgs";
 
@@ -11,9 +11,9 @@ export function Header() {
 
   const pathname = usePathname();
   return (
-    <header className={"w-full px-8 py-[4px] fixed top-0 md:top-10 bg-[#fff] z-50 lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0"}>
-      <Link href={"/"} className="w-[154px] h-[32px]">
-        <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
+    <header className="fixed w-full shadow px-8 bg-white top-0 left-0 right-0 z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center">
+      <Link href={"/"}>
+        <Image src={Logo} alt="FlixHome logo" width={140} height={41} />
       </Link>
 
       <button
@@ -21,14 +21,14 @@ export function Header() {
         className="lg:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <MenuIcon />
+        {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
       </button>
 
       <nav
         className={`
         lg:flex lg:flex-row lg:gap-x-[14px] lg:items-center
         ${isMenuOpen ? "flex" : "hidden"}
-        flex-col absolute items-center top-[50px] md:top-[133px] left-0 right-0
+        flex-col absolute items-center top-[81px] lg:top-[133px] left-0 right-0
         bg-white shadow-lg lg:shadow-none
         lg:static lg:bg-transparent
         p-4 lg:p-0

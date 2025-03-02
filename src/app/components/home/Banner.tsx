@@ -1,8 +1,8 @@
-import { backgroundImage } from '@/app/assets/images'
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
+import { backgroundImage } from "@/app/assets/images";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 export function Banner() {
   return (
@@ -52,5 +52,5 @@ export function Banner() {
         />
       </div>
     </div>
-  )
+  );
 }

@@ -12,7 +12,6 @@
   }
 }
 
-
 body {
   color: var(--background);
   background: var(--foreground);
@@ -20,77 +19,73 @@ body {
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fredoka';
-  src: url('/fonts/Fredoka/Fredoka-Medium.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yrsa';
-  src: url('/fonts/Yrsa/Yrsa-Regular.ttf') format('truetype');
+  font-family: "Yrsa";
+  src: url("/fonts/Yrsa/Yrsa-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/fonts/Inter.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url('/fonts/Manrope.ttf') format('truetype');
+  font-family: "Manrope";
+  src: url("/fonts/Manrope.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/fonts/Rubik.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/fonts/Rubik.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
-
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-
-
 
 @layer base {
   :root {
@@ -148,8 +143,6 @@ body {
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -158,4 +151,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-

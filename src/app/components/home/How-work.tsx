@@ -30,8 +30,8 @@ export default function HowWork() {
         </div>
 
         <div
-          className="hidden mt-6 md:flex w-full lg:grid grid-cols-2 gap-3 lg:overflow-hidden whitespace-nowrap overflow-x-auto lg:whitespace-normal px-4"
-          style={{ scrollbarWidth: 'none' }}
+          className="flex w-full lg:grid grid-cols-2 gap-3 lg:overflow-hidden whitespace-nowrap overflow-x-auto lg:whitespace-normal px-4 lg:px-0"
+          style={{ scrollbarWidth: "none" }}
         >
           <div className="h-[179px] w-[311px] p-5 flex flex-col items-start gap-[10px] rounded-[5px] border border-[#DEE2E7] hover:border-[#3C91E6] transition-all">
             <Image src={BookSvg} alt="Book Svg" width={40} height={40} />
@@ -120,11 +120,11 @@ export default function HowWork() {
               </div>
             </SwiperSlide>
             <div className="w-full mt-10">
-              <button className="w-2 h-2 bg-transparent"></button>
+              {/* <button className="w-2 h-2 bg-transparent"></button> */}
             </div>
           </Swiper>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -45,6 +45,14 @@ export function OurServices() {
       category: "Pintura",
       image: "https://source.unsplash.com/300x200/?painting",
     },
+    {
+      id: "5",
+      title: "Pintura de Interior Profissional",
+      oldPrice: 250.0,
+      newPrice: 200.0,
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
+    },
   ];
 
   return (
@@ -85,14 +93,13 @@ export function OurServices() {
           className="w-full flex items-center gap-10"
         >
           {
-            servicesData.map((item, key) => (
-              <SwiperSlide key={key}>
-                <ServiceCard key={key} {...item} />
+            servicesData.map((item) => (
+              <SwiperSlide key={item?.id}>
+                <ServiceCard key={item?.id} {...item} />
               </SwiperSlide>
             ))
           }
           <div className="w-full mt-5">
-            <button className="w-2 h-2 bg-transparent"></button>
           </div>
         </Swiper>
       </div>
