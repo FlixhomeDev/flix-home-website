@@ -9,13 +9,14 @@ interface CardPlansProps {
     title: string
     priceByMonth: number
     priceByYear: number
+    link: string
     items: { title: string, subtitle?: string }[]
     itemsnotinclud: { title: string, subtitle?: string }[]
 }
 
 export default function CardPlans(item: CardPlansProps) {
     return (
-        <div className="w-[252px] h-[500px] md:w-[380px] md:h-[722px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
+        <div className="w-[252px] h-[500px] md:w-[380px] md:h-[735px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
             <div className="w-full h-[152px] rounded-t-[10px]">
                 <Image
                     src={ImagePlans}
@@ -51,8 +52,8 @@ export default function CardPlans(item: CardPlansProps) {
                     ))
                 }
             </div>
-            <Link href={`/plans/details/${item.id}`} className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter py-2 md:py-4 px-8 mt-5">Assinar o plano</Link>
-            <Link href={`/plans/details/${item.id}`} className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter py-2 md:py-4 px-8 mt-5">Saiba mais</Link>
+            <Link href={item.link} target='_blank' className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter py-2 md:py-4 px-8 mt-5">Assinar o plano</Link>
+            <Link href={`/plans/details/${item.id}`} className="self-center text-[8.19px] md:text-[13px] text-center text-[#000] font-semibold font-inter py-2 px-8 -mt-3">Saiba mais</Link>
         </div>
     );
 }

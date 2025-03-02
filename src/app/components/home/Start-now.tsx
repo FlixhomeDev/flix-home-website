@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function StartNow() {
@@ -10,10 +10,10 @@ export default function StartNow() {
         A Flix Home é mais do que uma plataforma de serviços domésticos – somos
         seu parceiro confiável para facilitar o dia a dia.
       </p>
-      <Button variant={'ghost'} className="bg-[#3C91E6] w-[124px] md:w-[166px] h-[30px] md:h-[41px] mt-[15px] md:mt-[30px] rounded-[5px] flex items-center gap-[7px] md:gap-[10px] py-[9px] px-[7px] md:py-3 md:px-[10px] text-[#FFFFFF] text-[10px] md:text-sm font-medium font-inter leading-[12.71px] md:leading-[16.94px]">
+      <Link href={"https://wa.me/message/PHDJAIL6RKWZC1"} target='_blank' className="bg-[#3C91E6] w-[124px] md:w-[166px] h-[30px] md:h-[41px] mt-[15px] md:mt-[30px] rounded-[5px] flex items-center gap-[7px] md:gap-[10px] py-[9px] px-[7px] md:py-3 md:px-[10px] text-[#FFFFFF] text-[10px] md:text-sm font-medium font-inter leading-[12.71px] md:leading-[16.94px]">
         Experimente agora
         <ArrowRight size={9} color='#FFFFFF' />
-      </Button>
+      </Link>
     </div>
   )
 }

@@ -15,6 +15,7 @@ export const dataPlans = [
     title: "Para quem quer segurança sem gastar muito!",
     priceByMonth: 53.23,
     priceByYear: 129.99,
+    link: "https://wa.me/message/PHDJAIL6RKWZC1",
     items: [
       { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
       { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
@@ -38,6 +39,7 @@ export const dataPlans = [
     title: "Mais proteção com visitas mais frequentes!",
     priceByMonth: 53.23,
     priceByYear: 129.99,
+    link: "https://wa.me/message/PHDJAIL6RKWZC1",
     items: [
       { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
       { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
@@ -61,6 +63,7 @@ export const dataPlans = [
     title: "Máxima segurança e conforto para sua casa!",
     priceByMonth: 53.23,
     priceByYear: 129.99,
+    link: "https://wa.me/message/PHDJAIL6RKWZC1",
     items: [
       { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
       { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
@@ -83,7 +86,7 @@ export const dataPlans = [
 export default function Plans() {
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-[48px] md:mt-[120px]">
       <Banner />
       <div className="hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center md:flex items-center gap-5">
         {
@@ -93,7 +96,7 @@ export default function Plans() {
         }
 
       </div>
-      <div className="md:hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5">
+      <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5">
         <Swiper
           spaceBetween={12}
           slidesPerView={1.3}

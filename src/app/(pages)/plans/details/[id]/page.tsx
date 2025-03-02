@@ -15,11 +15,11 @@ export default function Details() {
     const { id } = useParams<{ id: string }>()
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-[48px] md:mt-[120px]">
             <div className="hidden md:block bg-[#3C91E6] w-full h-[61px]"></div>
             {
                 dataPlans.filter((i) => i.id === id).map((item) => (
-                    <section key={item.id} className="ml-0 w-full max-w-[350px] md:max-w-full self-center md:self-start md:px-[50px] mt-10 md:mt-[51px]">
+                    <section key={item.id} className="ml-0 w-full px-[15px] md:max-w-full self-center md:self-start md:px-[50px] mt-10 md:mt-[51px]">
                         <div className="hidden w-[126px] h-[36px] py-[9px] px-[13px] rounded-[8px] bg-[#3C91E6] md:flex items-center justify-center">
                             <span className="text-sm text-[#FFFFFF] font-medium font-inter">{item.plan}</span>
                         </div>
@@ -105,7 +105,7 @@ export default function Details() {
                 ))
             }
 
-            <div className="mt-[40px] w-full max-w-[350px] md:w-[620px] md:max-w-full md:px-10 flex flex-col md:flex-row items-center self-center md:self-start gap-[40px] md:gap-2">
+            <div className="mt-[40px] w-full px-[15px] md:w-[620px] md:max-w-full md:px-10 flex flex-col md:flex-row items-center self-center md:self-start gap-[40px] md:gap-2">
                 <div className="flex items-center w-full h-[136px] md:w-[620px] md:h-auto gap-2">
                     <div className="h-[92px] w-[74px]">
                         <Image src={HomePlansSvg} alt="Play Store" className="w-full h-full object-cover" />
@@ -129,10 +129,10 @@ export default function Details() {
                 </div>
             </div>
             <div className="w-[108px] h-[41px] mt-10 bg-[#3C91E6] self-center flex items-center gap-[10px] py-[12px] px-[10px] rounded-[5px]">
-                <Link href={"#"} className="text-sm text-[#FFFFFF] font-medium font-inter">Label CTA</Link>
+                <Link href={"https://wa.me/message/PHDJAIL6RKWZC1"} target="_blank" className="text-sm text-[#FFFFFF] font-medium font-inter">Agendar</Link>
                 <ArrowRightIcon color="#FFFFFF" size={9} />
             </div>
-            <div className="mt-[70px] md:px-10 w-full max-w-[350px] md:w-full self-center md:max-w-full">
+            <div className="mt-[70px] md:px-10 w-full px-[15px] md:w-full self-center md:max-w-full">
                 <FaqsPlans />
             </div>
             <div className="hidden w-[712px] h-[69px] mt-[29px] self-center border border-[#DEE2E7] rounded-[12px] py-[14px] px-[16px] md:flex items-center gap-[16px]">
