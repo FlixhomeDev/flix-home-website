@@ -11,11 +11,7 @@ export function Header() {
 
   const pathname = usePathname();
   return (
-<<<<<<< HEAD
     <header className={"w-full px-8 py-[4px] fixed top-0 md:top-10 bg-[#fff] z-50 lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0"}>
-=======
-    <header className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-10" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
->>>>>>> 0df1726a16279b4d33cd86580e6610237e341a21
       <Link href={"/"} className="w-[154px] h-[32px]">
         <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>

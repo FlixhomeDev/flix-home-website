@@ -6,7 +6,7 @@ import React from 'react'
 
 export function Banner() {
   return (
-    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center px-[27px] md:px-[132px] mt-20">
+    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center mx-auto px-[27px] md:px-[132px] mt-20">
       <div className="flex flex-col">
         <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-inter  md:max-w-[521px] w-full text-center md:text-left">
           Prevenir é sempre mais barato do que corrigir

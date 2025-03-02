@@ -6,7 +6,7 @@ import React from "react";
 
 export function WeTake() {
   return (
-    <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 h-[284px]">
+    <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 h-[284px] relative z-10">
       <Image
         src={WeTake01}
         alt="We Take your home"
