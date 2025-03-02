@@ -11,7 +11,7 @@ export function Banner() {
         <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-inter  md:max-w-[521px] w-full text-center lg:text-left">
           Prevenir é sempre mais barato do que corrigir
         </h1>
-        <p className="text-[#6F6F6F] text-lg md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center lg:text-left">
+        <p className="text-[#6F6F6F] text-xl md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center lg:text-left">
           Simplifique o cuidado com o seu lar com a Flix Home!
         </p>
 
@@ -22,6 +22,7 @@ export function Banner() {
               Famílias atendidas
             </span>
           </div>
+          <div className="h-6 w-px bg-gray-200" />
           <div className="flex items-center gap-[8px] md:gap-[11px] w-[94.85px] md:w-[161.8px]">
             <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">+150</span>
             <span className="text-[8px] leading-[9.68px] md:text-base font-normal font-inter text-[#3C91E6] tracking-[2%] md:leading-[19.36px]">

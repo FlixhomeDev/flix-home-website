@@ -125,7 +125,7 @@ export function Footer() {
 
           {/* Seção 5 - App Platform */}
           <div className="hidden md:flex flex-col items-center mt-[27px]">
-            <h3 className="font-semibold text-base text-[#3D3D3D] font-inter leading-[24px] mb-4">Disponível</h3>
+            <h3 className="font-semibold text-base text-[#3D3D3D] font-inter leading-[24px] mb-4">indisponível</h3>
             <div className="flex lg:flex-col gap-4">
               <Link href="/" target="_blank">
                 <Image src={AppleStoreSvg} alt="Apple Store" />

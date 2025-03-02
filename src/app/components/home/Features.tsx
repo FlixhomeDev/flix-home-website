@@ -1,66 +1,68 @@
-import {
-  FlashSvg,
-  MoneysSvg,
-  ShieldTickSvg,
-  UserTickSvg,
-} from '@/app/assets/svgs'
+
+
+import { FlashSvg, MoneysSvg, ShieldTickSvg, UserTickSvg } from '@/app/assets/svgs'
 import Image from 'next/image'
 import React from 'react'
+
+const FEATURES = [
+  {
+    icon: ShieldTickSvg,
+    title: 'Confiabilidade',
+    description:
+      'Todos os profissionais são treinados e avaliados.',
+  },
+  {
+    icon: UserTickSvg,
+    title: 'Tranquilidade',
+    description:
+      'Planos de manutenção preventiva para evitar surpresas.',
+  },
+  {
+    icon: FlashSvg,
+    title: 'Agilidade',
+    description:
+      'Agendamento simples, sem complicações.',
+  },
+  {
+    icon: MoneysSvg,
+    title: 'Preço fixo',
+    description:
+      'Sem surpresas no orçamento.',
+  },
+]
 
 export function Features() {
   return (
     <div
-      className="w-full h-[91px] px-3 md:px-[50px] flex items-center gap-5 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
+      className="w-full p-3 md:px-[50px] flex items-center gap-x-5 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
       style={{ scrollbarWidth: 'none' }}
     >
-      <div className="flex items-center gap-3 w-[290px]">
-        <Image
-          src={ShieldTickSvg}
-          alt="Shield Tick Svg"
-          width={40}
-          height={40}
-        />
-        <div className="flex flex-col">
-          <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">Confiabilidade</h3>
-          <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-            Todos os profissionais são treinados e avaliados.
-          </p>
+      {FEATURES.map((feature, index) => (
+        <div key={feature.title} className="flex">
+          <div className="flex items-center gap-3 w-[400px] lg:w-[85%]">
+            <Image
+              src={feature.icon}
+              alt="Shield Tick Svg"
+              width={40}
+              height={40}
+            />
+            <div className="flex flex-col">
+              <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-base text-[#1A1A1A]">
+                Confiabilidade
+              </h3>
+              <p className="text-[#808080] text-xs md:text-sm font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
+                Todos os profissionais são treinados e avaliados.
+              </p>
+            </div>
+          </div>
+          {index !== FEATURES.length - 1 && (
+            <div className="h-8 w-px bg-[#E6E6E6] self-center" />
+          )}
         </div>
-      </div>
+      ))}
 
-      <div className="h-8 w-px ml-5 md:ml-0 bg-[#E6E6E6]" />
 
-      <div className=" hidden md:flex items-center gap-3">
-        <Image src={UserTickSvg} alt="User Tick Svg" width={40} height={40} />
-        <div className="flex flex-col">
-          <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">Tranquilidade</h3>
-          <p className="text-[#808080] text-base font-normal font-inter leading-[19.2px] mt-[6px] w-[290px]">
-            Planos de manutenção preventiva para evitar surpresas.
-          </p>
-        </div>
-      </div>
 
-      <div className=" hidden md:block h-8 w-px bg-[#E6E6E6]" />
-
-      <div className=" hidden md:flex items-center gap-3 w-[290px]">
-        <Image src={FlashSvg} alt="Flash Svg" width={40} height={40} />
-        <div className="flex flex-col">
-          <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">Agilidade</h3>
-          <p className="text-[#808080] text-base font-normal font-inter leading-[19.2px] mt-[6px]">
-            Agendamento simples, sem complicações.
-          </p>
-        </div>
-      </div>
-
-      <div className=" hidden md:block h-8 w-px bg-[#E6E6E6]" />
-
-      <div className=" hidden md:flex items-center gap-3">
-        <Image src={MoneysSvg} alt="Moneys Svg" width={40} height={40} />
-        <div className="flex flex-col">
-          <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">Atendimento</h3>
-          <p className="text-[#808080] text-base font-normal font-inter leading-[19.2px] mt-[6px]">Sem surpresas no orçamento.</p>
-        </div>
-      </div>
     </div>
   )
 }
