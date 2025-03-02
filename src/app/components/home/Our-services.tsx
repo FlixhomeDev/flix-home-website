@@ -41,6 +41,14 @@ export function OurServices() {
       category: "Pintura",
       image: "https://source.unsplash.com/300x200/?painting",
     },
+    {
+      id: "5",
+      title: "Pintura de Interior Profissional",
+      oldPrice: 250.0,
+      newPrice: 200.0,
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
+    },
   ];
 
   return (
@@ -56,14 +64,9 @@ export function OurServices() {
       </div>
 
       <ToggleButtons active={active} setActive={setActive} />
-      <div className="w-full items-center justify-between flex mt-8 px-4 md:px-8">
-        <h3 className="text-lg md:text-2xl font-bold">Promoções</h3>
-        <Link href={"/"} className="text-primaryColor">
-          Ver todas
-        </Link>
-      </div>
+
       <div
-        className="flex gap-x-1 px-4 md:px-8 mt-3 overflow-x-auto xl:overflow-x-hidden pl-8"
+        className="flex mt-6 gap-x-1 px-4 md:px-8 overflow-x-auto xl:overflow-x-hidden pl-8"
         style={{ scrollbarWidth: "none" }}
       >
         {servicesData.map((service) => (

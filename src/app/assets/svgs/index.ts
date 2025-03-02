@@ -18,6 +18,8 @@ import FlashSvg from "./flash.svg";
 import MoneysSvg from "./moneys.svg";
 import BookSvg from "./book.svg";
 import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
+import FacebookSvg from "./facebook.svg";
+import InstagramSvg from "./instagram.svg";
 
 export {
   Logo,
@@ -40,4 +42,6 @@ export {
   MoneysSvg,
   BookSvg,
   NoPictureIllustrationSvg,
+  FacebookSvg,
+  InstagramSvg,
 };

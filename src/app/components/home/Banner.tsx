@@ -1,17 +1,17 @@
-import { backgroundImage } from '@/app/assets/images'
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
+import { backgroundImage } from "@/app/assets/images";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 export function Banner() {
   return (
-    <div className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center justify-between mx-auto mt-7 px-4 md:px-8">
+    <div className="max-w-[1256px] mt-28 lg:mt-[81px] w-full flex flex-col lg:flex-row gap-8 items-center justify-between mx-auto px-4 md:px-8">
       <div className="flex flex-col">
-        <h1 className="text-[32px] font-bold max-w-[521px] w-full text-center lg:text-left">
+        <h1 className="text-[32px] font-bold font-Inter max-w-[521px] w-full text-center lg:text-left leading-[38ppx]">
           Prevenir é sempre mais barato do que corrigir
         </h1>
-        <p className="text-[#6F6F6F] text-xl max-w-[410px] mt-4 text-center lg:text-left">
+        <p className="text-[#6F6F6F] text-xl max-w-[480px] mt-4 text-center lg:text-left">
           Simplifique o cuidado com o seu lar com a Flix Home!
         </p>
 
@@ -31,11 +31,11 @@ export function Banner() {
         </div>
 
         <div className="flex gap-2 mt-5 mx-auto lg:mx-0">
-          <Button variant={'ghost'} className="bg-primaryColor text-white">
+          <Button variant={"ghost"} className="bg-primaryColor text-white">
             Solicite um Serviço Agora!
           </Button>
           <Button
-            variant={'outline'}
+            variant={"outline"}
             className="border border-primaryColor text-primaryColor hover:text-primaryColor hover:opacity-60"
           >
             Fale conosco
@@ -50,5 +50,5 @@ export function Banner() {
         height={456}
       />
     </div>
-  )
+  );
 }
