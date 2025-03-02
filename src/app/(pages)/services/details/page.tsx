@@ -36,12 +36,12 @@ export default function Details() {
 
     return (
         <div className="flex flex-col">
-            <div className="hidden w-full md:flex items-center gap-[5px] px-[100px] mt-[55px]">
+            <div className="hidden w-full md:flex items-center gap-[5px] px-[100px]  mt-[48px] md:mt-[120px]">
                 <span className="text-sm text-[#9497A1] font-medium font-manrope">Serviços</span>
                 <div className="bg-[#9497A1] w-[1.5px] h-[14px]"></div>
                 <span className="text-sm text-[#292D33] font-semibold font-manrope">Details</span>
             </div>
-            <div className="mt-[60px] md:mt-2 w-full h-[220px] md:h-[400px] md:px-[100px]">
+            <div className="mt-[80px] md:mt-2 w-full h-[220px] md:h-[400px] md:px-[100px]">
                 <div className="hidden w-full h-full rounded-[16px] md:flex items-center gap-2">
                     <div className="w-[58%] h-full rounded-l-[16px]">
                         <Image src={ServiceDetails} alt="service details" className="w-full h-full object-cover rounded-l-[16px]" />

@@ -102,7 +102,7 @@ export function Appointments() {
         <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
           <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">Está pronto para cuidar do seu lar com facilidade? </span>
           <Link
-            href={"/services"}
+            href={"https://wa.me/message/PHDJAIL6RKWZC1"} target="_blank"
             className="text-[#3C91E6] text-sm font-medium font-inter leading-[16.94px] w-[240px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
             Fale conosco pelo WhatsApp

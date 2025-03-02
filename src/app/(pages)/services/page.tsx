@@ -41,16 +41,32 @@ export default function Services() {
       category: "Pintura",
       image: "https://source.unsplash.com/300x200/?painting",
     },
+    {
+      id: "5",
+      title: "Pintura de Interior Profissional",
+      oldPrice: 250.0,
+      newPrice: 200.0,
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
+    },
+    {
+      id: "6",
+      title: "Pintura de Interior Profissional",
+      oldPrice: 250.0,
+      newPrice: 200.0,
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
+    },
   ];
   const [active, setActive] = useState("cleaning");
   return (
-    <div className="px-4 md:px-8">
+    <div className="px-4 md:px-8 mb-36">
       <div className="max-w-[1256px] w-full mx-auto mt-[48px] md:mt-[100px]">
         <div className="mb-4 hidden md:block ml-9">
           <BreadcrumbBar
             items={[
               { label: "Serviços", href: "/services" },
-              { label: "Todos" }, // Último item sem href (BreadcrumbPage)
+              { label: "Todos" },
             ]}
           />
         </div>

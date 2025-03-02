@@ -8,82 +8,85 @@ import CardPlans from "@/app/components/plans/Card-plans";
 import FaqsPlans from "@/app/components/plans/Faqs";
 import React from "react";
 
-export const dataPlans = [
-  {
-    id: "1",
-    plan: "Fremium",
-    title: "Para quem quer segurança sem gastar muito!",
-    priceByMonth: 53.23,
-    priceByYear: 129.99,
-    items: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-    itemsnotinclud: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-  },
-  {
-    id: "2",
-    plan: "Médio",
-    title: "Mais proteção com visitas mais frequentes!",
-    priceByMonth: 53.23,
-    priceByYear: 129.99,
-    items: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-    itemsnotinclud: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-  },
-  {
-    id: "3",
-    plan: "Avançado",
-    title: "Máxima segurança e conforto para sua casa!",
-    priceByMonth: 53.23,
-    priceByYear: 129.99,
-    items: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-    itemsnotinclud: [
-      { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-      { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
-    ],
-  },
-];
+
 
 export default function Plans() {
-
+  const dataPlans = [
+    {
+      id: "1",
+      plan: "Fremium",
+      title: "Para quem quer segurança sem gastar muito!",
+      priceByMonth: 53.23,
+      priceByYear: 129.99,
+      link: "https://wa.me/message/PHDJAIL6RKWZC1",
+      items: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+      itemsnotinclud: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+    },
+    {
+      id: "2",
+      plan: "Médio",
+      title: "Mais proteção com visitas mais frequentes!",
+      priceByMonth: 53.23,
+      priceByYear: 129.99,
+      link: "https://wa.me/message/PHDJAIL6RKWZC1",
+      items: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+      itemsnotinclud: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+    },
+    {
+      id: "3",
+      plan: "Avançado",
+      title: "Máxima segurança e conforto para sua casa!",
+      priceByMonth: 53.23,
+      priceByYear: 129.99,
+      link: "https://wa.me/message/PHDJAIL6RKWZC1",
+      items: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+      itemsnotinclud: [
+        { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
+        { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+      ],
+    },
+  ];
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-[48px] md:mt-[120px]">
       <Banner />
       <div className="hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center md:flex items-center gap-5">
         {
@@ -93,7 +96,7 @@ export default function Plans() {
         }
 
       </div>
-      <div className="md:hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5">
+      <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5">
         <Swiper
           spaceBetween={12}
           slidesPerView={1.3}
