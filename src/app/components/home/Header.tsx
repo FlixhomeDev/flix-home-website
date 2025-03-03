@@ -4,14 +4,20 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon, MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { motion } from 'motion/react'
 import { Logo } from "@/app/assets/svgs";
+import { WhereWeAre } from "./WhereWeAre";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
   return (
-    <header className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-10" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
+    <motion.header
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-10" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
       <Link href={"/"} className="w-[154px] h-[32px]">
         <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>
@@ -66,22 +72,17 @@ export function Header() {
         >
           Planos Preventivos
         </Link>
-        <Link
-          href={"/about-us"}
-          onClick={() => setIsMenuOpen(false)}
-          className={`text-xs md:text-base self-start font-inter font-medium md:font-semibold leading-[24px] w-full md:w-auto px-1 border-b border-[#DEE2E7] md:border-b-0  mt-[15px] md:mt-0 py-2 md:py-6 ${pathname === "/about-us" ? "text-[#3C91E6]" : "text-[#484848]"
-            }`}
-        >
-          Sobre Nós
-        </Link>
-        <Link
-          href={"/"}
-          onClick={() => setIsMenuOpen(false)}
-          className={`text-xs md:text-base self-start font-inter font-medium md:font-semibold leading-[24px] w-full md:w-auto px-1 border-b border-[#DEE2E7] md:border-b-0  mt-[15px] md:mt-0 py-2 md:py-6 ${pathname === "/contacts" ? "text-[#3C91E6]" : "text-[#484848]"
-            }`}
-        >
-          Contatos
-        </Link>
+        <WhereWeAre>
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(false)}
+            className={`text-xs md:text-base self-start text-left font-inter font-medium md:font-semibold leading-[24px] w-full md:w-auto px-1 border-b border-[#DEE2E7] md:border-b-0  mt-[15px] md:mt-0 py-2 md:py-6 ${pathname === "/about-us" ? "text-[#3C91E6]" : "text-[#484848]"
+              }`}
+          >
+            Onde estamos
+          </button>
+        </WhereWeAre>
+
       </nav>
       <Link
         href={"https://wa.me/message/PHDJAIL6RKWZC1"}
@@ -91,6 +92,6 @@ export function Header() {
         Agendar Serviço
         <ArrowRightIcon size={14} />
       </Link>
-    </header>
+    </motion.header>
   );
 }

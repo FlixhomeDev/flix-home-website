@@ -1,4 +1,4 @@
-import { WeTake02, WantBeImage } from '@/app/assets/images'
+import { WeTake02, EquipeFh } from '@/app/assets/images'
 import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
@@ -34,7 +34,7 @@ export function WantToBe() {
       </div>
       <div className='h-full w-full'>
         <Image
-          src={WantBeImage}
+          src={EquipeFh}
           alt="We Take your home"
           className="h-full w-full hidden lg:flex"
         />

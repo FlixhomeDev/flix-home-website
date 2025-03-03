@@ -5,19 +5,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Payment01 } from '@/app/assets/images'
+import { AnimationGif } from '@/app/assets/images'
 import { BookSvg } from '@/app/assets/svgs'
 
 export default function HowWork() {
   return (
-    <div className="max-w-[1256px] w-full mx-auto flex flex-col lg:flex-row px-4 overflow-hidden justify-between gap-20 mt-[38px] md:mt-14">
-      <Image
-        src={Payment01}
-        alt="Payment"
-        width={453}
-        height={560}
-        className="lx:hover:scale-110 hover:rounded-lg transition-all hidden xl:flex"
-      />
+    <div className="max-w-[1256px] w-full mx-auto flex flex-col lg:flex-row px-4 overflow-hidden justify-between md:justify-around gap-20 mt-[38px] md:mt-14">
+      <div className="hidden lg:flex justify-center items-center  w-[339px] h-[420px] lg:mt-20">
+        <Image
+          src={AnimationGif}
+          alt="Payment"
+          width={339}
+          height={430}
+          className="hover:scale-110 hover:rounded-lg transition-all hidden lg:flex max-h-[420px] object-contain w-full"
+        />
+      </div>
 
       <div className="flex flex-col gap-y-6">
         <div className="mx-auto w-[95%]">

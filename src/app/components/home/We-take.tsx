@@ -1,5 +1,5 @@
 "use client";
-import { WeTake01, WeTake02 } from '@/app/assets/images'
+import { Family, WeTake02, } from '@/app/assets/images'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -12,7 +12,7 @@ export function WeTake() {
     <div className="mt-0 lg:mt-[50px] w-full grid grid-cols-1 lg:grid-cols-2 h-[251px] md:h-[400px]">
       <div className='h-full w-full'>
         <Image
-          src={WeTake01}
+          src={Family}
           alt="We Take your home"
           className="h-full w-full hidden lg:flex"
         />
