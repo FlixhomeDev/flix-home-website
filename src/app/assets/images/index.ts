@@ -24,6 +24,10 @@ import ServiceDetails2 from "./service-details-02.png";
 import ServiceDetails3 from "./service-details-03.png";
 import ServiceDetails4 from "./service-details-04.png";
 import ServiceDetails5 from "./service-details-05.png";
+import TimeIcon from "./24-7.png";
+import family2 from "./family2.jpg";
+import EquipeFH from "./Equipe-FH.png";
+import MapPinned from "./map.png";
 
 export {
   logo,
@@ -51,4 +55,8 @@ export {
   WeTake02,
   WantBeImage,
   ServiceBg,
+  TimeIcon,
+  family2,
+  EquipeFH,
+  MapPinned,
 };

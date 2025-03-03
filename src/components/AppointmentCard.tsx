@@ -15,11 +15,11 @@ type Props = {
 
 export function AppointmentCard({ appointment, user }: Props) {
   return (
-    <div className="flex flex-col bg-[#FFFFFF] w-full max-w-[293px] h-[106px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
+    <div className="flex flex-col bg-[#FFFFFF] w-full lg:max-w-[293px] h-[106px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
       <div className="w-full flex items-center justify-between gap-[6px]">
         <div className="flex items-center gap-[7px]">
           <Avatar className="w-[35px] h-[35px]">
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src={user?.avatar} />
             <AvatarFallback>{user?.name}</AvatarFallback>
           </Avatar>
           <div>

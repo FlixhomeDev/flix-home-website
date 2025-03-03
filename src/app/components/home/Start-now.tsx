@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function StartNow() {
   return (
-    <div className="w-full mt-5 md:mt-12 flex items-center justify-center flex-col gap-y-4 px-4 md:px-8">
+    <div className="w-full mt-20 md:mt-12 flex items-center justify-center flex-col gap-y-4 px-4 md:px-8">
       <h2 className="text-lg md:text-2xl text-[#3D3D3D] font-semibold font-inter leading-[21.78px] md:leading-[29.05px]">Comece agora mesmo!</h2>
       <p className="mt-0 md:mt-3 text-[#3D3D3D] text-xs md:text-lg text-center font-normal font-inter leading-[14.52px] md:leading-[21.78px] -tracking-[2%] max-w-[854px] w-full">
         A Flix Home é mais do que uma plataforma de serviços domésticos – somos

@@ -39,7 +39,7 @@ export default function ToggleButtons({ active = "cleaning", setActive }: Props)
           <Button
             key={label}
             variant={active === label ? 'default' : 'outline'}
-            className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
+            className={`mx-0 h-[30px] md:h-[41px] hover:!text-primaryColor text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
             onClick={() => setActive(label)}
           >
             {label === 'Limpeza' && (

@@ -12,7 +12,7 @@ import useWindowSize from '@/app/hooks/useWindowSize'
 import { motion } from 'motion/react'
 
 export function OurServices() {
-  const [active, setActive] = useState<'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string>('')
+  const [active, setActive] = useState<'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string>('Limpeza')
 
   const { width } = useWindowSize()
 
@@ -67,7 +67,6 @@ export function OurServices() {
   ]
 
   const filteredServices = servicesData.filter((service) => service.category === active)
-  console.log(filteredServices)
 
 
   return (

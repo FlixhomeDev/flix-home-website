@@ -1,4 +1,4 @@
-import { WeTake01, WeTake02 } from "@/app/assets/images";
+import { family2, WeTake02 } from "@/app/assets/images";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -6,20 +6,24 @@ import React from "react";
 
 export function WeTake() {
   return (
-    <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 h-[284px] relative z-10">
-      <Image
-        src={WeTake01}
-        alt="We Take your home"
-        className="h-[284px] hidden lg:flex"
-      />
+    <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 lg:h-[384px] relative z-10">
+      <div className="lg:h-[384px] overflow-hidden">
+        <Image
+          src={family2}
+          width={689}
+          height={384}
+          alt="We Take your home"
+          className=" hidden relative bottom-12 lg:flex bg-contain w-full bg-center"
+        />
+      </div>
       <div className="relative">
-        <div className="absolute z-10 top-0 left-0 right-0 bottom-0 bg-primaryColor/90 h-[284px]" />
+        <div className="absolute z-10 top-0 left-0 right-0 bottom-0 bg-primaryColor/90 h-[384px]" />
         <Image
           src={WeTake02}
           alt="We Take your home"
-          className="h-[284px] absolute -z-10"
+          className="h-[384px] absolute -z-10"
         />
-        <div className="relative flex flex-col justify-center items-center z-50 h-[284px]">
+        <div className="relative flex flex-col justify-center items-center z-50 h-[384px]">
           <h2 className="text-center lg:text-left text-white text-2xl font-bold">
             Cuidamos do seu lar, do jeito que gostarias
           </h2>

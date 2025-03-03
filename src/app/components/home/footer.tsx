@@ -23,7 +23,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-white mt-[180px] pt-16 border-t border-secondaryColor pb-6 px-4 md:px-8 mx-auto">
+    <footer className="w-full bg-white mt-[20px] pt-16 pb-6 px-4 md:px-8 mx-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-x-[50px]">
           {/* Seção 1 - Logo e Descrição */}
@@ -125,7 +125,7 @@ export function Footer() {
 
           {/* Seção 5 - App Platform */}
           <div className="hidden md:flex flex-col items-center mt-[27px]">
-            <h3 className="font-semibold text-base text-[#3D3D3D] font-inter leading-[24px] mb-4">indisponível</h3>
+            <h3 className="font-semibold text-base text-[#3D3D3D] font-inter leading-[24px] mb-4">Indisponível</h3>
             <div className="flex lg:flex-col gap-4">
               <Link href="/" target="_blank">
                 <Image src={AppleStoreSvg} alt="Apple Store" />
