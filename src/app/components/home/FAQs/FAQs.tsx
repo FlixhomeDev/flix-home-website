@@ -36,8 +36,8 @@ const faqs = [
 
 export function FAQs() {
   return (
-    <div className="w-full max-w-[1120px] mx-auto mt-[60px] md:mt-[200px] px-4 md:px-8">
-      <h2 className="text-lg md:text-2xl text-center font-bold">
+    <div className="w-full max-w-[1150px] mx-auto mt-[60px] md:mt-[119px] px-4 md:px-8">
+      <h2 className="text-lg md:text-2xl text-[#1C1F35] text-center font-semibold font-rubik">
         Perguntas frequentes
       </h2>
 
@@ -45,6 +45,7 @@ export function FAQs() {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map(faq => (
             <AccordionItemLabel
+              className='w-full border border-[#DEE2E7] rounded-[8px] py-2 md:py-4 px-[41px] mt-3'
               key={faq.value}
               title={faq.title}
               value={faq.value}

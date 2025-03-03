@@ -13,21 +13,21 @@ type Props = {
   rating?: number
 }
 
-export function AppointmentCard({ appointment, createdAt, user }: Props) {
+export function AppointmentCard({ appointment, user }: Props) {
   return (
-    <div className="flex flex-col w-full max-w-[428px] justify-center items-center py-3 px-3 rounded-md border">
-      <div className="w-full flex items-center justify-between gap-4">
-        <div className="flex items-center gap-x-2">
-          <Avatar className="w-8 h-8">
-            <AvatarImage src="https://github.com/shadcn.png" />
+    <div className="flex flex-col bg-[#FFFFFF] w-full lg:max-w-[293px] h-[106px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
+      <div className="w-full flex items-center justify-between gap-[6px]">
+        <div className="flex items-center gap-[7px]">
+          <Avatar className="w-[35px] h-[35px]">
+            <AvatarImage src={user?.avatar} />
             <AvatarFallback>{user?.name}</AvatarFallback>
           </Avatar>
           <div>
-            <h4 className="-mb-2 text-sm">{user?.name}</h4>
-            <span className="text-xs text-gray-400">{user?.location}</span>
+            <h4 className="-mb-2 text-xs text-[#000000] font-medium font-inter leading-[14.52px] tracking-[2%]">{user?.name}</h4>
+            <span className="text-[7px] text-[#6F6F6F] font-medium font-inter leading-[8.47px] tracking-[2%]">{user?.location}</span>
           </div>
         </div>
-        <span className="text-xs text-gray-400">{createdAt}</span>
+        <span className="text-[8px] text-[#6F6F6F] font-normal font-inter leading-[9.68px] tracking-[2%]">1 day ago</span>
         <div className="flex gap-x-1 items-center">
           <StarSvg />
           <StarSvg />
@@ -36,7 +36,7 @@ export function AppointmentCard({ appointment, createdAt, user }: Props) {
           <StarSvg fill="#B6B4B0" />
         </div>
       </div>
-      <p className="text-sm text-gray-400 mt-3">{appointment}</p>
+      <p className="text-xs text-[#4E4E4E] font-normal font-inter leading-[19.2px] mt-[10px]">{` “ ${appointment} ”`}</p>
     </div>
   )
 }
