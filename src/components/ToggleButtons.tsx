@@ -1,8 +1,8 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import { Button } from '@/components/ui/button'
 import { BroomSvg } from '@/app/assets/svgs/broom'
 import { HomeTrendUpSvg } from '@/app/assets/svgs/home-trend-up'
@@ -18,7 +18,7 @@ const buttonOptions = [
 
 type Props = {
   buttonOptions?: {
-    id: string;
+    id: string
   }[]
   active: 'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
   setActive: React.Dispatch<
@@ -28,7 +28,10 @@ type Props = {
   >
 }
 
-export default function ToggleButtons({ active = "cleaning", setActive }: Props) {
+export default function ToggleButtons({
+  active = 'cleaning',
+  setActive,
+}: Props) {
   return (
     <div className="w-full">
       <div
@@ -39,20 +42,20 @@ export default function ToggleButtons({ active = "cleaning", setActive }: Props)
           <Button
             key={label}
             variant={active === label ? 'default' : 'outline'}
-            className={`mx-0 h-[30px] md:h-[41px] hover:!text-primaryColor text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
+            className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
             onClick={() => setActive(label)}
           >
             {label === 'Limpeza' && (
-              <BroomSvg fill={active === label ? '#FFF' : "#4094e4"} />
+              <BroomSvg fill={active === label ? '#FFF' : '#4094e4'} />
             )}
             {label === 'Pintura' && (
-              <HomeTrendUpSvg fill={active === label ? '#FFF' : "#4094e4"} />
+              <HomeTrendUpSvg fill={active === label ? '#FFF' : '#4094e4'} />
             )}
             {label === 'Jardinagem' && (
-              <BrushSvg fill={active === label ? '#FFF' : "#4094e4"} />
+              <BrushSvg fill={active === label ? '#FFF' : '#4094e4'} />
             )}
             {label === 'Elétrica' && (
-              <BuildingSvg fill={active === label ? '#FFF' : "#4094e4"} />
+              <BuildingSvg fill={active === label ? '#FFF' : '#4094e4'} />
             )}
             {label}
           </Button>
@@ -72,32 +75,32 @@ export default function ToggleButtons({ active = "cleaning", setActive }: Props)
           }}
           className="w-full flex items-center gap-[0px]"
         >
-          {
-            buttonOptions.map(({ label }) => (
-              <SwiperSlide key={label} className="!w-[119px]" >
-                <Button
-                  key={label}
-                  variant={active === label ? 'default' : 'outline'}
-                  className={`mx-0 w-[119px] h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
-                  onClick={() => setActive(label)}
-                >
-                  {label === 'Limpeza' && (
-                    <BroomSvg fill={active === label ? '#FFF' : "#4094e4"} />
-                  )}
-                  {label === 'Pintura' && (
-                    <HomeTrendUpSvg fill={active === label ? '#FFF' : "#4094e4"} />
-                  )}
-                  {label === 'Jardinagem' && (
-                    <BrushSvg fill={active === label ? '#FFF' : "#4094e4"} />
-                  )}
-                  {label === 'Elétrica' && (
-                    <BuildingSvg fill={active === label ? '#FFF' : "#4094e4"} />
-                  )}
-                  {label}
-                </Button>
-              </SwiperSlide>
-            ))
-          }
+          {buttonOptions.map(({ label }) => (
+            <SwiperSlide key={label} className="!w-[119px]">
+              <Button
+                key={label}
+                variant={active === label ? 'default' : 'outline'}
+                className={`mx-0 w-[119px] h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === label ? 'text-white' : 'text-[#3C91E6]'}`}
+                onClick={() => setActive(label)}
+              >
+                {label === 'Limpeza' && (
+                  <BroomSvg fill={active === label ? '#FFF' : '#4094e4'} />
+                )}
+                {label === 'Pintura' && (
+                  <HomeTrendUpSvg
+                    fill={active === label ? '#FFF' : '#4094e4'}
+                  />
+                )}
+                {label === 'Jardinagem' && (
+                  <BrushSvg fill={active === label ? '#FFF' : '#4094e4'} />
+                )}
+                {label === 'Elétrica' && (
+                  <BuildingSvg fill={active === label ? '#FFF' : '#4094e4'} />
+                )}
+                {label}
+              </Button>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
