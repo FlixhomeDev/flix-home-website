@@ -10,10 +10,10 @@ import { BrushSvg } from '@/app/assets/svgs/brush'
 import { BuildingSvg } from '@/app/assets/svgs/building'
 
 const buttonOptions = [
-  { id: 'cleaning', label: 'Cleaning', color: '#4094e4' },
-  { id: 'repairs', label: 'Repairs', color: '#4094e4' },
-  { id: 'gardening', label: 'Gardening', color: '#4094e4' },
-  { id: 'flights', label: 'Flights', color: '#4094e4' },
+  { id: 'Limpeza', label: 'Limpeza', color: '#4094e4' },
+  { id: 'Reparações', label: 'Reparações', color: '#4094e4' },
+  { id: 'Jardinagem', label: 'Jardinagem', color: '#4094e4' },
+  { id: 'Voos', label: 'Voos', color: '#4094e4' },
 ]
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
   slidesPerView: number
   setActive: React.Dispatch<
     React.SetStateAction<
-      'cleaning' | 'repairs' | 'gardening' | 'flights' | string
+      'Limpeza' | 'Reparações' | 'Jardinagem' | 'Voos' | string
     >
   >
 }
@@ -40,16 +40,16 @@ export default function ToggleButtons({ active, setActive, slidesPerView }: Prop
             className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
             onClick={() => setActive(id)}
           >
-            {label === 'Cleaning' && (
+            {label === 'Limpeza' && (
               <BroomSvg fill={active === id ? '#FFF' : color} />
             )}
-            {label === 'Repairs' && (
+            {label === 'Reparações' && (
               <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
             )}
-            {label === 'Gardening' && (
+            {label === 'Jardinagem' && (
               <BrushSvg fill={active === id ? '#FFF' : color} />
             )}
-            {label === 'Flights' && (
+            {label === 'Voos' && (
               <BuildingSvg fill={active === id ? '#FFF' : color} />
             )}
             {label}
@@ -64,7 +64,7 @@ export default function ToggleButtons({ active, setActive, slidesPerView }: Prop
           spaceBetween={7.5}
           slidesPerView={slidesPerView}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          modules={[]}
           breakpoints={{
             768: { slidesPerView: 4 },
             1024: { slidesPerView: 4 },
@@ -77,19 +77,19 @@ export default function ToggleButtons({ active, setActive, slidesPerView }: Prop
                 <Button
                   key={id}
                   variant={active === id ? 'default' : 'outline'}
-                  className={`mx-0 py-[6px] pl-[6px] pr-[12px] w-[83px] h-[30px] text-[9.75px] leading-[16.58px] tracking-[0.5px] font-normal font-inter rounded-[7.5px] border-[1.5px] border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
+                  className={`mx-0 py-[6px] pl-[6px] pr-[12px] w-[95px] h-[30px] text-[9.75px] leading-[16.58px] tracking-[0.5px] font-normal font-inter rounded-[7.5px] border-[1.5px] border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
                   onClick={() => setActive(id)}
                 >
-                  {label === 'Cleaning' && (
+                  {label === 'Limpeza' && (
                     <BroomSvg fill={active === id ? '#FFF' : color} />
                   )}
-                  {label === 'Repairs' && (
+                  {label === 'Reparações' && (
                     <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
                   )}
-                  {label === 'Gardening' && (
+                  {label === 'Jardinagem' && (
                     <BrushSvg fill={active === id ? '#FFF' : color} />
                   )}
-                  {label === 'Flights' && (
+                  {label === 'Voos' && (
                     <BuildingSvg fill={active === id ? '#FFF' : color} />
                   )}
                   {label}

@@ -91,7 +91,7 @@ export default function Services() {
         <span className="text-xs text-[#000000] font-inter font-medium mt-[19px] block md:hidden">Tópicos Populares</span>
 
         <div className="w-full md:max-w-[714px] mx-auto mt-[10px] md:mt-8 ">
-          <ToggleButtons slidesPerView={3.7} active={active} setActive={setActive} />
+          <ToggleButtons slidesPerView={3.2} active={active} setActive={setActive} />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-1 gap-y-4 px-0 md:px-8 mt-8 w-full">
           {servicesData.map((service) => (

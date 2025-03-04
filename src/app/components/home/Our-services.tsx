@@ -60,7 +60,7 @@ export function OurServices() {
       </div>
 
       <div className="w-full pl-[15px] md:pl-0">
-        <ToggleButtons slidesPerView={4} active={active} setActive={setActive} />
+        <ToggleButtons slidesPerView={3.5} active={active} setActive={setActive} />
       </div>
       <div
         className="hidden md:flex items-center justify-center gap-5 mt-[27px]"
