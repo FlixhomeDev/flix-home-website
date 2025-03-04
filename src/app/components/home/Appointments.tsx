@@ -12,7 +12,7 @@ const appointments = [
     id: '1',
     user: {
       name: 'João Silva',
-      location: 'São Paulo, BR',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
     createdAt: '1 day ago',
@@ -23,7 +23,7 @@ const appointments = [
     id: '2',
     user: {
       name: 'Ana Maria',
-      location: 'Rio de Janeiro, BR',
+      location: 'Aveiro, PT',
       avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
     },
     createdAt: '1 day ago',
@@ -33,8 +33,8 @@ const appointments = [
   {
     id: '3',
     user: {
-      name: 'Ana Pedro',
-      location: 'Curitiba, BR',
+      name: 'Paulo',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
     createdAt: '1 day ago',
@@ -44,8 +44,8 @@ const appointments = [
   {
     id: '4',
     user: {
-      name: 'Pedro',
-      location: 'Curitiba, BR',
+      name: 'Eduardo',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
     createdAt: '1 day ago',

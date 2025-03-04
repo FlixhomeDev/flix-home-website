@@ -31,7 +31,7 @@ export function WhereWeAre({ children }: Props) {
                 </DialogHeader>
                 <div className="flex flex-col items-center justify-center gap-y-4">
                     <Image src={MapPinned} alt="MapPinned" width={150} />
-                    <h4 className="text-center font-bold">
+                    <h4 className="text-center font-bold text-xl font-inter">
                         Estamos localizados em varias zonas de Portugal
                     </h4>
                     <div className="flex flex-col gap-y-2 mx-auto pb-4">

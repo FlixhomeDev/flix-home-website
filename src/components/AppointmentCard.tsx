@@ -19,7 +19,7 @@ export function AppointmentCard({ appointment, user }: Props) {
       <div className="w-full flex items-center justify-between gap-[6px]">
         <div className="flex items-center gap-[7px]">
           <Avatar className="w-[35px] h-[35px]">
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src={user?.avatar} />
             <AvatarFallback>{user?.name}</AvatarFallback>
           </Avatar>
           <div>
