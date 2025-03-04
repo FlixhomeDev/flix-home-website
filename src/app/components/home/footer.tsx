@@ -23,7 +23,27 @@ export function Footer() {
       name: "⁠Whatsapp",
       icon: WhatsappSvg,
       url: "https://whatsapp.com/channel/0029VaryGtBHgZWXvSafix3I",
-    },
+    }
+    // {
+    //   name: "Youtube",
+    //   icon: YoutubeSvg,
+    //   url: "https://www.youtube.com/@flixhomeapp",
+    // },
+    // {
+    //   name: "X",
+    //   icon: XSvg,
+    //   url: "https://x.com/flixhomeapp",
+    // },
+    // {
+    //   name: "Threads",
+    //   icon: ThreadsSvg,
+    //   url: "https://www.threads.net/@flixhome.app",
+    // },
+    // {
+    //   name: "Pinterest",
+    //   icon: PinterestSvg,
+    //   url: "https://pinterest.com/flixhomeapp/",
+    // },
   ];
 
   return (

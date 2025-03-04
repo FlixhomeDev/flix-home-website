@@ -112,7 +112,7 @@ export default function HowWork() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[137px] w-[251px] p-[15px] flex flex-col items-start gap-[7.5px] rounded-[3.75px] border border-[#DEE2E7] hover:border-[#3C91E6] transition-all">
+              <div className="h-[137px] w-[260px] p-[15px] flex flex-col items-start gap-[7.5px] rounded-[3.75px] border border-[#DEE2E7] hover:border-[#3C91E6] transition-all">
                 <Image src={BookSvg} alt="Book Svg" width={30} height={30} />
                 <h3 className="text-[#000000] text-sm font-semibold font-inter leading-[16.94px]">Evite Problemas Futuramente</h3>
                 <p className="text-[#6F6F6F] text-xs font-normal font-inter leading-[14.52px]">

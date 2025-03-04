@@ -24,10 +24,18 @@ import Facebook from "./Facebook.svg";
 import Insta from "./Insta.svg";
 import Linkdin from "./linkedin-svg.svg";
 import WhatsappSvg from "./whatsapp-svg.svg";
+import YoutubeSvg from "./youtube-svg.svg";
+import PinterestSvg from "./pinterest-svg.svg";
+import ThreadsSvg from "./threads-svg.svg";
+import XSvg from "./x-svg.svg";
 
 export {
   Logo,
   Linkdin,
+  YoutubeSvg,
+  PinterestSvg,
+  ThreadsSvg,
+  XSvg,
   WhatsappSvg,
   SettingsSvg,
   DotSvg,
