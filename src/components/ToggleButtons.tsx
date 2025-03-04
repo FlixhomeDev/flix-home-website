@@ -18,6 +18,7 @@ const buttonOptions = [
 
 type Props = {
   active: string
+  slidesPerView: number
   setActive: React.Dispatch<
     React.SetStateAction<
       'cleaning' | 'repairs' | 'gardening' | 'flights' | string
@@ -25,7 +26,7 @@ type Props = {
   >
 }
 
-export default function ToggleButtons({ active, setActive }: Props) {
+export default function ToggleButtons({ active, setActive, slidesPerView }: Props) {
   return (
     <div className="w-full">
       <div
@@ -56,19 +57,19 @@ export default function ToggleButtons({ active, setActive }: Props) {
         ))}
       </div>
       <div
-        className="md:hidden flex md:justify-center justify-start items-center gap-[7px] md:gap-4 mt-[17px] md:mt-[30px] overflow-x-scroll pl-[8px] md:pl-8 whitespace-nowrap"
+        className="md:hidden flex md:justify-center justify-start items-center gap-[7px] mt-[17px] overflow-x-scroll pl-[0px] whitespace-nowrap"
         style={{ scrollbarWidth: 'none' }}
       >
         <Swiper
-          spaceBetween={7}
-          slidesPerView={2.5}
+          spaceBetween={7.5}
+          slidesPerView={slidesPerView}
           pagination={{ clickable: true }}
           modules={[Pagination]}
           breakpoints={{
-            768: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
             1024: { slidesPerView: 4 },
           }}
-          className="w-full flex items-center gap-[0px]"
+          className="w-full flex items-center gap-[7.5px]"
         >
           {
             buttonOptions.map(({ id, label, color }) => (
@@ -76,7 +77,7 @@ export default function ToggleButtons({ active, setActive }: Props) {
                 <Button
                   key={id}
                   variant={active === id ? 'default' : 'outline'}
-                  className={`mx-0 h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
+                  className={`mx-0 py-[6px] pl-[6px] pr-[12px] w-[83px] h-[30px] text-[9.75px] leading-[16.58px] tracking-[0.5px] font-normal font-inter rounded-[7.5px] border-[1.5px] border-[#3C91E614] ${active === id ? 'text-white' : 'text-[#3C91E6]'}`}
                   onClick={() => setActive(id)}
                 >
                   {label === 'Cleaning' && (

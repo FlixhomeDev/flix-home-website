@@ -16,7 +16,7 @@ const appointments = [
       avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Consulta de rotina com Dr. Carlos.',
+    appointment: 'Serviço incrível! Rápido e prático',
     rating: 4,
   },
   {
@@ -27,7 +27,7 @@ const appointments = [
       avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Exame de sangue e check-up geral.',
+    appointment: 'Profissionais confiáveis e muito ágeis!',
     rating: 5,
   },
   {
@@ -37,8 +37,8 @@ const appointments = [
       location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
-    createdAt: '1 day ago',
-    appointment: 'Consulta ortopédica para avaliação do joelho.',
+    createdAt: '2 day ago',
+    appointment: 'Simples, transparente e sem surpresas.',
     rating: 3,
   },
   {
@@ -49,7 +49,7 @@ const appointments = [
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Consulta ortopédica para avaliação.',
+    appointment: 'Melhor plataforma para cuidar do lar!',
     rating: 3,
   },
 ]

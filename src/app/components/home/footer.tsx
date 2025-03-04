@@ -1,18 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AppleStoreSvg, Facebook, Insta, Logo, PlayStoreSvg } from "../../assets/svgs";
+import { AppleStoreSvg, Facebook, Insta, Linkdin, Logo, PlayStoreSvg, WhatsappSvg } from "../../assets/svgs";
 
 export function Footer() {
   const socials = [
+    {
+      name: "LinkedIn",
+      icon: Linkdin,
+      url: "https://www.linkedin.com/company/flixhome-app/",
+    },
+    {
+      name: "Instagram",
+      icon: Insta,
+      url: "https://instagram.com/flixhome.app",
+    },
     {
       name: "Facebook",
       icon: Facebook,
       url: "https://www.facebook.com/flixhomeapp",
     },
     {
-      name: "Instagram",
-      icon: Insta,
-      url: "https://www.linkedin.com/company/flixhome-app/",
+      name: "⁠Whatsapp",
+      icon: WhatsappSvg,
+      url: "https://whatsapp.com/channel/0029VaryGtBHgZWXvSafix3I",
     },
   ];
 
@@ -113,7 +123,7 @@ export function Footer() {
             </div>
 
             {/* Seção 4 - Redes Sociais */}
-            <div className="-mt-20">
+            <div>
               <h3 className="font-semibold text-xs text-[#3D3D3D] font-inter leading-[18px] mb-4">Redes Sociais</h3>
               <div className="flex flex-col gap-4">
                 {socials.map((social) => (

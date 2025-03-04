@@ -2,8 +2,8 @@
 import React from "react";
 import { BadgeInfoIcon, CheckCircle2, ArrowRightIcon, CircleXIcon } from "lucide-react";
 import Image from "next/image";
-import { HomePlansSvg } from "@/app/assets/svgs";
 import { ImagePlans } from "@/app/assets/images";
+import { InfoIcon } from "lucide-react";
 import Link from "next/link";
 import FaqsPlans from "@/app/components/plans/Faqs";
 import { useParams } from "next/navigation";
@@ -88,8 +88,8 @@ export default function Details() {
     ];
 
     return (
-        <div className="flex flex-col mt-[48px] md:mt-[120px]">
-            <div className="hidden md:block bg-[#3C91E6] w-full h-[61px]"></div>
+        <div className="flex flex-col mt-[48px] md:mt-[100px]">
+            <div className="hidden md:block bg-[#3C91E6] w-full h-[10px]"></div>
             {
                 dataPlans.filter((i) => i.id === id).map((item) => (
                     <section key={item.id} className="ml-0 w-full px-[15px] md:max-w-full self-center md:self-start md:px-[50px] mt-10 md:mt-[51px]">
@@ -99,7 +99,7 @@ export default function Details() {
                         <div className="mt-0 md:mt-[10px] flex flex-col">
                             <h1 className="text-base md:text-[32px] text-[#000000] font-bold font-inter mt-0 md:mt-[10px]">{item.title}</h1>
                             <div className="flex flex-col-reverse md:flex-row">
-                                <div className="w-full">
+                                <div className="w-full" id="resumo">
                                     <div className="mt-10 md:mt-[52px]">
                                         <div className="flex items-center gap-[5px]">
                                             <BadgeInfoIcon color="#3C91E6" size={18} />
@@ -181,7 +181,7 @@ export default function Details() {
             <div className="mt-[40px] w-full px-[15px] md:w-[620px] md:max-w-full md:px-10 flex flex-col md:flex-row items-center self-center md:self-start gap-[40px] md:gap-2">
                 <div className="flex items-center w-full h-[136px] md:w-[620px] md:h-auto gap-2">
                     <div className="h-[92px] w-[74px]">
-                        <Image src={HomePlansSvg} alt="Play Store" className="w-full h-full object-cover" />
+                        <InfoIcon color="#3C91E6" className="w-full h-full" />
                     </div>
                     <div className="text-[#6F6F6F] font-inter flex flex-col h-full w-full md:w-[540px] space-y-1 pr-5">
                         <span className="font-bold text-sm md:text-xl leading-6 tracking-[-1.5%]">Primeiro, verifique se você é elegível - este plano é apenas para proprietários de imóveis</span>
@@ -191,19 +191,22 @@ export default function Details() {
                 </div>
                 <div className="flex items-center w-full md:w-[530px] h-[136px] md:h-[143px] gap-2">
                     <div className="h-[92px] w-[74px]">
+                        <InfoIcon color="#3C91E6" className="w-full h-full" />
 
-                        <Image src={HomePlansSvg} alt="Play Store" className="w-full h-full object-cover" />
                     </div>
                     <div className="text-[#6F6F6F] font-inter flex flex-col h-full w-full md:w-[450px] space-y-4 pr-5">
                         <span className="font-bold text-sm md:text-xl leading-6 tracking-[-1.5%]">Não se esqueça de ler os documentos do plano</span>
                         <span className="font-normal text-sm md:text-lg leading-[21px] tracking-[-1.5%]">
-                            É importante que você leia o <span className="text-[#3C91E6]">Resumo do Plano</span> e os <span className="text-[#3C91E6]">Termos e Condições</span> antes de contratar o plano.</span>
+                            É importante que você leia o <Link href={"#resumo"} onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById("resumo")?.scrollIntoView({ behavior: "smooth" });
+                            }} className="text-[#3C91E6]">Resumo do Plano</Link> e os <Link href={"#"} className="text-[#3C91E6]">Termos e Condições</Link > antes de contratar o plano.</span>
                     </div>
                 </div>
             </div>
-            <div className="w-[108px] h-[41px] mt-10 bg-[#3C91E6] self-center flex items-center gap-[10px] py-[12px] px-[10px] rounded-[5px]">
-                <Link href={"https://wa.me/message/PHDJAIL6RKWZC1"} target="_blank" className="text-sm text-[#FFFFFF] font-medium font-inter">Agendar</Link>
-                <ArrowRightIcon color="#FFFFFF" size={9} />
+            <div className="w-[150px] h-[41px] mt-10 bg-[#3C91E6] self-center flex items-center gap-[10px] py-[12px] px-[10px] rounded-[5px]">
+                <Link href={"https://wa.me/message/PHDJAIL6RKWZC1"} target="_blank" className="text-sm text-[#FFFFFF] font-medium font-inter">Aderir o plano</Link>
+                <ArrowRightIcon color="#FFFFFF" size={12} />
             </div>
             <div className="mt-[70px] md:px-10 w-full px-[15px] md:w-full self-center md:max-w-full">
                 <FaqsPlans />

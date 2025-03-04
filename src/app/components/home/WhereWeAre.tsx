@@ -22,7 +22,7 @@ export function WhereWeAre({ children }: Props) {
     return (
         <Dialog>
             <DialogTrigger asChild>{children}</DialogTrigger>
-            <DialogContent className="max-w-[400px] w-full">
+            <DialogContent className="max-w-[320px] md:max-w-[400px] w-full border rounded-[5px]">
                 <DialogHeader>
                     <DialogTitle className="hidden">
                         Estamos localizados em varias zonas de Portugal
@@ -45,7 +45,7 @@ export function WhereWeAre({ children }: Props) {
                     <Link
                         href={'https://wa.me/message/PHDJAIL6RKWZC1'}
                         target="_blank"
-                        className="bg-[#3C91E6] hidden xl:flex gap-x-1 rounded-[5px] w-full mt-4 h-[40px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
+                        className="bg-[#3C91E6] flex gap-x-1 rounded-[5px] w-full mt-4 h-[40px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
                     >
                         Agendar Serviço
                         <ArrowRightIcon size={14} />

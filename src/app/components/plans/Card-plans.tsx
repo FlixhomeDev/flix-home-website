@@ -53,7 +53,7 @@ export default function CardPlans(item: CardPlansProps) {
                 }
             </div>
             <Link href={item.link} target='_blank' className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter py-2 md:py-4 px-8 mt-5">Assinar o plano</Link>
-            <Link href={`/plans/details/${item.id}`} className="self-center text-[8.19px] md:text-[13px] text-center text-[#000] font-semibold font-inter py-2 px-8 -mt-3">Saiba mais</Link>
+            <Link href={`/plans/details/${item.id}`} className="self-center underline text-[8.19px] md:text-[13px] text-center text-[#000] font-semibold font-inter py-2 px-8 -mt-3">Saiba mais</Link>
         </div>
     );
 }

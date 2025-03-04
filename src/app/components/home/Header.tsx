@@ -17,7 +17,7 @@ export function Header() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-10" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
+      className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-5" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
       <Link href={"/"} className="w-[154px] h-[32px]">
         <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>

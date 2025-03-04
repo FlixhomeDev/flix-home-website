@@ -59,8 +59,9 @@ export function OurServices() {
         </p>
       </div>
 
-      <ToggleButtons active={active} setActive={setActive} />
-      <h3 className="block md:hidden ml-[15px] mt-[27px] text-[#000000] text-[15px] font-semibold font-inter leading-[26px] tracking-[2%]">Promoções</h3>
+      <div className="w-full pl-[15px] md:pl-0">
+        <ToggleButtons slidesPerView={3.9} active={active} setActive={setActive} />
+      </div>
       <div
         className="hidden md:flex items-center justify-center gap-5 mt-[27px]"
         style={{ scrollbarWidth: "none" }}
