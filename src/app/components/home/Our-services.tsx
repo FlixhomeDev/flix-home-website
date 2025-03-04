@@ -58,8 +58,7 @@ export function OurServices() {
           parceiro confiável para facilitar o dia a dia.
         </p>
       </div>
-
-      <div className="w-full pl-[15px] md:pl-0">
+      <div className="w-full md:max-w-[714px] mx-auto pl-[15px] md:pl-0">
         <ToggleButtons slidesPerView={3.5} active={active} setActive={setActive} />
       </div>
       <div
