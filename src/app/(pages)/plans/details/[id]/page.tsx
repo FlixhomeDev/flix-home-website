@@ -15,74 +15,64 @@ export default function Details() {
     const dataPlans = [
         {
             id: "1",
-            plan: "Fremium",
-            title: "Para quem quer segurança sem gastar muito!",
+            plan: "Freemium",
+            title: "Ideal para quem quer conhecer nosso serviço e começar a cuidar dos seus ativos residenciais",
             priceByMonth: 53.23,
             priceByYear: 129.99,
             link: "https://wa.me/message/PHDJAIL6RKWZC1",
             items: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "1 visita técnica de diagnóstico e levantamento de ativos", subtitle: "ar-condicionado, canal hidráulico, eletrodomésticos, entre outros" },
+                { title: "Relatório técnico com o estado dos ativos identificados.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Dicas personalizadas para aumentar a vida útil dos seus equipamentos.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Notificações e alertas sobre boas práticas de manutenção dos seus ativos", subtitle: "via whatsapp" },
             ],
             itemsnotinclud: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Manutenção preventiva ou corretiva.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Peças de reposição.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Atendimento prioritário.", subtitle: "You’ll have the apartment to yourself" },
             ],
         },
         {
             id: "2",
-            plan: "Médio",
-            title: "Mais proteção com visitas mais frequentes!",
-            priceByMonth: 53.23,
+            plan: "Essencial",
+            title: "Para quem deseja uma manutenção preventiva básica e evitar problemas inesperados.",
+            priceByMonth: 15,
             priceByYear: 129.99,
             link: "https://wa.me/message/PHDJAIL6RKWZC1",
             items: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "1 visita de diagnóstico para cadastrar os ativos.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "1 visita técnica anual de manutenção preventiva.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Checklist completo de avaliação do equipamento escolhido.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Dicas personalizadas para aumentar a vida útil dos seus equipamentos.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Notificações e alertas sobre boas práticas de manutenção dos seus ativos", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Relatório técnico detalhado após cada visita.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Suporte remoto para dúvidas.", subtitle: "You’ll have the apartment to yourself" },
             ],
             itemsnotinclud: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Peças de reposição.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Manutenções corretivas.", subtitle: "caso haja um problema, o serviço pode ser solicitado à parte" },
+                { title: "Atendimento prioritário.", subtitle: "You’ll have the apartment to yourself" },
             ],
         },
         {
             id: "3",
-            plan: "Avançado",
-            title: "Máxima segurança e conforto para sua casa!",
-            priceByMonth: 53.23,
-            priceByYear: 129.99,
+            plan: "Premium",
+            title: "Para quem quer a proteção completa da casa com um atendimento mais abrangente.",
+            priceByMonth: 25,
+            priceByYear: 229.99,
             link: "https://wa.me/message/PHDJAIL6RKWZC1",
             items: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "1 visita inicial para cadastro dos ativos da residência.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "2 visitas técnicas anuais de manutenção preventiva em múltiplos equipamentos", subtitle: "ar-condicionado, eletrodomésticos, canal hidráulico, esquentadores..." },
+                { title: "Dicas personalizadas para aumentar a vida útil dos seus equipamentos.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Notificações e alertas sobre boas práticas de manutenção dos seus ativos.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Atendimento prioritário para serviços emergenciais", subtitle: "desconto especial para correções" },
+                { title: "Relatórios técnicos detalhados e recomendações personalizadas.", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Desconto exclusivo em serviços on-demand.", subtitle: "You’ll have the apartment to yourself" },
             ],
             itemsnotinclud: [
-                { title: "Revisão elétrica e hidráulica", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Verificação de gás included in Basic", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Pequenos reparos domésticos", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Suporte remoto para dúvidas técnicas", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-                { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
+                { title: "Peças de reposição", subtitle: "podem ser adquiridas separadamente" },
+                { title: "Reparos corretivos fora do escopo da manutenção preventiva.", subtitle: "You’ll have the apartment to yourself" },
             ],
         },
     ];
@@ -147,7 +137,7 @@ export default function Details() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="w-full mt-[10px] md:mt-0 md:w-[400px] h-[152px] bg-[#000000] bg-opacity-45 rounded-t-[10px]">
+                                    <div className="w-full mt-[10px] md:mt-10 md:w-[400px] h-[152px] bg-[#000000] bg-opacity-45 rounded-t-[10px]">
                                         <Image
                                             src={ImagePlans}
                                             alt="Casal relaxando no sofá"
@@ -156,12 +146,12 @@ export default function Details() {
                                     </div>
                                     <div className="flex items-center gap-[10px] mt-5 mx-5">
                                         <div className="w-[73px] h-[36px] bg-[#3C91E6] py-[9px] flex items-center justify-center rounded-[8px] text-sm text-[#FFFFFF] font-medium font-inter">{item.plan}</div>
-                                        <h3 className="text-lg md:text-2xl text-[#3C91E6] font-bold font-inter">€ {item.priceByMonth}</h3>
-                                        <span className="text-sm md:text-lg text-[#3C91E6] font-medium font-inter">por / mês</span>
+                                        <h3 className="text-lg md:text-2xl text-[#3C91E6] font-bold font-inter">{item.plan === "Freemium" ? "" : "€" + item.priceByMonth}</h3>
+                                        <span className="text-sm md:text-lg text-[#3C91E6] font-medium font-inter">{item.plan === "Freemium" ? "Gratuito" : "por / mês"}</span>
                                     </div>
                                     <div className="mt-[10px] mx-5 flex items-center gap-[3px]">
-                                        <h2 className="text-sm md:text-lg text-[#6F6F6F] font-bold font-inter">€ {item.priceByYear}</h2>
-                                        <span className="text-xs md:text-base text-[#6F6F6F] font-medium font-inter">/Ano</span>
+                                        <h2 className="text-sm md:text-lg text-[#6F6F6F] font-bold font-inter">{item.plan !== "Freemium" && "€ " + item.priceByYear}</h2>
+                                        <span className="text-xs md:text-base text-[#6F6F6F] font-medium font-inter">{item.plan === "Freemium" ? "" : "/Ano"}</span>
                                     </div>
                                     <p className="mx-5 mt-[10px] text-[#6F6F6F] text-sm md:text-lg font-normal font-inter">
                                         Sempre enviaremos um lembrete antes da data de renovação,
@@ -178,7 +168,7 @@ export default function Details() {
                 ))
             }
 
-            <div className="mt-[40px] w-full px-[15px] md:w-[620px] md:max-w-full md:px-10 flex flex-col md:flex-row items-center self-center md:self-start gap-[40px] md:gap-2">
+            <div className="mt-[40px] w-full px-[15px] md:w-[620px] xl:w-[1920px] md:max-w-full md:px-10 flex flex-col md:flex-row items-center xl:justify-between self-center md:self-start gap-[40px] md:gap-2">
                 <div className="flex items-center w-full h-[136px] md:w-[620px] md:h-auto gap-2">
                     <div className="h-[92px] w-[74px]">
                         <InfoIcon color="#3C91E6" className="w-full h-full" />
@@ -194,7 +184,7 @@ export default function Details() {
                         <InfoIcon color="#3C91E6" className="w-full h-full" />
 
                     </div>
-                    <div className="text-[#6F6F6F] font-inter flex flex-col h-full w-full md:w-[450px] space-y-4 pr-5">
+                    <div className="text-[#6F6F6F] font-inter flex flex-col h-full w-full md:w-[450px] xl:w-[470px] space-y-4 pr-5">
                         <span className="font-bold text-sm md:text-xl leading-6 tracking-[-1.5%]">Não se esqueça de ler os documentos do plano</span>
                         <span className="font-normal text-sm md:text-lg leading-[21px] tracking-[-1.5%]">
                             É importante que você leia o <Link href={"#resumo"} onClick={(e) => {

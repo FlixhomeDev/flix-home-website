@@ -12,7 +12,7 @@ export function Banner() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-[1256px] w-full flex flex-col lg:flex-row gap-8 items-center px-[27px] md:px-[132px] mt-20">
+      className="max-w-[1256px] w-full flex flex-col lg:flex-row xl:max-w-full xl:justify-between gap-8 items-center px-[27px] md:px-[132px] mt-20">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

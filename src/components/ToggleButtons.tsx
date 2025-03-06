@@ -8,6 +8,8 @@ import { HomeTrendUpSvg } from '@/app/assets/svgs/home-trend-up'
 import { BrushSvg } from '@/app/assets/svgs/brush'
 import { BuildingSvg } from '@/app/assets/svgs/building'
 import ToolsSvg from "@/app/assets/svgs/toolsSvg";
+import WaterSvg from "@/app/assets/svgs/water-svg";
+import PaintSvg from "@/app/assets/svgs/paint";
 
 const buttonOptions = [
   { id: 'Limpeza', label: 'Limpeza', color: '#4094e4' },
@@ -105,13 +107,13 @@ export default function ToggleButtons({ active, setActive, slidesPerView }: Prop
                     <BuildingSvg fill={active === id ? '#FFF' : color} />
                   )}
                   {label === 'Decoração' && (
-                    <BuildingSvg fill={active === id ? '#FFF' : color} />
+                    <PaintSvg fill={active === id ? '#FFF' : color} />
                   )}
                   {label === 'Instalação' && (
                     <ToolsSvg fill={active === id ? '#FFF' : color} />
                   )}
                   {label === 'Impermeabilização' && (
-                    <BuildingSvg fill={active === id ? '#FFF' : color} />
+                    <WaterSvg fill={active === id ? '#FFF' : color} />
                   )}
                   {label}
                 </Button>
