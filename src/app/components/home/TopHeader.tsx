@@ -15,7 +15,7 @@ export function TopHeader() {
   // };
 
   return (
-    <div className={`z-50 hidden w-full h-5 fixed top-0 ${pathname === "/" ? "bg-[#3C91E6]" : "bg-[#fff]"} px-10 py-3 md:flex flex-row justify-between items-center mb-[4px]`}>
+    <div className={`z-50 hidden w-full h-[25px] fixed top-0 ${pathname === "/" ? "bg-[#3C91E6]" : "bg-[#fff]"} px-10 py-3 md:flex flex-row justify-between items-center mb-[4px]`}>
       <nav
         className={`w-full h-full ${pathname === "/" ? "flex" : "hidden"} items-center justify-around`}
       >

@@ -17,7 +17,7 @@ export function Header() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-5" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[41px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
+      className={`w-full px-8 py-[4px] fixed z-50 top-0 ${pathname === "/" ? "md:top-[25px]" : "md:top-4"} bg-[#fff]  lg:px-[112px] h-[60px] flex flex-row justify-between items-center mt-[0px] md:mt-0 transition-all ease-linear`}>
       <Link href={"/"} className="w-[154px] h-[32px]">
         <Image src={Logo} alt="FlixHome logo" className="w-full h-full" />
       </Link>
@@ -87,7 +87,7 @@ export function Header() {
       <Link
         href={"https://wa.me/message/PHDJAIL6RKWZC1"}
         target="_blank"
-        className="bg-[#3C91E6] hidden xl:flex gap-x-1 rounded-[5px] h-full w-[151px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
+        className="bg-[#3C91E6] hidden xl:flex gap-x-1 rounded-[5px] h-[35px] w-[151px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
       >
         Agendar Serviço
         <ArrowRightIcon size={14} />
