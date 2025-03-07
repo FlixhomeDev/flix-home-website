@@ -18,7 +18,7 @@ export function Banner() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex flex-col">
-        <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-inter  md:max-w-[521px] w-full text-center md:text-left">
+        <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-interBold  md:max-w-[521px] w-full text-center md:text-left">
           Prevenir é sempre mais barato do que corrigir
         </h1>
         <p className="text-[#6F6F6F] text-lg md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center lg:text-left">

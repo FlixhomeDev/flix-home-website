@@ -24,6 +24,7 @@ export default {
 					'Yrsa'
 				],
 				inter: "Inter",
+				interBold: "InterBold",
 				manrope: "Manrope",
 				rubik: "Rubik",
 				"helvetica": "Helvetica"

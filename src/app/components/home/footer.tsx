@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AppleStoreSvg, Facebook, Insta, Linkdin, Logo, PlayStoreSvg, WhatsappSvg } from "../../assets/svgs";
+import { AppleStoreSvg, Insta, Linkdin, Logo, PlayStoreSvg, WhatsappSvg } from "../../assets/svgs";
 
 export function Footer() {
   const socials = [
@@ -16,7 +16,7 @@ export function Footer() {
     },
     {
       name: "Facebook",
-      icon: Facebook,
+      icon: Insta,
       url: "https://www.facebook.com/flixhomeapp",
     },
     {

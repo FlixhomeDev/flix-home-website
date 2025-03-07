@@ -20,7 +20,7 @@ import BookSvg from "./book.svg";
 import Call from "./call.svg";
 import Whatsapp from "./whatsapp.svg";
 import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
-import Facebook from "./Facebook.svg";
+// import Facebook from "./Facebook.svg";
 import Insta from "./Insta.svg";
 import Linkdin from "./linkedin-svg.svg";
 import WhatsappSvg from "./whatsapp-svg.svg";
@@ -40,7 +40,7 @@ export {
   SettingsSvg,
   DotSvg,
   Insta,
-  Facebook,
+  // Facebook,
   Whatsapp,
   Call,
   VectorSvg,
