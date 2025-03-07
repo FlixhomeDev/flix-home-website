@@ -56,7 +56,7 @@ const appointments = [
 
 export function Appointments() {
   return (
-    <div className="max-w-[1256px] w-full mx-auto mt-[48px] lg:mt-20 px-4 md:px-8 overflow-hidden">
+    <div className="max-w-[1256px] w-full mx-auto mt-[48px] lg:mt-24 2xl:mt-64 px-4 md:px-8 overflow-hidden">
       <h2 className="hidden md:block text-lg text-[#292D33] md:text-2xl font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-center">
         Depoimentos de quem experimentou!
       </h2>

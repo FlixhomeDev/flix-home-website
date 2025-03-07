@@ -36,7 +36,7 @@ const faqs = [
 
 export function FAQs() {
   return (
-    <div className="w-full max-w-[1150px] mx-auto mt-[60px] md:mt-[200px] px-4 md:px-8">
+    <div className="w-full max-w-[1256px] 2xl:max-w-full mx-auto mt-[60px] md:mt-[200px] px-4 md:px-8 2xl:px-16">
       <h2 className="text-lg md:text-2xl text-[#1C1F35] text-center font-semibold font-rubik">
         Perguntas frequentes
       </h2>
