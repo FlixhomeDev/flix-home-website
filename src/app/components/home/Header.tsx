@@ -20,7 +20,7 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="fixed w-full shadow px-8 bg-white top-10 left-0 right-0 z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center"
+        className="fixed w-full shadow px-8 bg-white top-[33px] left-0 right-0 z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center"
       >
         <Link href={'/'}>
           <Image src={Logo} alt="FlixHome logo" width={140} height={41} />
@@ -55,24 +55,27 @@ export function Header() {
           <Link
             href={'/'}
             onClick={() => setIsMenuOpen(false)}
-            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto border-b border-[#DEE2E7] lg:border-b-0  px-1 mt-[15px] lg:mt-0 py-2 lg:py-6 ${pathname === '/' ? 'text-[#3C91E6]' : 'text-[#484848]'
-              }`}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto border-b border-[#DEE2E7] lg:border-b-0  px-1 mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === '/' ? 'text-[#3C91E6]' : 'text-[#484848]'
+            }`}
           >
             Início
           </Link>
           <Link
             href={'/services'}
             onClick={() => setIsMenuOpen(false)}
-            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${pathname === '/services' ? 'text-[#3C91E6]' : 'text-[#484848]'
-              }`}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === '/services' ? 'text-[#3C91E6]' : 'text-[#484848]'
+            }`}
           >
             Serviços
           </Link>
           <Link
             href={'/plans'}
             onClick={() => setIsMenuOpen(false)}
-            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${pathname === '/plans' ? 'text-[#3C91E6]' : 'text-[#484848]'
-              }`}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === '/plans' ? 'text-[#3C91E6]' : 'text-[#484848]'
+            }`}
           >
             Planos Preventivos
           </Link>
@@ -80,8 +83,9 @@ export function Header() {
             <button
               type="button"
               onClick={() => setIsMenuOpen(false)}
-              className={`text-xs lg:text-base self-start text-left font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${pathname === '/about-us' ? 'text-[#3C91E6]' : 'text-[#484848]'
-                }`}
+              className={`text-xs lg:text-base self-start text-left font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+                pathname === '/about-us' ? 'text-[#3C91E6]' : 'text-[#484848]'
+              }`}
             >
               Onde Estamos
             </button>

@@ -13,44 +13,44 @@ const appointments = [
     id: '1',
     user: {
       name: 'João Silva',
-      location: 'São Paulo, BR',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Consulta de rotina com Dr. Carlos.',
+    appointment: 'Serviço incrível! Rápido e prático',
     rating: 4,
   },
   {
     id: '2',
     user: {
       name: 'Ana Maria',
-      location: 'Rio de Janeiro, BR',
+      location: 'Aveiro, PT',
       avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Exame de sangue e check-up geral.',
+    appointment: 'Profissionais confiáveis e muito ágeis!',
     rating: 5,
   },
   {
     id: '3',
     user: {
-      name: 'Ana Pedro',
-      location: 'Curitiba, BR',
+      name: 'Paulo',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
-    createdAt: '1 day ago',
-    appointment: 'Consulta ortopédica para avaliação do joelho.',
+    createdAt: '2 day ago',
+    appointment: 'Simples, transparente e sem surpresas.',
     rating: 3,
   },
   {
     id: '4',
     user: {
-      name: 'Pedro',
-      location: 'Curitiba, BR',
+      name: 'Eduardo',
+      location: 'Porto, PT',
       avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
     },
     createdAt: '1 day ago',
-    appointment: 'Consulta ortopédica para avaliação.',
+    appointment: 'Melhor plataforma para cuidar do lar!',
     rating: 3,
   },
 ]
@@ -65,7 +65,7 @@ export function Appointments() {
     return 4 // Desktop
   }
   return (
-    <div className="max-w-[1256px] w-full mx-auto mt-[48px] lg:mt-20 px-4 md:px-8 overflow-hidden">
+    <div className="max-w-[1256px] w-full mx-auto mt-[48px] lg:mt-24 2xl:mt-64 px-4 md:px-8 overflow-hidden">
       <h2 className="hidden md:block text-lg text-[#292D33] md:text-2xl font-bold font-inter leading-[29.05px] -tracking-[1.5%] text-center">
         Depoimentos de quem experimentou!
       </h2>

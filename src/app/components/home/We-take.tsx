@@ -1,17 +1,15 @@
-import { family2, WeTake02 } from "@/app/assets/images";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+'use client'
+import { Family, WeTake02 } from '@/app/assets/images'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export function WeTake() {
   return (
     <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 lg:h-[384px] relative z-10">
       <div className="lg:h-[384px] overflow-hidden">
         <Image
-          src={family2}
-          width={689}
-          height={384}
+          src={Family}
           alt="We Take your home"
           className=" hidden relative bottom-12 lg:flex bg-contain w-full bg-center"
         />
@@ -32,7 +30,7 @@ export function WeTake() {
             Proporcionar confiança, eficiência e tempo para nossos clientes
           </p>
           <Button
-            variant={"ghost"}
+            variant={'ghost'}
             className="bg-white text-primaryColor mt-5 mx-auto relative"
           >
             Ver Planos preventivos
@@ -41,5 +39,5 @@ export function WeTake() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -9,11 +9,23 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(to bottom, #3C91E6 0%, #0068FFDE 87%)",
+      },
       fontFamily: {
-        Inter: ["Inter"],
+        fredoka: ["Fredoka"],
         roboto: ["Roboto"],
         poppins: "Poppins",
         yrsa: ["Yrsa"],
+        inter: "Inter",
+        interBold: "InterBold",
+        manrope: "Manrope",
+        rubik: "Rubik",
+        helvetica: "Helvetica",
+      },
+      letterSpacing: {
+        "-1.5": "-0.015em",
       },
       colors: {
         background: "hsl(var(--background))",

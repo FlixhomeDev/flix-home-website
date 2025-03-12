@@ -12,7 +12,9 @@ import useWindowSize from '@/app/hooks/useWindowSize'
 import { motion } from 'motion/react'
 
 export function OurServices() {
-  const [active, setActive] = useState<'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string>('Limpeza')
+  const [active, setActive] = useState<
+    'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
+  >('Limpeza')
 
   const { width } = useWindowSize()
 
@@ -66,8 +68,9 @@ export function OurServices() {
     },
   ]
 
-  const filteredServices = servicesData.filter((service) => service.category === active)
-
+  const filteredServices = servicesData.filter(
+    service => service.category === active
+  )
 
   return (
     <div className="max-w-[1256px] w-full mx-auto mt-[58px] lg:mt-[78px]">
@@ -80,11 +83,13 @@ export function OurServices() {
           parceiro confiável para facilitar o dia a dia.
         </p>
       </div>
-
-      <ToggleButtons active={active} setActive={setActive} />
-      <h3 className="block md:hidden ml-[15px] mt-[27px] text-[#000000] text-[15px] font-semibold font-inter leading-[26px] tracking-[2%]">
-        Promoções
-      </h3>
+      <div className="w-full md:max-w-[714px] mx-auto pl-[15px] md:pl-0">
+        <ToggleButtons
+          slidesPerView={3.5}
+          active={active}
+          setActive={setActive}
+        />
+      </div>
       <div
         className="hidden md:flex items-center justify-center gap-5 mt-[27px] px-4"
         style={{ scrollbarWidth: 'none' }}

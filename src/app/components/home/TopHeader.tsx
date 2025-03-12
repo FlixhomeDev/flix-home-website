@@ -1,24 +1,25 @@
-"use client";
-import Link from "next/link";
+'use client'
+import Link from 'next/link'
 // import { useLocale } from "next-intl";
 
 export function TopHeader() {
-
   return (
-    <div className={"z-50 w-full fixed top-0 bg-[#3C91E6] h-10 px-10 py-3 md:flex flex-row justify-between items-center mb-[4px]"}>
-      <nav
-        className={"w-full h-full flex items-center justify-around"}
-      >
+    <div
+      className={
+        'z-50 hidden w-full  fixed top-0 bg-primaryColor px-10 py-3 md:flex flex-row justify-between items-center'
+      }
+    >
+      <nav className={'w-full h-full flex items-center justify-around'}>
         <nav className="flex items-center gap-4">
           <Link
-            href={"/"}
+            href={'/'}
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
             Apoio ao Cliente
           </Link>
           <Link
-            href={"/services"}
+            href={'/services'}
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
@@ -27,14 +28,14 @@ export function TopHeader() {
         </nav>
         <nav className="flex items-center gap-4">
           <Link
-            href={"/plans"}
+            href={'/plans'}
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
             Parceiros
           </Link>
           <Link
-            href={"/about-us"}
+            href={'/about-us'}
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
@@ -47,7 +48,7 @@ export function TopHeader() {
             <option value="fr">FR</option>
           </select> */}
           <Link
-            href={"/"}
+            href={'/'}
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
@@ -56,5 +57,5 @@ export function TopHeader() {
         </nav>
       </nav>
     </div>
-  );
+  )
 }

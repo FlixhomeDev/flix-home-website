@@ -1,13 +1,13 @@
-import { WeTake02, EquipeFH } from "@/app/assets/images";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
+import { WeTake02, EquipeFh } from '@/app/assets/images'
+import { Button } from '@/components/ui/button'
+import { ArrowRightIcon } from 'lucide-react'
+import Image from 'next/image'
 
 export function WantToBe() {
   return (
     <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 md:h-[357px] relative z-10">
       <div className="relative">
-        <div className="absolute h-[357px] top-0 left-0 right-0 bottom-0 bg-primaryColor/90" />
+        <div className="absolute h-[357px] top-0 left-0 right-0 bottom-0 bg-primaryColor/95" />
         <Image
           src={WeTake02}
           alt="We Take your home"
@@ -22,7 +22,7 @@ export function WantToBe() {
             técnicos da FlixHome? Regista-te agora!
           </p>
           <Button
-            variant={"ghost"}
+            variant={'ghost'}
             className="bg-white text-primaryColor mt-5 !h-8 !text-sm !rounded active:scale-95 transition-all mx-auto lg:ml-0"
           >
             Torna-te um Flix
@@ -32,11 +32,11 @@ export function WantToBe() {
       </div>
       <div className="h-[357px] overflow-hidden hidden lg:block">
         <Image
-          src={EquipeFH}
+          src={EquipeFh}
           alt="We Take your home"
           className="hidden lg:flex relative bottom-12"
         />
       </div>
     </div>
-  );
+  )
 }

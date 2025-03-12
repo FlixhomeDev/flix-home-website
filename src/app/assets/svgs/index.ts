@@ -19,16 +19,28 @@ import MoneysSvg from "./moneys.svg";
 import BookSvg from "./book.svg";
 import Call from "./call.svg";
 import Whatsapp from "./whatsapp.svg";
-import HomePlansSvg from "./home-plans-svg.svg";
 import NoPictureIllustrationSvg from "./no-picture-illustration.svg";
-import FacebookSvg from "./facebook.svg";
-import InstagramSvg from "./instagram.svg";
+// import Facebook from "./Facebook.svg";
+import Insta from "./Insta.svg";
+import Linkdin from "./linkedin-svg.svg";
+import WhatsappSvg from "./whatsapp-svg.svg";
+import YoutubeSvg from "./youtube-svg.svg";
+import PinterestSvg from "./pinterest-svg.svg";
+import ThreadsSvg from "./threads-svg.svg";
+import XSvg from "./x-svg.svg";
 
 export {
   Logo,
-  HomePlansSvg,
+  Linkdin,
+  YoutubeSvg,
+  PinterestSvg,
+  ThreadsSvg,
+  XSvg,
+  WhatsappSvg,
   SettingsSvg,
   DotSvg,
+  Insta,
+  // Facebook,
   Whatsapp,
   Call,
   VectorSvg,
@@ -48,6 +60,4 @@ export {
   MoneysSvg,
   BookSvg,
   NoPictureIllustrationSvg,
-  FacebookSvg,
-  InstagramSvg,
 };
