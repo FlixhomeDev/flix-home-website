@@ -17,7 +17,7 @@ export default function Plans() {
         'Ideal para quem quer conhecer nosso serviço e começar a cuidar dos seus ativos residenciais',
       priceByMonth: 53.23,
       priceByYear: 129.99,
-      link: 'https://wa.me/message/PHDJAIL6RKWZC1',
+      link: 'https://wa.link/jgmwg5',
       items: [
         {
           title: '1 visita técnica de diagnóstico e levantamento de ativos',
@@ -38,8 +38,6 @@ export default function Plans() {
             'Notificações e alertas sobre boas práticas de manutenção dos seus ativos',
           subtitle: 'via whatsapp',
         },
-        // { title: "Checklist preventivo geral", subtitle: "You’ll have the apartment to yourself" },
-        // { title: "Relatório digital de manutenção", subtitle: "You’ll have the apartment to yourself" },
       ],
       itemsnotinclud: [
         {
@@ -66,7 +64,7 @@ export default function Plans() {
         'Para quem deseja uma manutenção preventiva básica e evitar problemas inesperados.',
       priceByMonth: 15,
       priceByYear: 129.99,
-      link: 'https://wa.me/message/PHDJAIL6RKWZC1',
+      link: 'https://wa.link/4iozk1',
       items: [
         {
           title: '1 visita de diagnóstico para cadastrar os ativos.',
@@ -125,7 +123,7 @@ export default function Plans() {
         'Para quem quer a proteção completa da casa com um atendimento mais abrangente.',
       priceByMonth: 25,
       priceByYear: 229.99,
-      link: 'https://wa.me/message/PHDJAIL6RKWZC1',
+      link: 'https://wa.link/y610ch',
       items: [
         {
           title: '1 visita inicial para cadastro dos ativos da residência.',

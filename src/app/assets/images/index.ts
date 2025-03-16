@@ -21,7 +21,7 @@ import ServiceDetails3 from "./service-details-03.png";
 import ServiceDetails4 from "./service-details-04.png";
 import ServiceDetails5 from "./service-details-05.png";
 import AnimationGif from "./Animation.gif";
-import TimeIcon from "./timeIcon.png";
+import TimeIcon from "./24-hours.png";
 import EquipeFh from "./Equipe.png";
 import Family from "./family.jpg";
 import WeTake02 from "./we-take-02.png";
