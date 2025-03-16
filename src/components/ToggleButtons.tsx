@@ -10,12 +10,9 @@ import { BuildingSvg } from '@/app/assets/svgs/building'
 
 const buttonOptions = [
   { id: 'Limpeza', label: 'Limpeza', color: '#4094e4' },
-  { id: 'Reparações', label: 'Reparações', color: '#4094e4' },
+  { id: 'Pintura', label: 'Pintura', color: '#4094e4' },
   { id: 'Jardinagem', label: 'Jardinagem', color: '#4094e4' },
-  { id: 'Repar Electro', label: 'Repar Electro', color: '#4094e4' },
-  { id: 'Decoração', label: 'Decoração', color: '#4094e4' },
-  { id: 'Instalação', label: 'Instalação', color: '#4094e4' },
-  { id: 'Impermeabilização', label: 'Impermeabilização', color: '#4094e4' },
+  { id: 'Elétrica', label: 'Elétrica', color: '#4094e4' },
 ]
 
 type Props = {
@@ -23,23 +20,21 @@ type Props = {
   slidesPerView: number
   setActive: React.Dispatch<
     React.SetStateAction<
-      | 'Limpeza'
-      | 'Reparações'
-      | 'Jardinagem'
-      | 'Repar Electro'
-      | 'Decoração'
-      | 'Instalação'
-      | 'Impermeabilização'
-      | string
+      'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
     >
   >
 }
 
 export default function ToggleButtons({
-  active = 'cleaning',
+  active = 'Limpeza',
   setActive,
   slidesPerView,
 }: Props) {
+  console.log(
+    'buttonOptions',
+    buttonOptions.map(item => item.label)
+  )
+
   return (
     <div className="w-full">
       {/* <div
@@ -56,7 +51,7 @@ export default function ToggleButtons({
             {label === 'Limpeza' && (
               <BroomSvg fill={active === id ? '#FFF' : color} />
             )}
-            {label === 'Reparações' && (
+            {label === 'Pintura' && (
               <HomeTrendUpSvg fill={active === id ? '#FFF' : color} />
             )}
             {label === 'Jardinagem' && (
@@ -79,7 +74,7 @@ export default function ToggleButtons({
         ))}
       </div> */}
       <div
-        className="flex md:justify-center justify-start items-center gap-[7px] mt-[17px] overflow-x-scroll pl-[0px] whitespace-nowrap"
+        className="flex md:justify-center justify-start lg:justify-center items-center gap-[7px] mt-[17px] overflow-x-scroll pl-[0px] whitespace-nowrap"
         style={{ scrollbarWidth: 'none' }}
       >
         <Swiper
@@ -91,10 +86,10 @@ export default function ToggleButtons({
             768: { slidesPerView: 4 },
             1024: { slidesPerView: 4 },
           }}
-          className="w-full flex items-center gap-[7.5px]"
+          className="w-full flex items-center gap-[7.5px] justify-center mx-auto"
         >
           {buttonOptions.map(({ label }) => (
-            <SwiperSlide key={label} className="!w-[119px]">
+            <SwiperSlide key={label} className="!w-[119px] flex justify-center">
               <Button
                 key={label}
                 variant={active === label ? 'default' : 'outline'}

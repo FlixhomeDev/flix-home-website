@@ -24,7 +24,7 @@ export function Paterners() {
         <Image src={TechHouseSvg} alt="Tech House Svg" />
       </div>
 
-      <div className="w-full mx-[132px] flex items-center justify-between gap-x-20">
+      <div className="w-full lg:mx-[132px] flex items-center justify-between gap-x-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

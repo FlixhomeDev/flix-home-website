@@ -12,7 +12,7 @@ export function Banner() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-[1256px] w-full flex flex-col lg:flex-row xl:max-w-full xl:justify-between gap-8 items-center px-[27px] md:px-[132px] mt-20"
+      className="max-w-[1256px] w-full flex flex-col lg:flex-row xl:max-w-full xl:justify-between gap-8 items-center px-[27px] md:px-[132px] mt-40 lg:mt-20"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -23,7 +23,7 @@ export function Banner() {
         <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-interBold  md:max-w-[521px] w-full text-center md:text-left">
           Prevenir é sempre mais barato do que corrigir
         </h1>
-        <p className="text-[#6F6F6F] text-xl md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center lg:text-left">
+        <p className="text-[#6F6F6F] text-xl md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center mx-auto lg:ml-0 lg:text-left">
           Simplifique o cuidado com o seu lar com a Flix Home!
         </p>
 

@@ -58,7 +58,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-x-[50px]">
           {/* Seção 1 - Logo e Descrição */}
-          <div className="flex flex-col gap-4 lg:max-w-[270px] w-full">
+          <div className="flex flex-col gap-4 lg:max-w-[270px] w-full mb-8 lg:mb-0">
             <Image src={logo} alt="FlixHome logo" width={140} height={41} />
             <p className="text-gray-600 text-[13px]">
               Simplificamos a vida das pessoas oferecendo serviços domésticos de
@@ -66,7 +66,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
             {/* Seção 2 - Navegação */}
             <div>
               <h3 className="font-semibold text-lg mb-4">Navegação</h3>
@@ -161,7 +161,7 @@ export function Footer() {
             </div>
 
             {/* Seção 4 - Redes Sociais */}
-            <div className="ml-4">
+            <div className="lg:ml-4">
               <h3 className="font-semibold text-lg mb-4 whitespace-nowrap">
                 Redes Sociais
               </h3>

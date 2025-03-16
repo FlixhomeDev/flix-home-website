@@ -6,7 +6,7 @@ export function TopHeader() {
   return (
     <div
       className={
-        'z-50 hidden w-full  fixed top-0 bg-primaryColor px-10 py-3 md:flex flex-row justify-between items-center'
+        'z-50 w-full flex fixed top-0 bg-primaryColor px-10 py-3 md:flex flex-row justify-between items-center'
       }
     >
       <nav className={'w-full h-full flex items-center justify-around'}>

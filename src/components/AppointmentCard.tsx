@@ -1,6 +1,7 @@
 import React from 'react'
 import { Avatar, AvatarFallback } from './ui/avatar'
 import { StarSvg } from '@/app/assets/svgs/star'
+import { getFirstLetter } from '@/app/utils/getFirstLetter'
 
 type Props = {
   user?: {
@@ -20,7 +21,9 @@ export function AppointmentCard({ appointment, user }: Props) {
         <div className="flex items-center gap-[7px]">
           <Avatar className="w-[35px] h-[35px]">
             {/* <AvatarImage src={user?.avatar} /> */}
-            <AvatarFallback>{user?.name}</AvatarFallback>
+            <AvatarFallback>
+              {getFirstLetter(user?.name as string)}
+            </AvatarFallback>
           </Avatar>
           <div>
             <h4 className="-mb-2 text-xs text-[#000000] font-medium font-inter leading-[14.52px] tracking-[2%]">
