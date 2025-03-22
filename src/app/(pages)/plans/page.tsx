@@ -1,12 +1,10 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import Banner from '@/app/components/plans/Banner'
 import CardPlans from '@/app/components/plans/Card-plans'
 import FaqsPlans from '@/app/components/plans/Faqs'
-import React from 'react'
 
 export default function Plans() {
   const dataPlans = [
@@ -176,7 +174,7 @@ export default function Plans() {
     },
   ]
   return (
-    <div className="flex flex-col pt-28 pd:mt-40">
+    <div className="flex flex-col pt-28 mt-10 lg:mt-5">
       <Banner />
       <div className="hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:flex items-center gap-5 mx-auto max-w-[1261px]">
         {dataPlans.map(item => (
@@ -187,8 +185,6 @@ export default function Plans() {
         <Swiper
           spaceBetween={12}
           slidesPerView={1.3}
-          pagination={{ clickable: true }}
-          modules={[Pagination]}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },

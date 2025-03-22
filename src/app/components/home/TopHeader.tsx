@@ -24,7 +24,7 @@ export function TopHeader() {
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
-            Ajuda
+            Torna-te um parceiro 
           </Link>
         </nav>
         <nav className="flex items-center gap-4">

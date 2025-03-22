@@ -20,7 +20,7 @@ export default function Details() {
   const { id } = useParams<{ id: string }>()
 
   return (
-    <div className="flex flex-col mt-[48px] md:mt-[100px]">
+    <div className="flex flex-col mt-28">
       <div className="hidden md:block bg-[#3C91E6] w-full h-[10px]" />
       {dataPlans
         .filter(i => i.id === id)
@@ -110,18 +110,18 @@ export default function Details() {
                     />
                   </div>
                   <div className="flex items-center gap-[10px] mt-5 mx-5">
-                    <div className="px-4 h-[36px] bg-primaryColor py-[9px] flex items-center justify-center rounded-[8px] text-sm text-[#FFFFFF] font-medium font-inter">
+                    <div className="px-4 h-[36px] bg-primaryColor py-[9px] flex items-center justify-center rounded-[8px] text-xs text-[#FFFFFF] font-medium font-inter">
                       {item.plan}
                     </div>
-                    <h3 className="text-lg md:text-2xl ml-4 text-[#3C91E6] font-bold font-inter">
+                    <h3 className="text-base md:text-2xl ml-4 text-[#3C91E6] font-bold font-inter">
                       {item.plan === 'Freemium' ? '' : `€${item.priceByMonth}`}
                     </h3>
-                    <span className="text-sm md:text-lg text-[#3C91E6] font-medium font-inter">
+                    <span className="text-xs md:text-base text-[#3C91E6] font-medium font-inter">
                       {item.plan === 'Freemium' ? 'Gratuito' : 'por / mês'}
                     </span>
                   </div>
                   <div className="mt-[10px] mx-5 flex items-center gap-[3px]">
-                    <h2 className="text-sm md:text-lg text-[#6F6F6F] font-bold font-inter">
+                    <h2 className="text-xs md:text-base text-[#6F6F6F] font-bold font-inter">
                       {item.plan !== 'Freemium' && `€ ${item.priceByYear}`}
                     </h2>
                     <span className="text-xs md:text-base text-[#6F6F6F] font-medium font-inter">
