@@ -174,7 +174,7 @@ export default function Plans() {
     },
   ]
   return (
-    <div className="flex flex-col pt-28 mt-10 lg:mt-5">
+    <div className="flex flex-col pt-28 mt-10 lg:mt-52">
       <Banner />
       <div className="hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:flex items-center gap-5 mx-auto max-w-[1261px]">
         {dataPlans.map(item => (

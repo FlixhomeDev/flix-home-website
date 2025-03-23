@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import SelectLang from './SelectLang'
-// import { useLocale } from "next-intl";
 
 export function TopHeader() {
   return (
@@ -13,14 +12,18 @@ export function TopHeader() {
       <nav className={'w-full h-full flex items-center justify-around'}>
         <nav className="flex items-center gap-4">
           <Link
-            href={'/'}
+            href={
+              'https://docs.google.com/forms/d/e/1FAIpQLSeTY-18Zi3QxhUQv7vWsIBlIh_IsdFWgge2rusq22paNvfKbQ/viewform'
+            }
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
             Apoio ao Cliente
           </Link>
           <Link
-            href={'/services'}
+            href={
+              'https://docs.google.com/forms/d/e/1FAIpQLSeTY-18Zi3QxhUQv7vWsIBlIh_IsdFWgge2rusq22paNvfKbQ/viewform'
+            }
             className={`text-xs text-[#ffffff] font-inter font-normal"
             }`}
           >
@@ -28,12 +31,6 @@ export function TopHeader() {
           </Link>
         </nav>
         <nav className="flex items-center gap-4">
-          {/* <select value={locale} onChange={handleLanguageChange} className="text-xs bg-transparent text-[#ffffff] font-inter font-normal border-none">
-            <option value="pt">PT</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-          </select> */}
           <SelectLang />
         </nav>
       </nav>
