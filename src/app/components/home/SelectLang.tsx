@@ -14,7 +14,7 @@ import { useLocale } from "next-intl";
 
 export default function SelectLang() {
   const locale = useLocale();
-  const [isPending, startTransition] = useTransition();
+  const [_, startTransition] = useTransition();
 
   function onChange(value: string) {
     const locale = value as Locale;
