@@ -7,20 +7,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useTransition } from "react";
 import { Locale } from "@/i18n/config";
 import { setUserLocale } from "@/services/locale";
 import { useLocale } from "next-intl";
 
 export default function SelectLang() {
   const locale = useLocale();
-  const [_, startTransition] = useTransition();
 
   function onChange(value: string) {
     const locale = value as Locale;
-    startTransition(() => {
-      setUserLocale(locale);
-    });
+    setUserLocale(locale);
   }
 
   return (
