@@ -2,12 +2,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import Banner from "@/app/components/plans/Banner";
 import CardPlans from "@/app/components/plans/Card-plans";
-import FaqsPlans from "@/app/components/plans/Faqs";
 import { useTranslations } from "next-intl";
 
-export default function Plans() {
+export default function OurPlans() {
   const t = useTranslations();
   const dataPlans = [
     {
@@ -163,9 +161,8 @@ export default function Plans() {
     },
   ];
   return (
-    <div className="flex flex-col pt-28 mt-10 lg:mt-2">
-      <Banner />
-      <div className="hidden mt-0 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:flex items-center gap-5 mx-auto max-w-[1261px]">
+    <div className="flex flex-col mt-10 lg:mt-20">
+      <div className="hidden mt-0 md:mt-[10px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:flex items-center gap-5 mx-auto max-w-[1261px]">
         {dataPlans.map((item) => (
           <CardPlans key={item.id} {...item} />
         ))}
@@ -186,9 +183,6 @@ export default function Plans() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div className="mt-[70px] w-[340px] md:w-full self-center md:px-10">
-        <FaqsPlans />
       </div>
     </div>
   );

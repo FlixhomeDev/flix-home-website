@@ -1,15 +1,17 @@
-'use client'
-import { FlashSvg, ShieldTickSvg, UserTickSvg } from '@/app/assets/svgs'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import React from 'react'
-import { TimeIcon } from '@/app/assets/images'
+"use client";
+import { FlashSvg, ShieldTickSvg, UserTickSvg } from "@/app/assets/svgs";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import React from "react";
+import { TimeIcon } from "@/app/assets/images";
+import { useTranslations } from "next-intl";
 
 export function Features() {
+  const t = useTranslations();
   return (
     <>
       <motion.div
@@ -17,7 +19,7 @@ export function Features() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="w-full h-[91px] px-3 md:px-[50px] hidden md:flex items-center gap-[10px] overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
-        style={{ scrollbarWidth: 'none' }}
+        style={{ scrollbarWidth: "none" }}
       >
         <div className="flex items-center gap-3">
           <Image
@@ -28,10 +30,10 @@ export function Features() {
           />
           <div className="flex flex-col">
             <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">
-              Confiabilidade
+              {t("Home.Features.first")}
             </h3>
             <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-              Todos os profissionais são treinados e avaliados.
+              {t("Home.Features.first_description")}
             </p>
           </div>
         </div>
@@ -42,10 +44,10 @@ export function Features() {
           <Image src={UserTickSvg} alt="User Tick Svg" width={40} height={40} />
           <div className="flex flex-col">
             <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">
-              Tranquilidade
+              {t("Home.Features.second")}
             </h3>
             <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-              Planos de manutenção preventiva.
+              {t("Home.Features.second_description")}
             </p>
           </div>
         </div>
@@ -56,10 +58,10 @@ export function Features() {
           <Image src={FlashSvg} alt="Flash Svg" width={40} height={40} />
           <div className="flex flex-col">
             <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">
-              Agilidade
+              {t("Home.Features.three")}
             </h3>
             <p className="text-[#808080] text-base font-normal font-inter leading-[19.2px] mt-[6px]">
-              Agendamento simples, sem complicações.
+              {t("Home.Features.three_description")}
             </p>
           </div>
         </div>
@@ -70,10 +72,10 @@ export function Features() {
           <Image src={TimeIcon} alt="Moneys Svg" width={40} height={40} />
           <div className="flex flex-col">
             <h3 className="font-semibold font-inter text-lg text-[#1A1A1A]">
-              Atendimento
+              {t("Home.Features.four")}
             </h3>
             <p className="text-[#808080] text-base font-normal font-inter leading-[19.2px] mt-[6px]">
-              Estamos disponíveis 24h/dia, 7 dias/semana, 365 dias/ano.
+              {t("Home.Features.four_description")}
             </p>
           </div>
         </div>
@@ -83,7 +85,7 @@ export function Features() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="w-full h-[91px] px-3 md:px-[50px] md:hidden flex items-center gap-5 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
-        style={{ scrollbarWidth: 'none' }}
+        style={{ scrollbarWidth: "none" }}
       >
         <Swiper
           spaceBetween={10}
@@ -106,10 +108,10 @@ export function Features() {
               />
               <div className="flex flex-col">
                 <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">
-                  Confiabilidade
+                  {t("Home.Features.first")}
                 </h3>
                 <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-                  Todos os profissionais são treinados e avaliados.
+                  {t("Home.Features.first_description")}
                 </p>
               </div>
             </div>
@@ -124,10 +126,10 @@ export function Features() {
               />
               <div className="flex flex-col">
                 <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">
-                  Tranquilidade
+                  {t("Home.Features.second")}
                 </h3>
                 <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-                  Planos de manutenção preventiva.
+                  {t("Home.Features.second_description")}
                 </p>
               </div>
             </div>
@@ -137,10 +139,10 @@ export function Features() {
               <Image src={FlashSvg} alt="Flash Svg" width={40} height={40} />
               <div className="flex flex-col">
                 <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">
-                  Agilidade
+                  {t("Home.Features.three")}
                 </h3>
                 <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-                  Agendamento simples, sem complicações.
+                  {t("Home.Features.three_description")}
                 </p>
               </div>
             </div>
@@ -150,10 +152,10 @@ export function Features() {
               <Image src={TimeIcon} alt="Moneys Svg" width={40} height={40} />
               <div className="flex flex-col">
                 <h3 className="font-semibold font-inter leading-[16.8px] md:leading-[21.6px] text-sm md:text-lg text-[#1A1A1A]">
-                  Atendimento
+                  {t("Home.Features.four")}
                 </h3>
                 <p className="text-[#808080] text-xs md:text-base font-normal font-inter leading-[14.4px] md:leading-[19.2px] mt-[6px]">
-                  Estamos disponíveis 24h/dia, 7 dias/semana, 365 dias/ano.
+                  {t("Home.Features.four_description")}
                 </p>
               </div>
             </div>
@@ -164,5 +166,5 @@ export function Features() {
         </Swiper>
       </motion.div>
     </>
-  )
+  );
 }

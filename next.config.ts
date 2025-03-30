@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -10,10 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  i18n: {
-    locales: ["en", "pt", "es", "fr"],
-    defaultLocale: "pt",
-  },
+  // i18n: {
+  //   locales: ["en", "pt", "es", "fr"],
+  //   defaultLocale: "pt",
+  // },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

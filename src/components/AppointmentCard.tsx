@@ -1,22 +1,22 @@
-import React from 'react'
-import { Avatar, AvatarFallback } from './ui/avatar'
-import { StarSvg } from '@/app/assets/svgs/star'
-import { getFirstLetter } from '@/app/utils/getFirstLetter'
+import React from "react";
+import { Avatar, AvatarFallback } from "./ui/avatar";
+import { StarSvg } from "@/app/assets/svgs/star";
+import { getFirstLetter } from "@/app/utils/getFirstLetter";
 
 type Props = {
   user?: {
-    name?: string
-    location?: string
-    avatar?: string
-  }
-  createdAt?: string
-  appointment?: string
-  rating?: number
-}
+    name?: string;
+    location?: string;
+    avatar?: string;
+  };
+  createdAt?: string;
+  appointment?: string;
+  rating?: number;
+};
 
 export function AppointmentCard({ appointment, user }: Props) {
   return (
-    <div className="flex flex-col bg-[#FFFFFF] w-full lg:max-w-[293px] h-[106px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
+    <div className="flex flex-col bg-[#FFFFFF] w-full lg:max-w-[350px] h-[150px] justify-center items-center gap-[10px] py-[13px] px-[19px] rounded-[8px] border border-[#DEE2E7]">
       <div className="w-full flex items-center justify-between gap-[6px]">
         <div className="flex items-center gap-[7px]">
           <Avatar className="w-[35px] h-[35px]">
@@ -47,5 +47,5 @@ export function AppointmentCard({ appointment, user }: Props) {
       </div>
       <p className="text-xs text-[#4E4E4E] font-normal font-inter leading-[19.2px] mt-[10px]">{` “ ${appointment} ”`}</p>
     </div>
-  )
+  );
 }

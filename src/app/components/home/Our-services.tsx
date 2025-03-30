@@ -1,86 +1,87 @@
-'use client'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import { ServiceCard } from '@/components/ServiceCard'
-import ToggleButtons from '@/components/ToggleButtons'
-import { ArrowRight } from 'lucide-react'
-import Link from 'next/link'
-import { useState } from 'react'
-import useWindowSize from '@/app/hooks/useWindowSize'
-import { motion } from 'motion/react'
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { ServiceCard } from "@/components/ServiceCard";
+import ToggleButtons from "@/components/ToggleButtons";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import useWindowSize from "@/app/hooks/useWindowSize";
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 export function OurServices() {
+  const t = useTranslations();
   const [active, setActive] = useState<
-    'Limpeza' | 'Pintura' | 'Jardinagem' | 'Elétrica' | string
-  >('Limpeza')
+    "Limpeza" | "Pintura" | "Jardinagem" | "Elétrica" | string
+  >("Limpeza");
 
-  const { width } = useWindowSize()
+  const { width } = useWindowSize();
 
   const getAmount = () => {
-    if (width < 420) return 1 // Mobile
-    if (width < 560) return 2 // Mobile
-    if (width < 968) return 3 // Mobile
-    return 5 // Desktop
-  }
+    if (width < 420) return 1; // Mobile
+    if (width < 560) return 2; // Mobile
+    if (width < 968) return 3; // Mobile
+    return 5; // Desktop
+  };
 
   const servicesData = [
     {
-      id: '1',
-      title: 'Serviço de Jardinagem Vida Verde',
+      id: "1",
+      title: "Serviço de Jardinagem Vida Verde",
       oldPrice: 129.99,
       newPrice: 99.5,
-      category: 'Jardinagem',
-      image: 'https://source.unsplash.com/300x200/?gardening',
+      category: "Jardinagem",
+      image: "https://source.unsplash.com/300x200/?gardening",
     },
     {
-      id: '2',
-      title: 'Limpeza Residencial Completa',
+      id: "2",
+      title: "Limpeza Residencial Completa",
       oldPrice: 150.0,
       newPrice: 120.0,
-      category: 'Limpeza',
-      image: 'https://source.unsplash.com/300x200/?cleaning',
+      category: "Limpeza",
+      image: "https://source.unsplash.com/300x200/?cleaning",
     },
     {
-      id: '3',
-      title: 'Manutenção Elétrica Residencial',
+      id: "3",
+      title: "Manutenção Elétrica Residencial",
       oldPrice: 180.0,
       newPrice: 150.75,
-      category: 'Elétrica',
-      image: 'https://source.unsplash.com/300x200/?electrician',
+      category: "Elétrica",
+      image: "https://source.unsplash.com/300x200/?electrician",
     },
     {
-      id: '4',
-      title: 'Pintura de Interior Profissional',
+      id: "4",
+      title: "Pintura de Interior Profissional",
       oldPrice: 250.0,
       newPrice: 200.0,
-      category: 'Pintura',
-      image: 'https://source.unsplash.com/300x200/?painting',
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
     },
     {
-      id: '5',
-      title: 'Pintura de Interior Profissional',
+      id: "5",
+      title: "Pintura de Interior Profissional",
       oldPrice: 250.0,
       newPrice: 200.0,
-      category: 'Pintura',
-      image: 'https://source.unsplash.com/300x200/?painting',
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
     },
-  ]
+  ];
 
   const filteredServices = servicesData.filter(
-    service => service.category === active
-  )
+    (service) => service.category === active
+  );
 
   return (
     <div className="max-w-[1256px] w-full mx-auto mt-[58px] lg:mt-[78px]">
       <div className="w-full max-w-[340px] md:max-w-[468px] mx-auto">
         <h2 className="text-center font-bold font-inter leading-[21.78px] md:leading-[29.05px] -tracking-[1.5%] text-lg md:text-2xl text-[#292D33]">
-          Serviços que cuidam de tudo para você.
+          {t("Home.Services.title")}
         </h2>
         <p className="text-center lg:text-base text-gray-500 text-sm leading-4 md:text-lg font-normal font-inter  md:leading-[21.78px] -tracking-[1.5%] mt-[5px]">
-          Tudo o que você precisa para manter sua casa em ordem. Somos seu
-          parceiro confiável para facilitar o dia a dia.
+          {t("Home.Services.description")}
         </p>
       </div>
       <div className="w-full md:max-w-[714px] mx-auto pl-[15px] md:pl-0">
@@ -92,7 +93,7 @@ export function OurServices() {
       </div>
       <div
         className="hidden md:flex items-center justify-center gap-5 mt-[27px] px-4"
-        style={{ scrollbarWidth: 'none' }}
+        style={{ scrollbarWidth: "none" }}
       >
         {filteredServices.map((service, index) => (
           <motion.div
@@ -135,17 +136,17 @@ export function OurServices() {
       <div className="w-full justify-normal items-center mt-5 hidden md:flex">
         <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
           <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">
-            Não encontrou o que procura?{' '}
+            {t("Home.Services.not_found")}
           </span>
           <Link
-            href={'/services'}
-            className="text-[#3C91E6] text-xs font-medium font-inter leading-[16.94px] w-[186px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
+            href={"/services"}
+            className="text-[#3C91E6] text-xs font-medium font-inter leading-[16.94px] w-[210px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
-            Ver todos os Serviços
+            {t("Home.Services.button")}
             <ArrowRight size={14} color="#3C91E6" />
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

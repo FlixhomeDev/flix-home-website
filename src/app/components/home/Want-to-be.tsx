@@ -1,9 +1,11 @@
-import { WeTake02, EquipeFh } from '@/app/assets/images'
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from 'lucide-react'
-import Image from 'next/image'
+import { WeTake02, EquipeFh } from "@/app/assets/images";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function WantToBe() {
+  const t = useTranslations();
   return (
     <div className="mt-10 lg:mt-20 w-full grid grid-cols-1 lg:grid-cols-2 md:h-[357px] relative z-10">
       <div className="relative">
@@ -15,17 +17,16 @@ export function WantToBe() {
         />
         <div className="relative flex flex-col justify-center items-center lg:items-start px-6 lg:px-[147px] z-50 h-[357px]">
           <h2 className="text-center lg:text-left text-white text-2xl font-bold">
-            Queres ser um Flix?
+            {t("Home.Partners.title")}
           </h2>
           <p className="mt-2 max-w-[508px] w-full text-white text-xs md:text-base text-center lg:text-left">
-            És um profissional experiente e gostavas de pertencer à equipa de
-            técnicos da FlixHome? Regista-te agora!
+            {t("Home.Partners.description")}
           </p>
           <Button
-            variant={'ghost'}
+            variant={"ghost"}
             className="bg-white text-primaryColor mt-5 !h-8 !text-sm !rounded active:scale-95 transition-all mx-auto lg:ml-0"
           >
-            Torna-te um Flix
+            {t("Home.Partners.button")}
             <ArrowRightIcon />
           </Button>
         </div>
@@ -38,5 +39,5 @@ export function WantToBe() {
         />
       </div>
     </div>
-  )
+  );
 }

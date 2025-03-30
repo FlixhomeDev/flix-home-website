@@ -1,12 +1,14 @@
-'use client'
-import { backgroundImage } from '@/app/assets/images'
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from 'lucide-react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import React from 'react'
+"use client";
+import { backgroundImage } from "@/app/assets/images";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import React from "react";
+import { useTranslations } from "next-intl";
 
 export function Banner() {
+  const t = useTranslations();
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -21,33 +23,37 @@ export function Banner() {
         className="flex flex-col"
       >
         <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-interBold  md:max-w-[521px] w-full text-center md:text-left">
-          Prevenir é sempre mais barato do que corrigir
+          {t("Home.Banner.prevention")}
         </h1>
         <p className="text-[#6F6F6F] text-xl md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center mx-auto lg:ml-0 lg:text-left">
-          Simplifique o cuidado com o seu lar com a Flix Home!
+          {t("Home.Banner.simplify")}
         </p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex items-center justify-center md:justify-normal gap-[14px] mt-[10px] md:mt-5"
+          className="flex items-center justify-between md:justify-normal gap-[14px] mt-[10px] md:mt-5"
         >
-          <div className="flex items-center gap-[8px] md:gap-[11px] w-[89.85px] md:w-[141.8px]">
+          <div className="flex items-center gap-[8px] md:gap-[11px] w-[89.85px] md:w-auto">
+            <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
+              {t("Home.Banner.help")}
+            </span>
             <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">
               +2.000
             </span>
             <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
-              Famílias atendidas
+              {t("Home.Banner.families_served")}
             </span>
           </div>
           <div className="h-6 w-px bg-gray-200" />
-          <div className="flex items-center gap-[8px] md:gap-[11px] w-[94.85px] md:w-[161.8px]">
+          <div className="flex items-center gap-[8px] md:gap-[11px] w-[94.85px] md:w-auto">
             <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">
               +150
             </span>
             <span className="text-[8px] leading-[9.68px] md:text-base font-normal font-inter text-[#3C91E6] tracking-[2%] md:leading-[19.36px]">
-              Serviços <br /> para sua casa
+              {t("Home.Banner.services")} <br />{" "}
+              {t("Home.Banner.for_your_home")}
             </span>
           </div>
         </motion.div>
@@ -59,17 +65,17 @@ export function Banner() {
           className="flex items-center gap-[7.5px] md:gap-[10px] mt-[10px] md:mt-5 mx-auto lg:mx-0"
         >
           <Button
-            variant={'ghost'}
-            className="flex items-center gap-[5.44px] md:gap-[10px] py-[6px] px-[5.44px] md:px-[10px] md:py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-[9px] md:text-sm font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px] md:w-[215px] w-[144px] h-[23.25px] md:h-[41px]"
+            variant={"ghost"}
+            className="flex items-center gap-[5.44px] md:gap-[10px] py-[6px] px-[5.44px] md:px-[10px] md:py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-[9px] md:text-sm font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px] md:w-[280px] w-[180px] h-[23.25px] md:h-[41px]"
           >
-            Solicite um Serviço Agora!
+            {t("Home.Banner.request_a_service_now!")}
             <ArrowRightIcon size={2} />
           </Button>
           <Button
-            variant={'outline'}
-            className="md:w-[128px] w-[90.23px] h-[23.25px] md:h-[41px] py-[6px] px-[5px] md:py-auto md:px-auto border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 md:text-sm text-[9px] font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px]"
+            variant={"outline"}
+            className="md:w-[148px] w-[100.23px] h-[23.25px] md:h-[41px] py-[6px] px-[5px] md:py-auto md:px-auto border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 md:text-sm text-[9px] font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px]"
           >
-            Fale conosco
+            {t("Home.Banner.contact_us")}
             <ArrowRightIcon size={9} />
           </Button>
         </motion.div>
@@ -87,5 +93,5 @@ export function Banner() {
         />
       </motion.div>
     </motion.div>
-  )
+  );
 }
