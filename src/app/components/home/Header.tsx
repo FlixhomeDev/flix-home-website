@@ -1,88 +1,107 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { logo } from "../../assets/images";
 import Link from "next/link";
-import { ArrowRightIcon, MenuIcon } from "lucide-react";
+import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/app/assets/svgs";
+import { TopHeader } from "./TopHeader";
+import { WhereWeAre } from "./WhereWeAre";
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 export function Header() {
+  const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
   return (
-    <header className="w-full shadow px-8 relative z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center">
-      <Link href={"/"}>
-        <Image src={logo} alt="FlixHome logo" width={140} height={41} />
-      </Link>
-
-      <button
-        type="button"
-        className="lg:hidden"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+    <>
+      <TopHeader />
+      <motion.header
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="fixed w-full shadow px-8 bg-white top-[33px] left-0 right-0 z-50 lg:px-[112px] h-[81px] flex flex-row justify-between items-center"
       >
-        <MenuIcon />
-      </button>
+        <Link href={"/"}>
+          <Image src={Logo} alt="FlixHome logo" width={140} height={41} />
+        </Link>
 
-      <nav
-        className={`
+        <button
+          type="button"
+          className="lg:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
+        </button>
+
+        <nav
+          className={`
         lg:flex lg:flex-row lg:gap-x-[14px] lg:items-center
         ${isMenuOpen ? "flex" : "hidden"}
-        flex-col absolute items-center top-[133px] left-0 right-0
+        flex-col absolute items-center top-[81px] lg:top-[133px] left-0 right-0
         bg-white shadow-lg lg:shadow-none
         lg:static lg:bg-transparent
         p-4 lg:p-0
       `}
-      >
-        <Link
-          href={"/"}
-          className={`text-base px-1 py-6 ${
-            pathname === "/" && "text-primaryColor"
-          }`}
         >
-          Início
-        </Link>
+          <Link
+            href={"https://wa.me/message/PHDJAIL6RKWZC1"}
+            target="_blank"
+            className="bg-[#3C91E6] lg:hidden flex gap-x-1 rounded-[5px] h-full w-full px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-[10px] text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
+          >
+            {t("Header.schedule_service")}
+            <ArrowRightIcon size={14} />
+          </Link>
+          <Link
+            href={"/"}
+            onClick={() => setIsMenuOpen(false)}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto border-b border-[#DEE2E7] lg:border-b-0  px-1 mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === "/" ? "text-[#3C91E6]" : "text-[#484848]"
+            }`}
+          >
+            {t("Header.home")}
+          </Link>
+          <Link
+            href={"/services"}
+            onClick={() => setIsMenuOpen(false)}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === "/services" ? "text-[#3C91E6]" : "text-[#484848]"
+            }`}
+          >
+            {t("Header.services")}
+          </Link>
+          <Link
+            href={"/plans"}
+            onClick={() => setIsMenuOpen(false)}
+            className={`text-xs lg:text-base self-start font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+              pathname === "/plans" ? "text-[#3C91E6]" : "text-[#484848]"
+            }`}
+          >
+            {t("Header.preventive_plans")}
+          </Link>
+          <WhereWeAre>
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(false)}
+              className={`text-xs lg:text-base self-start text-left font-inter font-medium lg:font-semibold leading-[24px] w-full lg:w-auto px-1 border-b border-[#DEE2E7] lg:border-b-0  mt-[15px] lg:mt-0 py-2 lg:py-6 ${
+                pathname === "/about-us" ? "text-[#3C91E6]" : "text-[#484848]"
+              }`}
+            >
+              {t("Header.where_we_are")}
+            </button>
+          </WhereWeAre>
+        </nav>
         <Link
-          href={"/services"}
-          className={`text-base px-1 py-6 ${
-            pathname === "/#services" && "text-primaryColor"
-          }`}
+          href={"https://wa.me/message/PHDJAIL6RKWZC1"}
+          target="_blank"
+          className="bg-[#3C91E6] hidden xl:flex gap-x-1 rounded-[5px] w-[181px] h-[40px] px-[10px] py-3 items-center justify-center hover:bg-blue-400  text-sm text-[#FFFFFF] font-medium font-inter transition-all active:scale-95"
         >
-          Serviços
+          {t("Header.schedule_service")}
+          <ArrowRightIcon size={14} />
         </Link>
-        <Link
-          href={"/"}
-          className={`text-base px-1 py-6 ${
-            pathname === "/#plans" && "text-primaryColor"
-          }`}
-        >
-          Planos Preventivos
-        </Link>
-        <Link
-          href={"/about-us"}
-          className={`text-base px-1 py-6 ${
-            pathname === "/about-us" && "text-primaryColor"
-          }`}
-        >
-          Sobre Nós
-        </Link>
-        <Link
-          href={"/"}
-          className={`text-base px-1 py-6 ${
-            pathname === "/#contacts" && "text-primaryColor"
-          }`}
-        >
-          Contatos
-        </Link>
-      </nav>
-      <Link
-        href={"https://wa.me/message/PHDJAIL6RKWZC1"}
-        target="_blank"
-        className="bg-primaryColor max-w-full hidden xl:flex lg:w-auto lg:max-w-[196px] gap-x-1 text-white rounded-[14px] h-[46px]  lg:h-[61px] w-full justify-center px-2 items-center hover:bg-blue-400  text-sm transition-all active:scale-95"
-      >
-        Agendar Serviço
-        <ArrowRightIcon size={14} />
-      </Link>
-    </header>
+      </motion.header>
+    </>
   );
 }

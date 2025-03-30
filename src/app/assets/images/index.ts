@@ -12,15 +12,37 @@ import security from "./security.png";
 import user01 from "./user-01.png";
 import star from "./star.png";
 import backgroundImage from "./background.png";
-import Payment01 from "./payments-01.png";
-import WeTake01 from "./we-take-01.png";
-import WeTake02 from "./we-take-02.png";
-import WantBeImage from "./want-be-image.png";
 import ServiceBg from "./service-bg.png";
+import ImageBannerPlans from "./Image-banner-plans.png";
+import ImagePlans from "./image-plans.png";
+import ServiceDetails from "./service-details-01.png";
+import ServiceDetails2 from "./service-details-02.png";
+import ServiceDetails3 from "./service-details-03.png";
+import ServiceDetails4 from "./service-details-04.png";
+import ServiceDetails5 from "./service-details-05.png";
+import AnimationGif from "./Animation.gif";
+import TimeIcon from "./24-hours.png";
+import EquipeFh from "./Equipe.png";
+import Family from "./family.jpg";
+import WeTake02 from "./we-take-02.png";
+import MapPinned from "./map.png";
 
 export {
   logo,
+  WeTake02,
+  MapPinned,
   Careers,
+  TimeIcon,
+  EquipeFh,
+  Family,
+  AnimationGif,
+  ServiceDetails,
+  ServiceDetails2,
+  ServiceDetails3,
+  ServiceDetails4,
+  ServiceDetails5,
+  ImagePlans,
+  ImageBannerPlans,
   UserAbout,
   FemaleAbout,
   Layer4,
@@ -32,9 +54,5 @@ export {
   user01,
   star,
   backgroundImage,
-  Payment01,
-  WeTake01,
-  WeTake02,
-  WantBeImage,
   ServiceBg,
 };

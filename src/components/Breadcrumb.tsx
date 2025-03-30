@@ -19,7 +19,7 @@ interface BreadcrumbBarProps {
 
 export default function BreadcrumbBar({ items }: BreadcrumbBarProps) {
   return (
-    <Breadcrumb>
+    <Breadcrumb className='text-sm font-medium font-manrope'>
       <BreadcrumbList>
         {items.map((item, index) => (
           <React.Fragment key={item.label}>

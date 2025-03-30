@@ -1,0 +1,99 @@
+{
+    "TopHeader": {
+        "support": "Atención al cliente",
+        "partners": "Hágase socio "
+    },
+    "Header": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "preventive_plans": "Planes preventivos",
+        "where_we_are": "Dónde estamos",
+        "schedule_service": " Reservar un servicio"
+    },
+    "Services": {
+        "services": "Servicios",
+        "all": "Todos Los",
+        "services_that_take_care": "Servicios que se ocupan de todo por usted.",
+        "what_service_do_you_want": "Qué servicio desea?",
+        "popular_topics": "Temas populares"
+    },
+    "Home": {
+        "Banner": {
+            "prevention": "Prevenir siempre es más barato que corregir",
+            "simplify": "Simplifique el cuidado de su hogar con Flix Home!",
+            "families_served": "Familias atendidas",
+            "services": "Servicios",
+            "for_your_home": "para su hogar",
+            "request_a_service_now!": "Solicite un servicio ahora !",
+            "contact_us": "Contacte con nosotros"
+        },
+        "Home_to_work": {
+            "title": "How It Works",
+            "description": "Taking care of your home has never been easier. With Flix Home, prevent problems or solve them with quick services and tailored maintenance plans, all in one click.",
+            "first_step": "Choose the Service or Plan",
+            "first_description": "From urgent repairs to preventive plans, select what your home needs in just a few clicks.",
+            "second_step": "Schedule via WhatsApp",
+            "second_description": "Click to schedule and speak with our assistant on WhatsApp – fast and hassle-free.",
+            "three_step": "Confirm with the Team",
+            "three_description": "Receive confirmation from our team, who finalize the scheduling and payment securely.",
+            "four_step": "Enjoy Peace of Mind",
+            "four_description": "Have the service completed by top professionals and save time and money in the future."
+        },
+        "Services": {
+            "title": "Services That Solve Everything for You",
+            "description": "Keep your home flawless without effort. From cleaning to repairs, we are your trusted ally.",
+            "not_found": "Can’t find what you need?",
+            "button": "Explore all services and solve it now!"
+        },
+        "Depoinments": {
+            "title": "O que dizem os primeiros a confiar na Flix Home",
+            "first": "O diagnóstico grátis da Flix Home alertou-me para um problema na canalização que eu nem sabia que tinha. Sinto-me mais tranquilo agora.",
+            "second": "Com a manutenção preventiva, já evitei uma avaria no meu aquecedor. A Flix Home simplifica mesmo a vida!",
+            "three": "Adoro a facilidade de agendar tudo pelo WhatsApp. A equipa é rápida e deixa-me confiante na manutenção da minha casa.",
+            "four": "Comecei com o plano grátis e já vejo o valor de manter os meus ativos em dia. Recomendo a quem quer evitar surpresas!",
+            "five": "A Flix Home resolveu uma fuga na cozinha em tempo recorde. Agora estou a experimentar o plano para prevenir mais dores de cabeça.",
+            "help": "Quer simplificar o cuidado com a sua casa?",
+            "button": "Fale já pelo WhatsApp e comece hoje"
+        },
+        "Partners": {
+            "title": "Junta-te à Flix Home como parceiro",
+            "description": "És um técnico qualificado ou tens uma pequena empresa de serviços? Trabalha connosco, ganha mais clientes e faz parte de uma plataforma que valoriza a tua experiência. Recebe pedidos diretamente no teu telemóvel e aumenta os teus ganhos sem complicações.",
+            "button": "Regista-te já"
+        },
+        "Initials": {
+            "title": "Proteja a sua casa hoje mesmo!",
+            "description": "Esqueça imprevistos dispendiosos. Com a Flix Home, mantém os seus ativos em dia e vive com mais tranquilidade.",
+            "button": "Comece já pelo WhatsApp"
+        }
+    },
+    "Faqs": {
+        "title": "Perguntas Frequentes",
+        "first": "O que é a Flix Home?",
+        "first_description": "A Flix Home é a sua solução para manter a casa em dia sem complicações. Oferecemos planos de manutenção preventiva para proteger os seus ativos residenciais, como canalização ou eletricidade, e serviços rápidos para reparações ou limpezas, tudo com profissionais de confiança.",
+        "second": "Como funciona o agendamento de serviços?",
+        "second_description": "É simples: escolha o serviço ou plano no nosso site e clique para agendar pelo WhatsApp. O nosso assistente virtual recolhe os detalhes em minutos, e a nossa equipa confirma o horário e o pagamento. Precisa de ajustar? Basta contactar-nos pelo mesmo canal.",
+        "three": "A Flix Home oferece garantia nos serviços?",
+        "three_description": "Sim, todos os serviços realizados pelos nossos parceiros têm garantia de satisfação. Se algo não correr como esperado, contacte-nos pelo WhatsApp e resolvemos rapidamente.",
+        "four": "Quem são os profissionais da Flix Home?",
+        "four_description": "Os nossos profissionais são técnicos qualificados, desde trabalhadores independentes a pequenas empresas, selecionados pela sua experiência e fiabilidade. Fazem parte da nossa rede para garantir que a sua casa está em boas mãos.",
+        "five": "Quais serviços estão disponíveis na Flix Home?",
+        "five_description": "Oferecemos manutenção preventiva para ativos como canalização, eletricidade e eletrodomésticos, além de serviços on-demand como reparações urgentes e limpezas profundas. Veja todas as opções no nosso site!",
+        "six": "Como funcionam os planos de manutenção?",
+        "six_description": "Os nossos planos — Freemium, Essencial e Família — incluem diagnósticos e manutenções regulares para os seus ativos. Comece grátis com o Freemium e escolha o que melhor se adapta à sua casa.",
+        "seven": "Quanto custa aderir à Flix Home?",
+        "seven_description": "O Plano Freemium é grátis para começar, com diagnósticos iniciais. Os planos pagos começam nos €15/mês, com preços fixos e sem surpresas. Veja os detalhes no site!",
+        "height": "Posso cancelar ou mudar o meu plano?",
+        "height_description": "Sim, pode ajustar ou cancelar o seu plano a qualquer momento pelo WhatsApp. Queremos que tenha total flexibilidade."
+    },
+    "Plans": {
+        "title": "Quer prevenir problemas a longo prazo? escolha o plano que mantém a sua casa protegida dos imprevistos",
+        "first_plan": "Plano Freemium",
+        "first_description": "Diagnóstico grátis dos seus ativos para começar.",
+        "second_plan": "Plano Essencial",
+        "second_description": "Manutenção anual de um ativo essencial.",
+        "three_plan": "Plano Família",
+        "three_description": "Proteção completa para todos os seus ativos.",
+        "button": "Comece já a proteger os seus ativos",
+        "link": "Saiba como os nossos planos ajudam"
+    }
+}

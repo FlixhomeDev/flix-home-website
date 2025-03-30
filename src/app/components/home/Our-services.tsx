@@ -1,12 +1,31 @@
 "use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { ServiceCard } from "@/components/ServiceCard";
 import ToggleButtons from "@/components/ToggleButtons";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import useWindowSize from "@/app/hooks/useWindowSize";
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 export function OurServices() {
-  const [active, setActive] = useState("cleaning");
+  const t = useTranslations();
+  const [active, setActive] = useState<
+    "Limpeza" | "Pintura" | "Jardinagem" | "Elétrica" | string
+  >("Limpeza");
+
+  const { width } = useWindowSize();
+
+  const getAmount = () => {
+    if (width < 420) return 1; // Mobile
+    if (width < 560) return 2; // Mobile
+    if (width < 968) return 3; // Mobile
+    return 5; // Desktop
+  };
 
   const servicesData = [
     {
@@ -41,45 +60,90 @@ export function OurServices() {
       category: "Pintura",
       image: "https://source.unsplash.com/300x200/?painting",
     },
+    {
+      id: "5",
+      title: "Pintura de Interior Profissional",
+      oldPrice: 250.0,
+      newPrice: 200.0,
+      category: "Pintura",
+      image: "https://source.unsplash.com/300x200/?painting",
+    },
   ];
 
+  const filteredServices = servicesData.filter(
+    (service) => service.category === active
+  );
+
   return (
-    <div className="max-w-[1256px] w-full mx-auto mt-8 lg:mt-20">
-      <div className="w-full max-w-[468px] mx-auto">
-        <h2 className="text-center font-bold text-2xl">
-          Serviços que cuidam de tudo para você.
+    <div className="max-w-[1256px] w-full mx-auto mt-[58px] lg:mt-[78px]">
+      <div className="w-full max-w-[340px] md:max-w-[468px] mx-auto">
+        <h2 className="text-center font-bold font-inter leading-[21.78px] md:leading-[29.05px] -tracking-[1.5%] text-lg md:text-2xl text-[#292D33]">
+          {t("Home.Services.title")}
         </h2>
-        <p className="text-center text-gray-500 mt-3">
-          Tudo o que você precisa para manter sua casa em ordem. Somos seu
-          parceiro confiável para facilitar o dia a dia.
+        <p className="text-center lg:text-base text-gray-500 text-sm leading-4 md:text-lg font-normal font-inter  md:leading-[21.78px] -tracking-[1.5%] mt-[5px]">
+          {t("Home.Services.description")}
         </p>
       </div>
-
-      <ToggleButtons active={active} setActive={setActive} />
-      <div className="w-full items-center justify-between flex mt-8 px-4 md:px-8">
-        <h3 className="text-lg md:text-2xl font-bold">Promoções</h3>
-        <Link href={"/"} className="text-primaryColor">
-          Ver todas
-        </Link>
+      <div className="w-full md:max-w-[714px] mx-auto pl-[15px] md:pl-0">
+        <ToggleButtons
+          slidesPerView={3.5}
+          active={active}
+          setActive={setActive}
+        />
       </div>
       <div
-        className="flex gap-x-1 px-4 md:px-8 mt-3 overflow-x-auto xl:overflow-x-hidden pl-8"
+        className="hidden md:flex items-center justify-center gap-5 mt-[27px] px-4"
         style={{ scrollbarWidth: "none" }}
       >
-        {servicesData.map((service) => (
-          <ServiceCard key={service.id} {...service} />
+        {filteredServices.map((service, index) => (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <ServiceCard {...service} />
+          </motion.div>
         ))}
       </div>
 
+      <div className="md:hidden flex items-center justify-center w-full px-5 gap-5 mt-[10px] overflow-x-hidden">
+        <Swiper
+          spaceBetween={12}
+          slidesPerView={getAmount()}
+          modules={[Pagination]}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full flex items-center gap-10"
+        >
+          {filteredServices.map((item, index) => (
+            <SwiperSlide key={item?.id}>
+              <motion.div
+                key={item?.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <ServiceCard key={item?.id} {...item} />
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
       <div className="w-full justify-normal items-center mt-5 hidden md:flex">
-        <div className="max-w-[712px] w-full mx-auto border h-[69px] p-2 rounded-md bg-white shadow-sm flex justify-between items-center">
-          <span className="">Não encontrou o que procura? </span>
+        <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
+          <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">
+            {t("Home.Services.not_found")}
+          </span>
           <Link
-            href={"/"}
-            className="text-primaryColor flex items-center gap-x-1 border border-primaryColor p-1 rounded px-4 py-2"
+            href={"/services"}
+            className="text-[#3C91E6] text-xs font-medium font-inter leading-[16.94px] w-[210px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
-            Ver todos os Serviços
-            <ArrowRight />
+            {t("Home.Services.button")}
+            <ArrowRight size={14} color="#3C91E6" />
           </Link>
         </div>
       </div>
