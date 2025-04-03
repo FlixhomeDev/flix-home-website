@@ -76,7 +76,7 @@
         "Initials": {
             "title": "Protégez votre maison dès aujourd'hui!",
             "description": "Oubliez les imprévus coûteux. Avec Flix Home, gardez vos actifs à jour et vivez avec plus de tranquillité.",
-            "button": "Commencez via WhatsApp maintenant"
+            "button": "Commencez aujourd'hui"
         }
     },
     "Faqs": {
@@ -111,7 +111,28 @@
         "second_description": "Maintenance annuelle d'un actif essentiel.",
         "three_plan": "Plan Famille",
         "three_description": "Protection complète pour tous vos actifs.",
-        "button": "Commencez à protéger vos actifs maintenant",
+        "button": "Commencez aujourd'hui et protégez vos actifs",
+        "button_free": "Commencez aujourd'hui gratuitement",
         "link": "Découvrez comment nos plans aident"
+    },
+    "Footer": {
+        "description": "Nous simplifions la vie des gens en offrant des services domestiques de qualité avec transparence et confiance.",
+        "second_section": {
+            "title": "Navigation",
+            "first": "Qui sommes-nous",
+            "second": "Comment ça marche",
+            "three": "Blog",
+            "four": "Support",
+            "five": "Contact"
+        },
+        "three_section": {
+            "first": "Liens utiles",
+            "second": "Contactez-nous",
+            "three": "Travaillez avec nous",
+            "four": "Conditions d'utilisation",
+            "five": "Politique de confidentialité"
+        },
+        "social_media": "Réseaux sociaux",
+        "soon": "Bientôt dans les magasins :"
     }
 }

@@ -26,9 +26,15 @@ import EquipeFh from "./Equipe.png";
 import Family from "./family.jpg";
 import WeTake02 from "./we-take-02.png";
 import MapPinned from "./map.png";
+import PlanoEssencial from "./Plano-Essencial.jpg";
+import PlanoFamiliar from "./Plano-Familiar.jpg";
+import PlanoFreemium from "./Plano-Freemium.png";
 
 export {
   logo,
+  PlanoEssencial,
+  PlanoFamiliar,
+  PlanoFreemium,
   WeTake02,
   MapPinned,
   Careers,

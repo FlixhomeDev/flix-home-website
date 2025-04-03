@@ -107,6 +107,7 @@ export const dataPlans = [
     priceByMonth: 25,
     priceByYear: 229.99,
     link: " https://wa.link/y610ch",
+
     items: [
       {
         title: "1 visita inicial para cadastro dos ativos da residência.",

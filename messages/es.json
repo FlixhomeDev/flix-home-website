@@ -76,26 +76,26 @@
         "Initials": {
             "title": "¡Protege tu casa hoy mismo!",
             "description": "Olvídate de imprevistos costosos. Con Flix Home, mantén tus activos al día y vive con más tranquilidad.",
-            "button": "Comienza ya por WhatsApp"
+            "button": "Empezar hoy"
         }
     },
     "Faqs": {
         "title": "Preguntas Frecuentes",
-        "first": "¿Qué es Flix Home?",
+        "first": "Qué es Flix Home?",
         "first_description": "Flix Home es tu solución para mantener la casa al día sin complicaciones. Ofrecemos planes de mantenimiento preventivo para proteger tus activos residenciales, como canalización o electricidad, y servicios rápidos para reparaciones o limpiezas, todo con profesionales de confianza.",
-        "second": "¿Cómo funciona la agendamiento de servicios?",
+        "second": "Cómo funciona la agendamiento de servicios?",
         "second_description": "Es simple: elige el servicio o plan en nuestro sitio web y haz clic para agendar por WhatsApp. Nuestro asistente virtual recoge los detalles en minutos, y nuestro equipo confirma el horario y el pago. ¿Necesitas ajustar? Basta con contactarnos por el mismo canal.",
-        "three": "¿Flix Home ofrece garantía en los servicios?",
+        "three": "Flix Home ofrece garantía en los servicios?",
         "three_description": "Sí, todos los servicios realizados por nuestros socios tienen garantía de satisfacción. Si algo no sale como esperado, contáctanos por WhatsApp y resolvemos rápidamente.",
         "four": "¿Quiénes son los profesionales de Flix Home?",
         "four_description": "Nuestros profesionales son técnicos calificados, desde trabajadores independientes hasta pequeñas empresas, seleccionados por su experiencia y fiabilidad. Forman parte de nuestra red para garantizar que tu casa está en buenas manos.",
-        "five": "¿Qué servicios están disponibles en Flix Home?",
+        "five": "Qué servicios están disponibles en Flix Home?",
         "five_description": "Ofrecemos mantenimiento preventivo para activos como canalización, electricidad y electrodomésticos, además de servicios on-demand como reparaciones urgentes y limpiezas profundas. ¡Ve todas las opciones en nuestro sitio web!",
-        "six": "¿Cómo funcionan los planes de mantenimiento?",
+        "six": "Cómo funcionan los planes de mantenimiento?",
         "six_description": "Nuestros planes — Freemium, Esencial y Familia — incluyen diagnósticos y mantenimientos regulares para tus activos. Comienza gratis con Freemium y elige lo que mejor se adapta a tu casa.",
         "seven": "¿Cuánto cuesta adherirse a Flix Home?",
         "seven_description": "El Plan Freemium es gratis para comenzar, con diagnósticos iniciales. Los planes pagados comienzan en €15/mes, con precios fijos y sin sorpresas. ¡Ve los detalles en el sitio web!",
-        "height": "¿Puedo cancelar o cambiar mi plan?",
+        "height": "Puedo cancelar o cambiar mi plan?",
         "height_description": "Sí, puedes ajustar o cancelar tu plan en cualquier momento por WhatsApp. Queremos que tengas total flexibilidad."
     },
     "Plans": {
@@ -111,7 +111,28 @@
         "second_description": "Mantenimiento anual de un activo esencial.",
         "three_plan": "Plan Familia",
         "three_description": "Protección completa para todos tus activos.",
-        "button": "Comienza ya a proteger tus activos",
+        "button": "Empiece hoy y proteja su patrimonio",
+        "button_free": "Empiece hoy gratis",
         "link": "Aprende cómo nuestros planes ayudan"
+    },
+    "Footer": {
+        "description": "Simplificamos la vida de las personas ofreciendo servicios domésticos de calidad con transparencia y confianza.",
+        "second_section": {
+            "title": "Navegación",
+            "first": "Quiénes somos",
+            "second": "Cómo funciona",
+            "three": "Blog",
+            "four": "Soporte",
+            "five": "Contacto"
+        },
+        "three_section": {
+            "first": "Enlaces útiles",
+            "second": "Hable con nosotros",
+            "three": "Trabaje con nosotros",
+            "four": "Términos de uso",
+            "five": "Política de privacidad"
+        },
+        "social_media": "Redes Sociales",
+        "soon": "Próximamente en las tiendas:"
     }
 }

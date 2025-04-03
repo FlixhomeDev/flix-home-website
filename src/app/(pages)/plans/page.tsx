@@ -6,6 +6,11 @@ import Banner from "@/app/components/plans/Banner";
 import CardPlans from "@/app/components/plans/Card-plans";
 import FaqsPlans from "@/app/components/plans/Faqs";
 import { useTranslations } from "next-intl";
+import {
+  PlanoEssencial,
+  PlanoFamiliar,
+  PlanoFreemium,
+} from "@/app/assets/images";
 
 export default function Plans() {
   const t = useTranslations();
@@ -17,6 +22,7 @@ export default function Plans() {
       priceByMonth: 0.0,
       priceByYear: 0.0,
       link: "https://wa.link/jgmwg5",
+      image: PlanoFreemium,
       items: [
         {
           title: "1 visita técnica de diagnóstico e levantamento de ativos",
@@ -60,6 +66,7 @@ export default function Plans() {
       priceByMonth: 15,
       priceByYear: 129.99,
       link: "https://wa.link/4iozk1",
+      image: PlanoEssencial,
       items: [
         {
           title: "1 visita de diagnóstico para cadastrar os ativos.",
@@ -115,6 +122,7 @@ export default function Plans() {
       priceByMonth: 25,
       priceByYear: 229.99,
       link: "https://wa.link/y610ch",
+      image: PlanoFamiliar,
       items: [
         {
           title: "1 visita inicial para cadastro dos ativos da residência.",

@@ -1,7 +1,7 @@
 import { ImagePlans } from "@/app/assets/images";
 import { ShieldTickSvg } from "@/app/assets/svgs";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface CardPlansProps {
@@ -11,6 +11,7 @@ interface CardPlansProps {
   priceByMonth: number;
   priceByYear: number;
   link: string;
+  image: StaticImageData;
   items: { title: string; subtitle?: string }[];
   itemsnotinclud: { title: string; subtitle?: string }[];
 }
@@ -21,7 +22,7 @@ export default function CardPlans(item: CardPlansProps) {
     <div className="w-[252px] h-[480px] md:w-[380px] md:h-[780px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
       <div className="w-full h-[152px] rounded-t-[10px]">
         <Image
-          src={ImagePlans}
+          src={item.image}
           alt="Casal relaxando no sofá"
           className="w-full h-full object-cover rounded-t-[10px]"
         />
@@ -81,7 +82,7 @@ export default function CardPlans(item: CardPlansProps) {
         target="_blank"
         className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter flex items-center justify-center px-8 mt-5"
       >
-        {t("Plans.button")}
+        {item.id === "1" ? t("Plans.button_free") : t("Plans.button")}
       </Link>
       <Link
         href={`/plans/details/${item.id}`}
