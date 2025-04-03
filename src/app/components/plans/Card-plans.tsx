@@ -1,4 +1,3 @@
-import { ImagePlans } from "@/app/assets/images";
 import { ShieldTickSvg } from "@/app/assets/svgs";
 import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
