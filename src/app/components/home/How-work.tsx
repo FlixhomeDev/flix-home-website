@@ -6,19 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { BookSvg } from "@/app/assets/svgs";
 import { GitAmination } from "@/app/assets/icon";
-import useWindowSize from "@/app/hooks/useWindowSize";
 import { useTranslations } from "next-intl";
 
 export default function HowWork() {
-  const { width } = useWindowSize();
   const t = useTranslations();
 
-  const getAmount = () => {
-    if (width < 560) return 1; // Mobile
-    if (width < 768) return 2; // Mobile
-    if (width < 640) return 2; // Tablet
-    return 3; // Desktop
-  };
   return (
     <div
       id="howWork"
@@ -88,10 +80,10 @@ export default function HowWork() {
         </div>
 
         {/* MOBILE */}
-        <div className="md:hidden mt-[21px] flex gap-[7px] w-full h-[170px]">
+        <div className="md:hidden mt-[21px] flex gap-[7px] w-full h-[190px]">
           <Swiper
             spaceBetween={1}
-            slidesPerView={getAmount()}
+            slidesPerView={1.3}
             pagination={{ clickable: true }}
             modules={[Pagination]}
             breakpoints={{
@@ -144,6 +136,9 @@ export default function HowWork() {
                 </p>
               </div>
             </SwiperSlide>
+            <div className="w-full mt-12">
+              <button type="button" className="w-2 h-2 bg-transparent" />
+            </div>
           </Swiper>
         </div>
       </div>

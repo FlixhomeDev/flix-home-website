@@ -20,11 +20,11 @@
     "Home": {
         "Banner": {
             "prevention": "Prévenez les dépenses coûteuses et protégez votre maison en toute simplicité",
-            "simplify": "Oubliez les réparations inattendues. Prenez soin de votre maison avec Flix Home.",
+            "simplify": "Oubliez les réparations inattendues, prenez soin de votre maison avec Flix Home.",
             "help": "Nous avons déjà aidé",
             "families_served": "familles",
-            "services": "services",
-            "for_your_home": "pour vous de choisir",
+            "services": "services pour",
+            "for_your_home": "vous de choisir",
             "request_a_service_now!": "Demandez un Service Maintenant!",
             "contact_us": "Contactez-nous"
         },
@@ -66,7 +66,7 @@
             "four": "J'ai commencé avec le plan gratuit et je vois déjà la valeur de garder mes actifs à jour. Je le recommande à tous ceux qui veulent éviter les surprises!",
             "five": "Flix Home a réparé une fuite dans la cuisine en un temps record. Maintenant, j'essaie le plan pour prévenir d'autres maux de tête.",
             "help": "Voulez-vous simplifier l'entretien de votre maison?",
-            "button": "Parlez via WhatsApp maintenant et commencez aujourd'hui"
+            "button": "Parlez-nous et commencez aujourd'hui"
         },
         "Partners": {
             "title": "Rejoignez Flix Home en tant que partenaire",
@@ -101,6 +101,8 @@
     "Plans": {
         "header_home": "Accueil",
         "header_slug": "Plans Préventifs",
+        "title_home": "Protégez vos biens dès maintenant",
+        "description_home": "Choisissez le plan d'entretien qui mettra votre maison à l'abri des imprévus :",
         "title": "Voulez-vous prévenir les problèmes à long terme?",
         "subtitle": "choisissez le plan qui protège votre maison des imprévus",
         "description_mobile": "Évitez les dépenses inattendues et les maux de tête avec nos plans préventifs.",
@@ -130,7 +132,8 @@
             "second": "Contactez-nous",
             "three": "Travaillez avec nous",
             "four": "Conditions d'utilisation",
-            "five": "Politique de confidentialité"
+            "five": "Politique de confidentialité",
+            "six": "Cahier de doléances"
         },
         "social_media": "Réseaux sociaux",
         "soon": "Bientôt dans les magasins :"

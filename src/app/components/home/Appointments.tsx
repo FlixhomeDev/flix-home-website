@@ -30,7 +30,7 @@ export function Appointments() {
       },
       createdAt: "1 day ago",
       appointment: t("Home.Depoinments.first"),
-      rating: 4,
+      rating: 5,
     },
     {
       id: "2",
@@ -52,7 +52,7 @@ export function Appointments() {
       },
       createdAt: "2 day ago",
       appointment: t("Home.Depoinments.three"),
-      rating: 3,
+      rating: 5,
     },
     {
       id: "4",
@@ -63,7 +63,7 @@ export function Appointments() {
       },
       createdAt: "1 day ago",
       appointment: t("Home.Depoinments.four"),
-      rating: 3,
+      rating: 5,
     },
     {
       id: "5",
@@ -74,7 +74,7 @@ export function Appointments() {
       },
       createdAt: "1 day ago",
       appointment: t("Home.Depoinments.five"),
-      rating: 3,
+      rating: 5,
     },
   ];
 
@@ -85,11 +85,8 @@ export function Appointments() {
       </h2>
       <div className="flex flex-col md:hidden">
         <h2 className="text-lg text-[#292D33] font-bold font-inter leading-[21.78px] -tracking-[1.5%] text-center">
-          {t("Home.Depoinments.subtitle")}
+          {t("Home.Depoinments.title")}
         </h2>
-        <span className="text-[10px] text-[#6F6F6F] text-center mt-[5px] font-normal font-inter leading-[21.1px] -tracking-[1.5%]">
-          {t("Home.Depoinments.description")}
-        </span>
       </div>
 
       <div className="flex gap-[10px] mt-[26px] w-full">
@@ -111,15 +108,15 @@ export function Appointments() {
         </Swiper>
       </div>
 
-      <div className="w-full justify-normal items-center mt-[26px] hidden md:flex">
-        <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
-          <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">
+      <div className="w-full justify-normal items-center mt-[26px] flex">
+        <div className="max-w-[712px] w-full mx-auto md:h-[69px] h-[110px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex flex-col md:flex-row justify-between items-center">
+          <span className="text-sm md:text-base text-[#000000] font-medium font-inter leading-[22.4px]">
             {t("Home.Depoinments.help")}
           </span>
           <Link
             href={"https://wa.me/message/PHDJAIL6RKWZC1"}
             target="_blank"
-            className="text-[#3C91E6] text-sm font-medium font-inter leading-[16.94px] w-[270px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
+            className="text-[#3C91E6] text-sm font-medium font-inter leading-[16.94px] w-[300px] h-[41px]  flex items-center justify-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
             {t("Home.Depoinments.button")}
             <ArrowRight size={9} color="#3C91E6" />

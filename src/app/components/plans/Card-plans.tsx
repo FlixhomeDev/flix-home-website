@@ -1,4 +1,4 @@
-import { ShieldTickSvg } from "@/app/assets/svgs";
+import { ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -58,15 +58,14 @@ export default function CardPlans(item: CardPlansProps) {
       <span className="text-[8.82px] md:text-lg text-[#6F6F6F] font-normal font-inter -mt-[6px] md:mt-[10px] ml-5 w-auto md:w-[360px]">
         {item.title}
       </span>
-      <div className="-mt-[6px] md:mt-5 ml-5 flex flex-col gap-[10px]">
+      <div className="-mt-[6px] md:mt-5 mx-5 flex flex-col gap-[10px]">
         {item.items
           .map((category, index) => (
             <div key={index} className="flex items-center gap-[10px]">
               <div className="w-[15px] h-[15px] md:w-[24px] md:h-[24px]">
-                <Image
-                  src={ShieldTickSvg}
-                  alt="Shield Tick Svg"
-                  className="w-full h-full"
+                <ShieldCheck
+                  className="w-[15px] h-[15px] md:w-[24px] md:h-[24px]"
+                  color="#3C91E6"
                 />
               </div>
               <span className="text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter">
@@ -76,13 +75,15 @@ export default function CardPlans(item: CardPlansProps) {
           ))
           .slice(0, 4)}
       </div>
+
       <Link
         href={item.link}
         target="_blank"
-        className="w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter flex items-center justify-center px-8 mt-5"
+        className="whitespace-nowrap w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter flex items-center justify-center px-8 mt-0"
       >
         {item.id === "1" ? t("Plans.button_free") : t("Plans.button")}
       </Link>
+
       <Link
         href={`/plans/details/${item.id}`}
         className="self-center underline text-[8.19px] md:text-[13px] text-center text-[#000] font-semibold font-inter py-2 px-8 -mt-3"

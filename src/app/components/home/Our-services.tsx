@@ -133,14 +133,14 @@ export function OurServices() {
         </Swiper>
       </div>
 
-      <div className="w-full justify-normal items-center mt-5 hidden md:flex">
-        <div className="max-w-[712px] w-full mx-auto h-[69px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex justify-between items-center">
-          <span className="text-base text-[#000000] font-medium font-inter leading-[22.4px]">
+      <div className="w-full px-5 md:px-0 justify-normal items-center mt-5 flex">
+        <div className="max-w-[712px] w-full mx-auto md:h-[69px] h-[110px] py-[14px] px-[16px] border border-[#DEE2E7] rounded-[12px] bg-[#FFFFFF] shadow-[#090B2105] flex flex-col md:flex-row justify-between items-center">
+          <span className="text-sm md:text-base text-[#000000] font-medium font-inter leading-[22.4px]">
             {t("Home.Services.not_found")}
           </span>
           <Link
             href={"/services"}
-            className="text-[#3C91E6] text-xs font-medium font-inter leading-[16.94px] w-[210px] h-[41px]  flex items-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
+            className="text-[#3C91E6] text-xs font-medium font-inter leading-[16.94px] w-full md:w-[210px] h-[41px] flex items-center justify-center gap-[10px] px-[10px] py-3 border border-[#3C91E6] rounded-[5px]"
           >
             {t("Home.Services.button")}
             <ArrowRight size={14} color="#3C91E6" />

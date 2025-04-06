@@ -25,39 +25,47 @@ export function Banner() {
         <h1 className="text-2xl md:text-[32px] text-[#000000] leading-[29.05px] md:leading-[38.73px] font-bold font-interBold  md:max-w-[521px] w-full text-center md:text-left">
           {t("Home.Banner.prevention")}
         </h1>
-        <p className="text-[#6F6F6F] text-xl md:text-2xl leading-[21.78px] md:leading-[29.05px] font-normal font-inter -tracking-[1.5%] max-w-[306px] md:max-w-[410px] mt-4 text-center mx-auto lg:ml-0 lg:text-left">
+        <p className="text-[#6F6F6F] text-sm md:text-lg font-normal font-inter max-w-[306px] md:max-w-[410px] mt-4 text-center mx-auto lg:ml-0 lg:text-left">
           {t("Home.Banner.simplify")}
         </p>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex items-center justify-between md:justify-normal gap-[14px] mt-[10px] md:mt-5"
+          className="flex items-center justify-center md:justify-normal gap-[20px] mt-[10px] md:mt-5 mx-auto md:mx-0 w-fit"
         >
-          <div className="flex items-center gap-[8px] md:gap-[11px] w-[89.85px] md:w-auto">
-            <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
-              {t("Home.Banner.help")}
-            </span>
+          {/* Bloco 1 */}
+          <div className="flex items-center gap-[8px] md:gap-[11px]">
+            <div className="flex flex-col items-end justify-end">
+              <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
+                {t("Home.Banner.help")}
+              </span>
+              <span className="md:hidden block text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
+                {t("Home.Banner.families_served")}
+              </span>
+            </div>
             <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">
-              +2.000
+              +1.000
             </span>
-            <span className="text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
+            <span className="md:block hidden text-[8px] leading-[9.68px] md:text-base text-[#3C91E6] font-normal font-inter tracking-[2%] md:leading-[19.36px]">
               {t("Home.Banner.families_served")}
             </span>
           </div>
+
+          {/* Divider */}
           <div className="h-6 w-px bg-gray-200" />
-          <div className="flex items-center gap-[8px] md:gap-[11px] w-[94.85px] md:w-auto">
+
+          {/* Bloco 2 */}
+          <div className="flex items-center gap-[8px] md:gap-[11px]">
             <span className="text-[13px] leading-[29.87px] md:leading-[0px] md:text-base font-bold font-helvetica text-[#3C91E6] tracking-[2%]">
               +150
             </span>
             <span className="text-[8px] leading-[9.68px] md:text-base font-normal font-inter text-[#3C91E6] tracking-[2%] md:leading-[19.36px]">
-              {t("Home.Banner.services")} <br />{" "}
+              {t("Home.Banner.services")} <br />
               {t("Home.Banner.for_your_home")}
             </span>
           </div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

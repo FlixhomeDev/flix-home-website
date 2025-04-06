@@ -20,11 +20,11 @@
     "Home": {
         "Banner": {
             "prevention": "Previna gastos caros e proteja sua casa com facilidade",
-            "simplify": "Esqueça reparos inesperados. Cuide do seu lar com a Flix Home.",
+            "simplify": "Esqueça reparos inesperados, cuide do seu lar com a Flix Home.",
             "help": "Já ajudamos",
             "families_served": "famílias",
-            "services": "serviços",
-            "for_your_home": "para você escolher",
+            "services": "serviços para",
+            "for_your_home": "você escolher",
             "request_a_service_now!": "Solicite um Serviço Agora!",
             "contact_us": "Fale conosco"
         },
@@ -66,7 +66,7 @@
             "four": "Comecei com o plano grátis e já vejo o valor de manter os meus ativos em dia. Recomendo a quem quer evitar surpresas!",
             "five": "A Flix Home resolveu uma fuga na cozinha em tempo recorde. Agora estou a experimentar o plano para prevenir mais dores de cabeça.",
             "help": "Quer simplificar o cuidado com a sua casa?",
-            "button": "Fale já pelo WhatsApp e comece hoje"
+            "button": "Fale connosco e comece hoje"
         },
         "Partners": {
             "title": "Junta-te à Flix Home como parceiro",
@@ -101,6 +101,8 @@
     "Plans": {
         "header_home": "Inicio",
         "header_slug": "Planos Preventivos",
+        "title_home": "Comece já a proteger os seus ativos",
+        "description_home": "Quer prevenir problemas a longo prazo? escolha o plano de manuteção que mantém a sua casa protegida dos imprevistos:",
         "title": "Quer prevenir problemas a longo prazo?",
         "subtitle": "escolha o plano que mantém a sua casa protegida dos imprevistos",
         "description_mobile": "Evite gastos inesperados e dores de cabeça com nossos planos preventivos.",
@@ -130,7 +132,8 @@
             "second": "Fale conosco",
             "three": "Trabalhe conosco",
             "four": "Termos de Uso",
-            "five": "Políticas de privacidade"
+            "five": "Políticas de privacidade",
+            "six": "Livro de Reclamação"
         },
         "social_media": "Redes Sociais",
         "soon": "Brevemente nas lojas:"

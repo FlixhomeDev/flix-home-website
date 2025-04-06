@@ -140,6 +140,15 @@ export function Footer() {
                     {t("Footer.three_section.five")}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://www.livroreclamacoes.pt/Inicio/"}
+                    className="text-gray-600 hover:text-gray-900 whitespace-nowrap text-sm"
+                  >
+                    {t("Footer.three_section.six")}
+                  </Link>
+                </li>
               </ul>
             </div>
 

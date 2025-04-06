@@ -170,6 +170,14 @@ export default function OurPlans() {
   ];
   return (
     <div className="flex flex-col mt-10 lg:mt-20">
+      <div className="w-full max-w-[340px] md:max-w-[468px] mx-auto">
+        <h2 className="text-center font-bold font-inter leading-[21.78px] md:leading-[29.05px] -tracking-[1.5%] text-lg md:text-2xl text-[#292D33]">
+          {t("Plans.title_home")}
+        </h2>
+        <p className="text-center lg:text-base text-gray-500 text-sm leading-4 md:text-lg font-normal font-inter  md:leading-[21.78px] -tracking-[1.5%] mt-[5px]">
+          {t("Plans.description_home")}
+        </p>
+      </div>
       <div className="hidden mt-0 md:mt-[10px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:flex items-center gap-5 mx-auto max-w-[1261px]">
         {dataPlans.map((item) => (
           <CardPlans key={item.id} {...item} />

@@ -20,11 +20,11 @@
     "Home": {
         "Banner": {
             "prevention": "Prevent expensive costs and protect your home with ease",
-            "simplify": "Forget unexpected repairs. Take care of your home with Flix Home.",
+            "simplify": "Forget unexpected repairs, take care of your home with Flix Home.",
             "help": "We've already helped",
             "families_served": "families",
-            "services": "services",
-            "for_your_home": "for you to choose",
+            "services": "services for",
+            "for_your_home": "you to choose",
             "request_a_service_now!": "Request a Service Now!",
             "contact_us": "Contact us"
         },
@@ -66,7 +66,7 @@
             "four": "I started with the free plan and already see the value of keeping my assets up to date. I recommend it to anyone who wants to avoid surprises!",
             "five": "Flix Home fixed a leak in the kitchen in record time. Now I'm trying the plan to prevent more headaches.",
             "help": "Want to simplify home care?",
-            "button": "Talk via WhatsApp now and start today"
+            "button": "Talk to us and start today"
         },
         "Partners": {
             "title": "Join Flix Home as a partner",
@@ -101,6 +101,8 @@
     "Plans": {
         "header_home": "Home",
         "header_slug": "Preventive Plans",
+        "title_home": "Start protecting your assets now",
+        "description_home": "Do you want to prevent long-term problems? Choose the maintenance plan that keeps your home safe from the unexpected:",
         "title": "Do you want to prevent long-term problems?",
         "subtitle": "choose the plan that keeps your home protected from unforeseen events",
         "description_mobile": "Avoid unexpected expenses and headaches with our preventive plans.",
@@ -130,7 +132,8 @@
             "second": "Talk to us",
             "three": "Work with us",
             "four": "Terms of Use",
-            "five": "Privacy Policy"
+            "five": "Privacy Policy",
+            "six": "Complaint book"
         },
         "social_media": "Social Media",
         "soon": "Coming soon to stores:"

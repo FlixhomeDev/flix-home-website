@@ -3,7 +3,7 @@ import { FlashSvg, ShieldTickSvg, UserTickSvg } from "@/app/assets/svgs";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import React from "react";
@@ -84,19 +84,21 @@ export function Features() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="w-full h-[91px] px-3 md:px-[50px] md:hidden flex items-center gap-5 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
+        className="w-full h-[110px] px-3 md:px-[50px] md:hidden flex items-center gap-5 overflow-x-auto lg:overflow-hidden whitespace-nowrap lg:whitespace-normal"
         style={{ scrollbarWidth: "none" }}
       >
         <Swiper
           spaceBetween={10}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={600}
+          modules={[Pagination, Autoplay]}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="w-full h-[91px] mt-5 flex items-center gap-20 md:hidden"
+          className="w-full h-[100px] mt-10 flex items-center gap-20 md:hidden"
         >
           <SwiperSlide>
             <div className="flex items-center gap-3 w-[290px]">
@@ -160,7 +162,7 @@ export function Features() {
               </div>
             </div>
           </SwiperSlide>
-          <div className="w-full mt-10">
+          <div className="w-full mt-12">
             <button type="button" className="w-2 h-2 bg-transparent" />
           </div>
         </Swiper>

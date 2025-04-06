@@ -41,8 +41,8 @@ export function AppointmentCard({ appointment, user }: Props) {
           <StarSvg />
           <StarSvg />
           <StarSvg />
-          <StarSvg fill="#B6B4B0" />
-          <StarSvg fill="#B6B4B0" />
+          <StarSvg />
+          <StarSvg />
         </div>
       </div>
       <p className="text-xs text-[#4E4E4E] font-normal font-inter leading-[19.2px] mt-[10px]">{` “ ${appointment} ”`}</p>
