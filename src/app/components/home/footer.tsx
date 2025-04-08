@@ -122,9 +122,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    // href="/terms"
-                    href={"#"}
-                    target="_blank"
+                    href="/cookies-policy"
                     className="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap"
                   >
                     {t("Footer.three_section.four")}
@@ -132,9 +130,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    target="_blank"
-                    href={"#"}
-                    // href="/politics-and-privacy"
+                    href="/privacy-policy"
                     className="text-gray-600 hover:text-gray-900 whitespace-nowrap text-sm"
                   >
                     {t("Footer.three_section.five")}

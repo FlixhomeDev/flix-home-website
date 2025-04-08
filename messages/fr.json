@@ -131,11 +131,103 @@
             "first": "Liens utiles",
             "second": "Contactez-nous",
             "three": "Travaillez avec nous",
-            "four": "Conditions d'utilisation",
+            "four": "Politique des cookies",
             "five": "Politique de confidentialité",
             "six": "Cahier de doléances"
         },
         "social_media": "Réseaux sociaux",
         "soon": "Bientôt dans les magasins :"
+    },
+    "PrivacyPolicy": {
+        "title": "Politique de Confidentialité de Flix Home (Portugal)",
+        "subtitle": "Rendre le soin du foyer simple et accessible.",
+        "1": {
+            "title": "Introduction",
+            "description": "Flix Home, dont le siège est situé à Travessa Fonte de Contumil 274, Portugal, s'engage à protéger la vie privée et les données personnelles de ses clients, partenaires et visiteurs du site. Cette Politique de Confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD) et à la législation portugaise en vigueur. En utilisant nos services ou en visitant notre site, vous acceptez les pratiques décrites ici. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services."
+        },
+        "2": {
+            "title": "Données Personnelles Collectées",
+            "description": "Flix Home peut collecter les types de données personnelles suivants :\n- Informations d'Identification : Nom, adresse e-mail, numéro de téléphone, adresse postale.\n- Informations de Paiement : Données de carte bancaire ou autres moyens de paiement (traités par des tiers).\n- Informations Techniques : Adresse IP, type de navigateur, système d’exploitation, données de navigation.\n- Informations d’Utilisation : Interactions avec le site, services utilisés, préférences.\n- Informations de Communication : Messages envoyés via WhatsApp ou d'autres canaux de support."
+        },
+        "3": {
+            "title": "Finalités de la Collecte de Données",
+            "description": "Les données personnelles sont collectées aux fins suivantes :\n- Prestation de Services : Planifier et exécuter des services de maintenance préventive ou à la demande.\n- Communication : Envoyer des confirmations, rappels et mises à jour concernant les services.\n- Amélioration des Services : Analyser l’utilisation du site et des services pour améliorer l’expérience utilisateur.\n- Marketing : Envoyer des newsletters, promotions et informations sur de nouveaux services, si vous avez donné votre consentement.\n- Conformité Légale : Respecter les obligations légales et réglementaires."
+        },
+        "4": {
+            "title": "Base Légale du Traitement des Données",
+            "description": "Flix Home traite vos données personnelles sur les bases légales suivantes :\n- Exécution du Contrat : Pour fournir les services demandés.\n- Consentement : Pour les actions marketing et les communications promotionnelles.\n- Intérêt Légitime : Pour améliorer les services et assurer la sécurité du site.\n- Obligation Légale : Pour se conformer à la législation en vigueur."
+        },
+        "5": {
+            "title": "Partage des Données",
+            "description": "Flix Home peut partager des données personnelles avec :\n- Partenaires Opérationnels : Techniciens et entreprises réalisant les services.\n- Processeurs de Paiement : Pour traiter les transactions financières.\n- Autorités Légales : Lorsque requis par la loi ou pour protéger des droits légaux.\nTous les partenaires sont liés par des accords de confidentialité et de protection des données."
+        },
+        "6": {
+            "title": "Transfert International de Données",
+            "description": "Les données personnelles peuvent être transférées en dehors de l’Espace Économique Européen (EEE), mais uniquement vers des pays offrant un niveau de protection adéquat ou avec des garanties appropriées, comme les Clauses Contractuelles Types."
+        },
+        "7": {
+            "title": "Droits des Personnes Concernées",
+            "description": "Conformément au RGPD, vous disposez des droits suivants :\n- Accès : Demander une copie de vos données personnelles.\n- Rectification : Corriger des données inexactes ou incomplètes.\n- Suppression : Demander la suppression de vos données, si applicable.\n- Limitation : Restreindre le traitement de vos données dans certaines circonstances.\n- Portabilité : Recevoir vos données dans un format structuré et les transférer à un autre responsable du traitement.\n- Opposition : Vous opposer au traitement de vos données à des fins marketing ou autres.\n- Retrait du Consentement : Retirer votre consentement à tout moment, sans affecter la légalité du traitement antérieur.\nPour exercer ces droits, veuillez nous contacter à l’adresse support@flixhome.app."
+        },
+        "8": {
+            "title": "Sécurité des Données",
+            "description": "Flix Home met en œuvre des mesures techniques et organisationnelles pour protéger les données personnelles contre tout accès non autorisé, perte ou destruction. Ces mesures incluent le cryptage, le contrôle d'accès et des sauvegardes régulières."
+        },
+        "9": {
+            "title": "Conservation des Données",
+            "description": "Les données personnelles sont conservées uniquement pendant la durée nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées ou conformément à la loi. Passé ce délai, elles seront anonymisées ou supprimées de manière sécurisée."
+        },
+        "10": {
+            "title": "Cookies et Technologies Similaires",
+            "description": "Notre site utilise des cookies pour améliorer l’expérience utilisateur, analyser le trafic et personnaliser le contenu. Vous pouvez gérer vos préférences en matière de cookies dans les paramètres de votre navigateur. Pour plus d’informations, veuillez consulter notre Politique relative aux Cookies (https://www.flixhome.app/politica-de-cookies)."
+        },
+        "11": {
+            "title": "Modifications de la Politique de Confidentialité",
+            "description": "Flix Home se réserve le droit de mettre à jour cette politique périodiquement. Toute modification sera publiée sur notre site, et la version la plus récente sera toujours disponible."
+        },
+        "12": {
+            "title": "Contact",
+            "description": "Si vous avez des questions ou des préoccupations concernant cette politique ou le traitement de vos données, veuillez nous contacter :\n- E-mail : geral@flixhome.app\n- Adresse : Travessa Fonte de Contumil 274\n- Téléphone : +351 939 936 372\nVous avez également le droit de déposer une plainte auprès de la Comissão Nacional de Proteção de Dados (CNPD), l'autorité de contrôle au Portugal."
+        }
+    },
+    "CookiePolicy": {
+        "title": "Politique de Cookies de Flix Home (Portugal)",
+        "subtitle": "Sur demande, voici une politique de cookies générée pour Flix Home, adaptée au contexte européen et portugais :",
+        "1": {
+            "title": "Introduction",
+            "description": "Flix Home utilise des cookies et des technologies similaires sur son site Web pour améliorer l'expérience utilisateur, analyser le trafic et personnaliser le contenu. Cette politique de cookies explique ce que sont les cookies, comment nous les utilisons et comment vous pouvez gérer vos préférences. En naviguant sur notre site, vous acceptez l'utilisation des cookies comme décrit ici, sauf si vous les avez désactivés dans les paramètres de votre navigateur."
+        },
+        "2": {
+            "title": "Qu'est-ce que les Cookies ?",
+            "description": "Les cookies sont de petits fichiers texte stockés sur votre appareil (ordinateur, tablette, smartphone) lorsque vous visitez un site Web. Ils permettent au site de reconnaître votre appareil lors de futures visites et d'améliorer votre expérience de navigation."
+        },
+        "3": {
+            "title": "Types de Cookies Utilisés",
+            "description": "Flix Home utilise les types de cookies suivants :\n- Cookies Essentiels : Nécessaires au bon fonctionnement du site, tels que la navigation et l'accès aux zones sécurisées. Sans eux, le site ne fonctionne pas correctement. Exemple : Cookies de session pour maintenir la connexion active.\n- Cookies de Performance : Collectent des données sur la façon dont les utilisateurs interagissent avec le site, nous aidant à améliorer ses fonctionnalités. Exemple : Google Analytics pour analyser le trafic.\n- Cookies de Fonctionnalité : Permettent de mémoriser des choix comme la langue ou la région, offrant une expérience personnalisée. Exemple : Cookies qui sauvegardent les préférences linguistiques.\n- Cookies de Marketing : Utilisés pour afficher des annonces pertinentes et mesurer l'efficacité des campagnes publicitaires. Exemple : Cookies de remarketing pour des annonces personnalisées."
+        },
+        "4": {
+            "title": "Comment Nous Utilisons les Cookies",
+            "description": "Les cookies nous aident à :\n- Assurer le bon fonctionnement et la sécurité du site.\n- Analyser l'utilisation du site et améliorer ses performances.\n- Personnaliser votre expérience en mémorisant vos préférences.\n- Fournir des publicités pertinentes en fonction de vos intérêts."
+        },
+        "5": {
+            "title": "Consentement",
+            "description": "Lorsque vous visitez notre site Web, vous verrez une bannière de cookies vous demandant votre consentement pour les cookies non essentiels. Vous pouvez accepter, refuser ou personnaliser vos choix. Les cookies essentiels ne nécessitent pas de consentement, car ils sont nécessaires au fonctionnement du site."
+        },
+        "6": {
+            "title": "Gestion des Cookies",
+            "description": "Vous pouvez gérer ou désactiver les cookies dans les paramètres de votre navigateur à tout moment. Notez que désactiver les cookies essentiels peut affecter la fonctionnalité du site. Consultez les instructions de votre navigateur :\n- Google Chrome\n- Mozilla Firefox\n- Safari\n- Microsoft Edge"
+        },
+        "7": {
+            "title": "Cookies de Tiers",
+            "description": "Notre site Web peut utiliser des cookies de tiers, tels que Google Analytics ou des plateformes publicitaires. Ces tiers collectent des données conformément à leurs propres politiques de confidentialité."
+        },
+        "8": {
+            "title": "Modifications de la Politique de Cookies",
+            "description": "Flix Home peut mettre à jour cette politique périodiquement. Les modifications seront publiées sur le site Web, et la version la plus récente sera toujours disponible."
+        },
+        "9": {
+            "title": "Contact",
+            "description": "Si vous avez des questions concernant cette politique ou l'utilisation des cookies, veuillez nous contacter :\n- E-mail : geral@flixhome.app\n- Adresse : Travessa Fonte de Contumil 274\n- Téléphone : +351 939 936 372"
+        }
     }
 }

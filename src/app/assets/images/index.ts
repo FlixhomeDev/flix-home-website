@@ -29,9 +29,19 @@ import MapPinned from "./map.png";
 import PlanoEssencial from "./Plano-Essencial.jpg";
 import PlanoFamiliar from "./Plano-Familiar.jpg";
 import PlanoFreemium from "./Plano-Freemium.png";
+import LogoWk from "./logo-wk.png";
+import LogoWhite from "./logoWhite-Fall.png";
+import Skylla from "./skylla.app_.png";
+import GoogleReviews from "./google-reviews.png";
+import Trustpilot from "./trustpilot.jpg";
 
 export {
   logo,
+  LogoWk,
+  LogoWhite,
+  Skylla,
+  GoogleReviews,
+  Trustpilot,
   PlanoEssencial,
   PlanoFamiliar,
   PlanoFreemium,

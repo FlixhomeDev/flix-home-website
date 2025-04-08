@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Locale } from "@/i18n/config";
+import Cookie from "js-cookie";
 import { setUserLocale } from "@/services/locale";
 import { useLocale } from "next-intl";
 
@@ -16,6 +17,7 @@ export default function SelectLang() {
 
   function onChange(value: string) {
     const locale = value as Locale;
+    Cookie.set("lang", locale, { expires: 365 });
     setUserLocale(locale);
   }
 

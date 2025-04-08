@@ -6,8 +6,11 @@ import "swiper/css/pagination";
 import { AppointmentCard } from "@/components/AppointmentCard";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "motion/react";
 import useWindowSize from "@/app/hooks/useWindowSize";
 import { useTranslations } from "next-intl";
+import { GoogleReviews, Trustpilot } from "@/app/assets/images";
 
 export function Appointments() {
   const t = useTranslations();
@@ -106,6 +109,43 @@ export function Appointments() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      <div className="w-full justify-normal items-center mt-[26px] flex">
+        <div className="max-w-[712px] w-full mx-auto md:h-[150px] h-[250px] py-[14px] px-[16px] bg-[#FFFFFF] shadow-[#090B2105] flex flex-col md:flex-row justify-between items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            <Link
+              href={"https://g.page/r/CU6-gg3ZBiQaEAE/review"}
+              target="_blank"
+            >
+              <Image
+                src={GoogleReviews}
+                alt="ProSaas Svg"
+                className="h-auto md:h-auto"
+              />
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            <Link
+              href={"https://www.trustpilot.com/evaluate/flixhome.app"}
+              target="_blank"
+            >
+              <Image
+                src={Trustpilot}
+                alt="ProSaas Svg"
+                className="h-28 md:h-auto"
+              />
+            </Link>
+          </motion.div>
+        </div>
       </div>
 
       <div className="w-full justify-normal items-center mt-[26px] flex">

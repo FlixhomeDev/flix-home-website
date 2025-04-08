@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale } from "next-intl/server";
 import localFont from "next/font/local";
+import Cookie from "js-cookie";
 import "./globals.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import CookieConsent from "./components/CookieContent";
 
 // Fonte local variável
 const interLocal = localFont({
@@ -83,13 +84,18 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
+  const savedLocale = Cookie.get("lang");
+  const locale = savedLocale || "pt"; // Se não encontrar o cookie, define 'pt' como padrão
+
   return (
     <html lang={locale}>
       <body
         className={`${interLocal.variable} ${interGoogle.variable} font-Inter antialiased`}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <CookieConsent />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
