@@ -211,8 +211,11 @@ export default function Details() {
                       </h3>
                     </div>
                     <ul className="mt-[15px] px-5 flex flex-col gap-[13px]">
-                      {item.items.map((item, key) => (
-                        <li key={key} className="flex items-start gap-[10px]">
+                      {item.items.map((item) => (
+                        <li
+                          key={item?.title}
+                          className="flex items-start gap-[10px]"
+                        >
                           <CheckCircle2 color="#6F6F6F" size={18} />
                           <div className="flex flex-col">
                             <span className="text-[13px] text-[#484848] font-semibold font-inter">
@@ -233,8 +236,11 @@ export default function Details() {
                       </h3>
                     </div>
                     <ul className="mt-[15px] px-5 flex flex-col gap-[13px]">
-                      {item.itemsnotinclud.map((item, key) => (
-                        <li key={key} className="flex items-start gap-[10px]">
+                      {item.itemsnotinclud.map((item) => (
+                        <li
+                          key={item?.title}
+                          className="flex items-start gap-[10px]"
+                        >
                           <CircleXIcon color="#6F6F6F" size={18} />
                           <div className="flex flex-col">
                             <span className="text-[13px] text-[#484848] font-semibold font-inter">
@@ -380,6 +386,7 @@ export default function Details() {
           <DialogTrigger asChild>
             <button
               type="button"
+              name="contacto"
               className="w-[170px] h-[41px] border border-[#3C91E6] rounded-[5px] py-3 px-[10px] flex items-center gap-[10px] text-sm text-[#3C91E6] font-medium font-inter"
             >
               Entre em contacto

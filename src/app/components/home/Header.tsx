@@ -31,6 +31,7 @@ export function Header() {
         <button
           type="button"
           className="lg:hidden"
+          name="menu"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}

@@ -137,7 +137,11 @@ export default function HowWork() {
               </div>
             </SwiperSlide>
             <div className="w-full mt-12">
-              <button type="button" className="w-2 h-2 bg-transparent" />
+              <button
+                type="button"
+                className="w-2 h-2 bg-transparent"
+                name="btn"
+              />
             </div>
           </Swiper>
         </div>
