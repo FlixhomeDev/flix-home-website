@@ -25,7 +25,8 @@ const interGoogle = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FlixHome",
+  title:
+    "Flix Home | Manutenção Preventiva e Serviços Residenciais em Portugal",
   description:
     "A FlixHome é uma startup portuguesa dedicada a simplificar o cuidado com o lar. Oferecemos uma plataforma inovadora que conecta clientes a profissionais altamente qualificados, proporcionando serviços residenciais de qualidade, com preços fixos e total transparência.",
   icons: {
@@ -49,12 +50,19 @@ export const metadata: Metadata = {
     "Como agendar um serviço de canalização online?",
     "Onde encontrar serviços domésticos confiáveis?",
     "Quanto custa contratar serviços de limpeza?",
+    "manutenção preventiva residencial Portuga",
+    "planos de manutenção casa Lisboa",
+    "serviços domésticos rápidos",
+    "como evitar problemas na canalização",
+    "manutenção elétrica barata em Porto",
+    "diagnóstico grátis casa Portugal",
+    "",
   ],
   authors: [{ name: "FlixHome", url: "https://flixhome.com" }],
   openGraph: {
     title: "FlixHome",
     description:
-      "Descubra serviços confiáveis para sua casa. De reparações a jardinagem, estamos prontos para ajudar.",
+      "A Flix Home simplifica o cuidado com a casa através de planos de manutenção preventiva e serviços on-demand em Portugal.",
     url: "https://flixhome.com/servicos-domesticos-portugal",
     siteName: "FlixHome",
     images: [
@@ -77,6 +85,16 @@ export const metadata: Metadata = {
       "https://drive.google.com/file/d/1idmo3JX_513cfMjMLcHxhP_5LgYXHB6o/view?usp=drive_link",
     ],
   },
+  applicationName: "FlixHome - Serviços Domésticos",
+  generator: "Next.js",
+  category: "Serviços Domésticos",
+  alternates: {
+    canonical: "https://flixhome.com",
+    languages: {
+      "pt-PT": "https://flixhome.com/pt",
+      "en-US": "https://flixhome.com/en",
+    },
+  },
 };
 
 export default async function RootLayout({
@@ -85,10 +103,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const savedLocale = Cookie.get("lang");
-  const locale = savedLocale || "pt"; // Se não encontrar o cookie, define 'pt' como padrão
+  const locale = savedLocale || "pt";
+  const direction = locale === "ar" || locale === "he" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={direction}>
+      <head>
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="FlixHome" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="rating" content="general" />
+        <link rel="canonical" href="https://flixhome.com" />
+      </head>
       <body
         className={`${interLocal.variable} ${interGoogle.variable} font-Inter antialiased`}
       >
