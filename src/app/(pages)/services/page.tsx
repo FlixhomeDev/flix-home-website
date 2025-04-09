@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Input } from "@/components/ui/Input";
 import { SearchIcon } from "lucide-react";
@@ -8,64 +8,56 @@ import { ServiceCard } from "@/components/ServiceCard";
 import BreadcrumbBar from "@/components/Breadcrumb";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+import { ICategory, IServices } from "@/app/components/home/Our-services";
+import axios from "axios";
 
 export default function Services() {
   const t = useTranslations();
-  const servicesData = [
-    {
-      id: "1",
-      title: "Serviço de Jardinagem Vida Verde",
-      oldPrice: 129.99,
-      newPrice: 99.5,
-      category: "Jardinagem",
-      image: "https://source.unsplash.com/300x200/?gardening",
-    },
-    {
-      id: "2",
-      title: "Limpeza Residencial Completa",
-      oldPrice: 150.0,
-      newPrice: 120.0,
-      category: "Limpeza",
-      image: "https://source.unsplash.com/300x200/?cleaning",
-    },
-    {
-      id: "3",
-      title: "Manutenção Elétrica Residencial",
-      oldPrice: 180.0,
-      newPrice: 150.75,
-      category: "Elétrica",
-      image: "https://source.unsplash.com/300x200/?electrician",
-    },
-    {
-      id: "4",
-      title: "Pintura de Interior Profissional",
-      oldPrice: 250.0,
-      newPrice: 200.0,
-      category: "Pintura",
-      image: "https://source.unsplash.com/300x200/?painting",
-    },
-    {
-      id: "5",
-      title: "Pintura de Interior Profissional",
-      oldPrice: 250.0,
-      newPrice: 200.0,
-      category: "Pintura",
-      image: "https://source.unsplash.com/300x200/?painting",
-    },
-    {
-      id: "6",
-      title: "Pintura de Interior Profissional",
-      oldPrice: 250.0,
-      newPrice: 200.0,
-      category: "Pintura",
-      image: "https://source.unsplash.com/300x200/?painting",
-    },
-  ];
-  const [active, setActive] = useState("Limpeza");
+  const [active, setActive] = useState<string>("");
 
-  const filteredServices = servicesData.filter(
-    (service) => service.category === active
+  const [services, setServices] = useState<IServices[]>([]);
+  const [category, setCategory] = useState<ICategory[]>([]);
+
+  const getServices = async () => {
+    try {
+      const res = await axios.get(
+        "https://flix-home-app-api-production.up.railway.app/service"
+      );
+      setServices(res.data.items);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getCategory = async () => {
+    try {
+      const res = await axios.get(
+        "https://flix-home-app-api-production.up.railway.app/category"
+      );
+      setCategory(res.data.items);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const filteredServices = services.filter(
+    (service) => service.categoriesId === active
   );
+
+  // Se nenhum serviço for encontrado, mostramos todos:
+  const servicesToDisplay =
+    filteredServices.length > 0 ? filteredServices : services;
+
+  useEffect(() => {
+    getServices();
+    getCategory();
+  }, []);
+
+  useEffect(() => {
+    if (category.length > 0 && !active) {
+      setActive(category[0].id);
+    }
+  }, [category]);
 
   return (
     <div className="px-4 md:px-8 mb-36 pt-24 lg:pt-20">
@@ -107,22 +99,28 @@ export default function Services() {
 
         <div className="w-full md:max-w-[714px] mx-auto mt-[10px] md:mt-8 ">
           <ToggleButtons
-            slidesPerView={3.2}
+            categorys={category}
             active={active}
             setActive={setActive}
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-1 gap-y-4 px-0 md:px-8 mt-8 w-full">
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <ServiceCard key={service.id} {...service} />
-            </motion.div>
-          ))}
+          {servicesToDisplay.map((service, index) => {
+            const categoryName =
+              category.find((cat) => cat.id === service.categoriesId)?.name ||
+              "Sem categoria";
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <ServiceCard {...service} categoryName={categoryName} />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </div>
