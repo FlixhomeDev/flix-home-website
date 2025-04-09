@@ -191,8 +191,7 @@
         }
     },
     "CookiePolicy": {
-        "title": "Politique de Cookies de Flix Home (Portugal)",
-        "subtitle": "Sur demande, voici une politique de cookies générée pour Flix Home, adaptée au contexte européen et portugais :",
+        "title": "Politique de Cookies",
         "1": {
             "title": "Introduction",
             "description": "Flix Home utilise des cookies et des technologies similaires sur son site Web pour améliorer l'expérience utilisateur, analyser le trafic et personnaliser le contenu. Cette politique de cookies explique ce que sont les cookies, comment nous les utilisons et comment vous pouvez gérer vos préférences. En naviguant sur notre site, vous acceptez l'utilisation des cookies comme décrit ici, sauf si vous les avez désactivés dans les paramètres de votre navigateur."

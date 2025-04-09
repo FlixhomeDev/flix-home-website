@@ -1,36 +1,24 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import { Button } from "@/components/ui/button";
 import { BroomSvg } from "@/app/assets/svgs/broom";
 import { HomeTrendUpSvg } from "@/app/assets/svgs/home-trend-up";
 import { BrushSvg } from "@/app/assets/svgs/brush";
 import { BuildingSvg } from "@/app/assets/svgs/building";
+import { ICategory } from "@/app/components/home/Our-services";
 
-const buttonOptions = [
-  { id: "Limpeza", label: "Limpeza", color: "#4094e4" },
-  { id: "Pintura", label: "Pintura", color: "#4094e4" },
-  { id: "Jardinagem", label: "Jardinagem", color: "#4094e4" },
-  { id: "Instalação", label: "Instalação", color: "#4094e4" },
-  { id: "Decoração", label: "Decoração", color: "#4094e4" },
-];
-
-type Props = {
+interface ToggleButtonsProps {
+  categorys: ICategory[];
   active: string;
-  slidesPerView: number;
-  setActive: React.Dispatch<
-    React.SetStateAction<
-      "Limpeza" | "Pintura" | "Jardinagem" | "Instalação" | "Decoração" | string
-    >
-  >;
-};
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}
 
 export default function ToggleButtons({
-  active = "Limpeza",
+  categorys,
+  active,
   setActive,
-  slidesPerView,
-}: Props) {
+}: ToggleButtonsProps) {
   return (
     <div className="w-full">
       <div
@@ -39,7 +27,7 @@ export default function ToggleButtons({
       >
         <Swiper
           spaceBetween={7.5}
-          slidesPerView={slidesPerView}
+          slidesPerView={3.5}
           pagination={{ clickable: true }}
           modules={[]}
           breakpoints={{
@@ -48,34 +36,32 @@ export default function ToggleButtons({
           }}
           className="w-full flex items-center gap-[7.5px] justify-center mx-auto"
         >
-          {buttonOptions.map(({ label }) => (
-            <SwiperSlide key={label} className="!w-[119px] flex justify-center">
+          {categorys?.map(({ name, id }) => (
+            <SwiperSlide key={id} className="!w-[119px] flex justify-center">
               <Button
-                key={label}
-                variant={active === label ? "default" : "outline"}
+                key={id}
                 className={`mx-0 w-[119px] h-[30px] md:h-[41px] text-[9.75px] leading-[16.58px] md:text-[13px] md:leading-[21.1px] tracking-[0.5px] font-normal font-inter rounded-[7px] md:rounded-[10px] border-2 border-[#3C91E614] ${
-                  active === label ? "text-white" : "text-[#3C91E6]"
+                  active === id ? "text-white" : "text-[#3C91E6]"
                 }`}
-                onClick={() => setActive(label)}
+                variant={active === id ? "default" : "outline"}
+                onClick={() => setActive(id)}
               >
-                {label === "Limpeza" && (
-                  <BroomSvg fill={active === label ? "#FFF" : "#4094e4"} />
+                {name === "Limpeza" && (
+                  <BroomSvg fill={active === name ? "#FFF" : "#4094e4"} />
                 )}
-                {label === "Pintura" && (
-                  <HomeTrendUpSvg
-                    fill={active === label ? "#FFF" : "#4094e4"}
-                  />
+                {name === "Pintura" && (
+                  <HomeTrendUpSvg fill={active === name ? "#FFF" : "#4094e4"} />
                 )}
-                {label === "Jardinagem" && (
-                  <BrushSvg fill={active === label ? "#FFF" : "#4094e4"} />
+                {name === "Jardinagem" && (
+                  <BrushSvg fill={active === name ? "#FFF" : "#4094e4"} />
                 )}
-                {label === "Instalação" && (
-                  <BuildingSvg fill={active === label ? "#FFF" : "#4094e4"} />
+                {name === "Instalação" && (
+                  <BuildingSvg fill={active === name ? "#FFF" : "#4094e4"} />
                 )}
-                {label === "Decoração" && (
-                  <BrushSvg fill={active === label ? "#FFF" : "#4094e4"} />
+                {name === "Decoração" && (
+                  <BrushSvg fill={active === name ? "#FFF" : "#4094e4"} />
                 )}
-                {label}
+                {name.trim().length > 10 ? name.substring(0, 10) + "..." : name}
               </Button>
             </SwiperSlide>
           ))}

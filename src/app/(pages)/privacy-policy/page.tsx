@@ -37,10 +37,6 @@ export default function Page() {
           </span>
         </div>
 
-        <h2 className="mt-[10px] md:mt-[15px] text-2xl md:text-[32px] text-[#292D33] font-bold md:font-extrabold font-inter px-[15px] md:px-[70px]">
-          {t("PrivacyPolicy.subtitle")}
-        </h2>
-
         <div className="mt-10 space-y-10 px-[15px] md:px-[70px]">
           {sectionKeys.map((key) => (
             <section key={key}>

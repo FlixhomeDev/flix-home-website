@@ -139,8 +139,7 @@
         "soon": "Brevemente nas lojas:"
     },
     "PrivacyPolicy": {
-        "title": "Política de Privacidade da Flix Home (Portugal)",
-        "subtitle": "Transformar o cuidado com o lar em algo descomplicado e acessível.",
+        "title": "Política de Privacidade",
         "1": {
             "title": "Introdução",
             "description": "A Flix Home, com sede em Travessa Fonte de Contumil 274, Portugal, está empenhada em proteger a privacidade e os dados pessoais dos seus clientes, parceiros e visitantes do site. Esta Política de Privacidade explica como recolhemos, utilizamos, armazenamos e protegemos os seus dados pessoais, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD) e a legislação portuguesa aplicável. Ao utilizar os nossos serviços ou visitar o nosso site, você concorda com as práticas aqui descritas. Caso não concorde, por favor, não utilize os nossos serviços."
@@ -191,8 +190,7 @@
         }
     },
     "CookiePolicy": {
-        "title": "Política de Cookies da Flix Home (Portugal)",
-        "subtitle": "A pedido, aqui está uma política de cookies gerada para a Flix Home, adaptada ao contexto europeu e português:",
+        "title": "Política de Cookies",
         "1": {
             "title": "Introdução",
             "description": "A Flix Home utiliza cookies e tecnologias semelhantes no seu site para melhorar a experiência do utilizador, analisar o tráfego e personalizar conteúdo. Esta Política de Cookies explica o que são cookies, como os utilizamos e como pode gerir as suas preferências. Ao navegar no nosso site, você concorda com o uso de cookies conforme descrito aqui, salvo se os tiver desativado nas configurações do seu navegador."

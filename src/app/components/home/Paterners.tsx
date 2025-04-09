@@ -22,21 +22,21 @@ export function Paterners() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
         >
-          <Image src={LogoWk} alt="ProSaas Svg" className="h-10" />
+          <Image src={LogoWk} alt="ProSaas Svg" className="h-7" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
         >
-          <Image src={LogoWhite} alt="Nol City Svg" className="h-10" />
+          <Image src={LogoWhite} alt="Nol City Svg" className="h-7" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
-          <Image src={Skylla} alt="Mata Svg" className="h-10" />
+          <Image src={Skylla} alt="Mata Svg" className="h-7" />
         </motion.div>
       </div>
     </div>

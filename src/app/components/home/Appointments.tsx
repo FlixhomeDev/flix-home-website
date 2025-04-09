@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { AppointmentCard } from "@/components/AppointmentCard";
@@ -96,7 +96,9 @@ export function Appointments() {
         <Swiper
           spaceBetween={12}
           slidesPerView={getAmount()}
-          modules={[Pagination]}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          speed={600}
+          modules={[Pagination, Autoplay]}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
@@ -125,7 +127,7 @@ export function Appointments() {
               <Image
                 src={GoogleReviews}
                 alt="ProSaas Svg"
-                className="h-auto md:h-auto"
+                className="h-20 md:h-16"
               />
             </Link>
           </motion.div>
@@ -141,7 +143,7 @@ export function Appointments() {
               <Image
                 src={Trustpilot}
                 alt="ProSaas Svg"
-                className="h-28 md:h-auto"
+                className="h-20 md:h-16"
               />
             </Link>
           </motion.div>

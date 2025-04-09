@@ -7,72 +7,77 @@ import { ServiceCard } from "@/components/ServiceCard";
 import ToggleButtons from "@/components/ToggleButtons";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-import useWindowSize from "@/app/hooks/useWindowSize";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+import axios from "axios";
+
+export interface IServices {
+  id: string;
+  reference: string;
+  name: string;
+  description: string;
+  price: number;
+  currency: string;
+  status: string;
+  categoriesId: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ICategory {
+  id: string;
+  name: string;
+  description: string;
+  created_at: string;
+  updated_at: string;
+}
 
 export function OurServices() {
   const t = useTranslations();
-  const [active, setActive] = useState<
-    "Limpeza" | "Pintura" | "Jardinagem" | "Elétrica" | string
-  >("Limpeza");
+  const [active, setActive] = useState<string>("");
 
-  const { width } = useWindowSize();
+  const [services, setServices] = useState<IServices[]>([]);
+  const [category, setCategory] = useState<ICategory[]>([]);
 
-  const getAmount = () => {
-    if (width < 420) return 1; // Mobile
-    if (width < 560) return 2; // Mobile
-    if (width < 968) return 3; // Mobile
-    return 5; // Desktop
+  const getServices = async () => {
+    try {
+      const res = await axios.get(
+        "https://flix-home-app-api-production.up.railway.app/service"
+      );
+      console.log({ res: res.data.items });
+      setServices(res.data.items);
+    } catch (error) {}
   };
 
-  const servicesData = [
-    {
-      id: "1",
-      title: "Serviço de Jardinagem Vida Verde",
-      oldPrice: 129.99,
-      newPrice: 99.5,
-      category: "Jardinagem",
-      image: "https://source.unsplash.com/300x200/?gardening",
-    },
-    {
-      id: "2",
-      title: "Limpeza Residencial Completa",
-      oldPrice: 150.0,
-      newPrice: 120.0,
-      category: "Limpeza",
-      image: "https://source.unsplash.com/300x200/?cleaning",
-    },
-    {
-      id: "3",
-      title: "Manutenção Elétrica Residencial",
-      oldPrice: 180.0,
-      newPrice: 150.75,
-      category: "Elétrica",
-      image: "https://source.unsplash.com/300x200/?electrician",
-    },
-    {
-      id: "4",
-      title: "Pintura de Interior Profissional",
-      oldPrice: 250.0,
-      newPrice: 200.0,
-      category: "Pintura",
-      image: "https://source.unsplash.com/300x200/?painting",
-    },
-    {
-      id: "5",
-      title: "Pintura de Interior Profissional",
-      oldPrice: 250.0,
-      newPrice: 200.0,
-      category: "Pintura",
-      image: "https://source.unsplash.com/300x200/?painting",
-    },
-  ];
+  const getCategory = async () => {
+    try {
+      const res = await axios.get(
+        "https://flix-home-app-api-production.up.railway.app/category"
+      );
+      console.log({ res: res.data.items });
+      setCategory(res.data.items);
+    } catch (error) {}
+  };
 
-  const filteredServices = servicesData.filter(
-    (service) => service.category === active
+  const filteredServices = services.filter(
+    (service) => service.categoriesId === active
   );
+
+  // Se nenhum serviço for encontrado, mostramos todos:
+  const servicesToDisplay =
+    filteredServices.length > 0 ? filteredServices : services;
+
+  useEffect(() => {
+    getServices();
+    getCategory();
+  }, []);
+
+  useEffect(() => {
+    if (category.length > 0 && !active) {
+      setActive(category[0].id);
+    }
+  }, [category]);
 
   return (
     <div className="max-w-[1256px] w-full mx-auto mt-[58px] lg:mt-[78px]">
@@ -86,7 +91,7 @@ export function OurServices() {
       </div>
       <div className="w-full md:max-w-[714px] mx-auto pl-[15px] md:pl-0">
         <ToggleButtons
-          slidesPerView={3.5}
+          categorys={category}
           active={active}
           setActive={setActive}
         />
@@ -95,22 +100,30 @@ export function OurServices() {
         className="hidden md:flex items-center justify-center gap-5 mt-[27px] px-4"
         style={{ scrollbarWidth: "none" }}
       >
-        {filteredServices.map((service, index) => (
-          <motion.div
-            key={service.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-          >
-            <ServiceCard {...service} />
-          </motion.div>
-        ))}
+        {servicesToDisplay
+          .map((service, index) => {
+            const categoryName =
+              category.find((cat) => cat.id === service.categoriesId)?.name ||
+              "Sem categoria";
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <ServiceCard {...service} categoryName={categoryName} />
+              </motion.div>
+            );
+          })
+          .slice(0, 5)}
       </div>
 
-      <div className="md:hidden flex items-center justify-center w-full px-5 gap-5 mt-[10px] overflow-x-hidden">
+      <div className="md:hidden flex items-center justify-center w-full px-5 gap-5 mt-[10px]">
         <Swiper
           spaceBetween={12}
-          slidesPerView={getAmount()}
+          slidesPerView={2}
           modules={[Pagination]}
           breakpoints={{
             768: { slidesPerView: 2 },
@@ -118,18 +131,24 @@ export function OurServices() {
           }}
           className="w-full flex items-center gap-10"
         >
-          {filteredServices.map((item, index) => (
-            <SwiperSlide key={item?.id}>
-              <motion.div
-                key={item?.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <ServiceCard key={item?.id} {...item} />
-              </motion.div>
-            </SwiperSlide>
-          ))}
+          {servicesToDisplay
+            .map((item, index) => {
+              const categoryName =
+                category.find((cat) => cat.id === item.categoriesId)?.name ||
+                "Sem categoria";
+              return (
+                <SwiperSlide key={item?.id}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <ServiceCard {...item} categoryName={categoryName} />
+                  </motion.div>
+                </SwiperSlide>
+              );
+            })
+            .slice(0, 4)}
         </Swiper>
       </div>
 
