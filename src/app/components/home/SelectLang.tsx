@@ -7,10 +7,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Locale } from "@/i18n/config";
 import Cookie from "js-cookie";
 import { setUserLocale } from "@/services/locale";
 import { useLocale } from "next-intl";
+import type { Locale } from "@/i18n/config";
 
 export default function SelectLang() {
   const locale = useLocale();
@@ -30,10 +30,10 @@ export default function SelectLang() {
         />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="pt">PT 🇵🇹</SelectItem>
-        <SelectItem value="en">ENG 🇬🇧</SelectItem>
-        <SelectItem value="es">ES 🇪🇸</SelectItem>
-        <SelectItem value="fr">FR 🇫🇷</SelectItem>
+        <SelectItem value="pt">PT</SelectItem>
+        <SelectItem value="en">ENG</SelectItem>
+        <SelectItem value="es">ES</SelectItem>
+        <SelectItem value="fr">FR</SelectItem>
       </SelectContent>
     </Select>
   );
