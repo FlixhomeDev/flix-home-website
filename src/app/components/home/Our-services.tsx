@@ -45,9 +45,10 @@ export function OurServices() {
       const res = await axios.get(
         "https://flix-home-app-api-production.up.railway.app/service"
       );
-      console.log({ res: res.data.items });
       setServices(res.data.items);
-    } catch (error) {}
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const getCategory = async () => {
@@ -55,9 +56,10 @@ export function OurServices() {
       const res = await axios.get(
         "https://flix-home-app-api-production.up.railway.app/category"
       );
-      console.log({ res: res.data.items });
       setCategory(res.data.items);
-    } catch (error) {}
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const filteredServices = services.filter(
