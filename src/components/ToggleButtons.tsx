@@ -31,6 +31,27 @@ export default function ToggleButtons({
     array.includes(category.id)
   );
 
+  // const desiredOrder = [
+  //   "Montagem",
+  //   "Limpeza Residencial",
+  //   "Reparos Gerais",
+  //   "Impermeabilização",
+  //   "Instalação",
+  //   "Jardinagem",
+  // ];
+
+  // const allowedIds = [
+  //   "eecd2f03-56b9-4ca8-aad9-4b04ce79c5dd",
+  //   "5eb90ce6-2210-410e-b69d-3099d56ebd06",
+  //   "184e6c21-b4d3-4ad1-85af-1feb70cbfdeb",
+  //   "d888cd1f-4b07-46e6-a461-6ad33580a426",
+  //   "99e28911-447c-4ccb-b0ae-e6643f2a2650",
+  // ];
+
+  // const sortedCategories = [...categorys]
+  //   .filter((category) => allowedIds.includes(category.id) && desiredOrder.includes(category.name))
+  //   .sort((a, b) => desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name));
+
   return (
     <div className="w-full">
       <div

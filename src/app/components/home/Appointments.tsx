@@ -114,7 +114,7 @@ export function Appointments() {
       </div>
 
       <div className="w-full justify-normal items-center mt-[26px] flex">
-        <div className="max-w-[712px] w-full mx-auto md:h-[150px] h-[250px] py-[14px] px-[16px] bg-[#FFFFFF] shadow-[#090B2105] flex flex-col md:flex-row justify-between items-center">
+        <div className="max-w-[712px] w-full mx-auto md:h-[150px] h-[200px] py-[14px] px-[16px] bg-[#FFFFFF] shadow-[#090B2105] flex flex-col md:flex-row justify-between items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export function Appointments() {
               <Image
                 src={GoogleReviews}
                 alt="ProSaas Svg"
-                className="h-20 md:h-16"
+                className="h-16 w-44 md:h-[100px] md:w-72"
               />
             </Link>
           </motion.div>
@@ -143,7 +143,7 @@ export function Appointments() {
               <Image
                 src={Trustpilot}
                 alt="ProSaas Svg"
-                className="h-20 md:h-16"
+                className="h-20 w-44 md:h-[100px] md:w-72"
               />
             </Link>
           </motion.div>
