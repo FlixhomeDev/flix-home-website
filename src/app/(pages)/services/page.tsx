@@ -18,23 +18,47 @@ export default function Services() {
   const [services, setServices] = useState<IServices[]>([]);
   const [category, setCategory] = useState<ICategory[]>([]);
 
+  const CACHE_TTL = 2 * 60 * 60 * 1000; // 2 horas
+
   const getServices = async () => {
+    const cached = localStorage.getItem("services");
+    const cachedTime = localStorage.getItem("services_cached_at");
+
+    const now = Date.now();
+    if (cached && cachedTime && now - parseInt(cachedTime) < CACHE_TTL) {
+      setServices(JSON.parse(cached));
+      return;
+    }
+
     try {
       const res = await axios.get(
         "https://flix-home-app-api-production.up.railway.app/service"
       );
       setServices(res.data.items);
+      localStorage.setItem("services", JSON.stringify(res.data.items));
+      localStorage.setItem("services_cached_at", now.toString());
     } catch (e) {
       console.log(e);
     }
   };
 
   const getCategory = async () => {
+    const cached = localStorage.getItem("categories");
+    const cachedTime = localStorage.getItem("categories_cached_at");
+
+    const now = Date.now();
+    if (cached && cachedTime && now - parseInt(cachedTime) < CACHE_TTL) {
+      setCategory(JSON.parse(cached));
+      return;
+    }
+
     try {
       const res = await axios.get(
         "https://flix-home-app-api-production.up.railway.app/category"
       );
       setCategory(res.data.items);
+      localStorage.setItem("categories", JSON.stringify(res.data.items));
+      localStorage.setItem("categories_cached_at", now.toString());
     } catch (e) {
       console.log(e);
     }

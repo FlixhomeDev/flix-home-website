@@ -58,20 +58,20 @@ export default function ToggleButtons({
                 variant={active === id ? "default" : "outline"}
                 onClick={() => setActive(id)}
               >
-                {name === "Limpeza" && (
-                  <BroomSvg fill={active === name ? "#FFF" : "#4094e4"} />
+                {name === "Reparos Gerais" && (
+                  <HomeTrendUpSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
-                {name === "Pintura" && (
-                  <HomeTrendUpSvg fill={active === name ? "#FFF" : "#4094e4"} />
+                {name === "Limpeza Residencial" && (
+                  <BroomSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
                 {name === "Jardinagem" && (
-                  <BrushSvg fill={active === name ? "#FFF" : "#4094e4"} />
+                  <BrushSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
                 {name === "Instalação" && (
-                  <BuildingSvg fill={active === name ? "#FFF" : "#4094e4"} />
+                  <BuildingSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
-                {name === "Decoração" && (
-                  <BrushSvg fill={active === name ? "#FFF" : "#4094e4"} />
+                {name === "Impermeabilização" && (
+                  <BrushSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
                 {name.trim().length > 10 ? name.substring(0, 10) + "..." : name}
               </Button>
