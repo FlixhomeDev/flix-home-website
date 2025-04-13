@@ -35,6 +35,7 @@ export default function ToggleButtons({
   ];
 
   const allowedIds = [
+    "fd11d064-054a-44e2-8039-3043a60ea535",
     "184e6c21-b4d3-4ad1-85af-1feb70cbfdeb",
     "99e28911-447c-4ccb-b0ae-e6643f2a2650",
     "d888cd1f-4b07-46e6-a461-6ad33580a426",
@@ -79,6 +80,9 @@ export default function ToggleButtons({
                 variant={active === id ? "default" : "outline"}
                 onClick={() => setActive(id)}
               >
+                {name === "Montagem" && (
+                  <HomeTrendUpSvg fill={active === id ? "#FFF" : "#4094e4"} />
+                )}
                 {name === "Reparos Gerais" && (
                   <HomeTrendUpSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
