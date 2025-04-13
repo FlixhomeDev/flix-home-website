@@ -56,7 +56,7 @@ export function ServiceCard({
         {name}
       </p>
       <Link
-        href={`https://wa.me/+244952574322?text=${encodeURIComponent(
+        href={`https://wa.me/+351936032865?text=${encodeURIComponent(
           `Olá! Gostaria de agendar o serviço:\n` +
             `• Categoria: ${categoryName}\n` +
             `• Serviço: ${name}\n` +
