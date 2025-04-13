@@ -19,38 +19,38 @@ export default function ToggleButtons({
   active,
   setActive,
 }: ToggleButtonsProps) {
-  const array = [
-    "eecd2f03-56b9-4ca8-aad9-4b04ce79c5dd",
-    "5eb90ce6-2210-410e-b69d-3099d56ebd06",
-    "184e6c21-b4d3-4ad1-85af-1feb70cbfdeb",
-    "d888cd1f-4b07-46e6-a461-6ad33580a426",
-    "99e28911-447c-4ccb-b0ae-e6643f2a2650",
+  console.log({ categorys: categorys });
+
+  // const filteredCategories = categorys.filter((category) =>
+  //   allowedIds.includes(category.id)
+  // );
+
+  const desiredOrder = [
+    "Montagem",
+    "Limpeza Residencial",
+    "Reparos Gerais",
+    "Impermeabilização",
+    "Instalação",
+    "Jardinagem",
   ];
 
-  const filteredCategories = categorys.filter((category) =>
-    array.includes(category.id)
-  );
+  const allowedIds = [
+    "184e6c21-b4d3-4ad1-85af-1feb70cbfdeb",
+    "99e28911-447c-4ccb-b0ae-e6643f2a2650",
+    "d888cd1f-4b07-46e6-a461-6ad33580a426",
+    "5eb90ce6-2210-410e-b69d-3099d56ebd06",
+    "eecd2f03-56b9-4ca8-aad9-4b04ce79c5dd",
+  ];
 
-  // const desiredOrder = [
-  //   "Montagem",
-  //   "Limpeza Residencial",
-  //   "Reparos Gerais",
-  //   "Impermeabilização",
-  //   "Instalação",
-  //   "Jardinagem",
-  // ];
-
-  // const allowedIds = [
-  //   "eecd2f03-56b9-4ca8-aad9-4b04ce79c5dd",
-  //   "5eb90ce6-2210-410e-b69d-3099d56ebd06",
-  //   "184e6c21-b4d3-4ad1-85af-1feb70cbfdeb",
-  //   "d888cd1f-4b07-46e6-a461-6ad33580a426",
-  //   "99e28911-447c-4ccb-b0ae-e6643f2a2650",
-  // ];
-
-  // const sortedCategories = [...categorys]
-  //   .filter((category) => allowedIds.includes(category.id) && desiredOrder.includes(category.name))
-  //   .sort((a, b) => desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name));
+  const sortedCategories = [...categorys]
+    .filter(
+      (category) =>
+        allowedIds.includes(category.id) &&
+        desiredOrder.includes(category.name.trim())
+    )
+    .sort(
+      (a, b) => desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name)
+    );
 
   return (
     <div className="w-full">
@@ -69,7 +69,7 @@ export default function ToggleButtons({
           }}
           className="w-full flex items-center gap-[7.5px] justify-center mx-auto"
         >
-          {filteredCategories?.map(({ name, id }) => (
+          {sortedCategories?.map(({ name, id }) => (
             <SwiperSlide key={id} className="!w-[119px] flex justify-center">
               <Button
                 key={id}
@@ -82,7 +82,7 @@ export default function ToggleButtons({
                 {name === "Reparos Gerais" && (
                   <HomeTrendUpSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
-                {name === "Limpeza Residencial" && (
+                {name.trim() === "Limpeza Residencial".trim() && (
                   <BroomSvg fill={active === id ? "#FFF" : "#4094e4"} />
                 )}
                 {name === "Jardinagem" && (
