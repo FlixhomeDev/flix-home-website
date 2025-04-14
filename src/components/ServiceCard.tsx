@@ -56,7 +56,7 @@ export function ServiceCard({
         {name}
       </p>
       <Link
-        href={`https://wa.me/+351936032865?text=${encodeURIComponent(
+        href={`https://wa.me/+351939936372?text=${encodeURIComponent(
           `Olá! Gostaria de agendar o serviço:\n` +
             `• Categoria: ${categoryName}\n` +
             `• Serviço: ${name}\n` +
@@ -69,14 +69,6 @@ export function ServiceCard({
         <CalendarDaysIcon size={14} />
         {t("Header.schedule_service")}
       </Link>
-
-      {/* <Link
-        href={"https://wa.me/message/PHDJAIL6RKWZC1"}
-        className="md:h-[37.22px] h-[28px] w-[140px] md:w-[180.77px] flex items-center gap-[10px] md:gap-[5.31px] py-[8px] px-[9px] md:py-[11px] md:px-[10px] border border-[#3C91E614] border-opacity-[8%] bg-[#3C91E605] bg-opacity-[2%] rounded-[7px] mt-4 text-[#3C91E6] text-[10px] md:text-[13px] font-medium font-inter leading-[12.1px] md:leading-[16.05px] -tracking-[0.2px]"
-      >
-        <CalendarDaysIcon size={14} />
-        {t("Header.schedule_service")}
-      </Link> */}
     </div>
   );
 }

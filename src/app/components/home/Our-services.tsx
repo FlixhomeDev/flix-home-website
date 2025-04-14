@@ -148,8 +148,6 @@ export function OurServices() {
         });
       }
 
-      // 3. Salva no estado e no cache
-      console.log({ allItems: allItems });
       setCategory(allItems);
       localStorage.setItem("categories", JSON.stringify(allItems));
       localStorage.setItem("categories_cached_at", now.toString());
