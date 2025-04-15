@@ -21,15 +21,6 @@ export default function Services() {
   const CACHE_TTL = 2 * 60 * 60 * 1000; // 2 horas
 
   const getServices = async () => {
-    const cached = localStorage.getItem("services");
-    const cachedTime = localStorage.getItem("services_cached_at");
-    const now = Date.now();
-
-    if (cached && cachedTime && now - parseInt(cachedTime) < CACHE_TTL) {
-      setCategory(JSON.parse(cached));
-      return;
-    }
-
     try {
       // 1. Buscar a primeira página
       const firstPageRes = await axios.get(
@@ -59,24 +50,12 @@ export default function Services() {
 
       // 3. Salva no estado e no cache
       setServices(allItems);
-      localStorage.setItem("services", JSON.stringify(allItems));
-      localStorage.setItem("services_cached_at", now.toString());
     } catch (error) {
       console.error("Erro ao buscar servicos:", error);
     }
   };
 
   const getCategory = async () => {
-    const CACHE_TTL = 1000 * 60 * 60; // 1 hora em ms
-    const cached = localStorage.getItem("categories");
-    const cachedTime = localStorage.getItem("categories_cached_at");
-    const now = Date.now();
-
-    if (cached && cachedTime && now - parseInt(cachedTime) < CACHE_TTL) {
-      setCategory(JSON.parse(cached));
-      return;
-    }
-
     try {
       // 1. Buscar a primeira página
       const firstPageRes = await axios.get(
@@ -105,8 +84,6 @@ export default function Services() {
       }
 
       setCategory(allItems);
-      localStorage.setItem("categories", JSON.stringify(allItems));
-      localStorage.setItem("categories_cached_at", now.toString());
     } catch (error) {
       console.error("Erro ao buscar categorias:", error);
     }
