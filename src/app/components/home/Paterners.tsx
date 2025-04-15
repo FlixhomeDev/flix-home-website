@@ -16,27 +16,30 @@ export function Paterners() {
         <Image src={Skylla} alt="Mata Svg" className="h-[25px] w-28" />
       </div>
 
-      <div className="w-full lg:mx-[132px] flex items-center justify-between gap-x-20">
+      <div className="w-full lg:mx-[132px] flex items-center justify-around gap-x-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
+          className="h-[25px] w-36"
         >
-          <Image src={LogoWk} alt="ProSaas Svg" className="h-[25px] w-36" />
+          <Image src={LogoWk} alt="ProSaas Svg" className="h-full w-full" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
+          className="h-[25px] w-36"
         >
-          <Image src={LogoWhite} alt="Nol City Svg" className="h-[25px] w-36" />
+          <Image src={LogoWhite} alt="Nol City Svg" className="h-full w-full" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
+          className="h-[25px] w-36"
         >
-          <Image src={Skylla} alt="Mata Svg" className="h-[25px] w-36" />
+          <Image src={Skylla} alt="Mata Svg" className="h-full w-full" />
         </motion.div>
       </div>
     </div>
