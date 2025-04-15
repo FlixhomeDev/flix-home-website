@@ -18,8 +18,6 @@ export default function Services() {
   const [services, setServices] = useState<IServices[]>([]);
   const [category, setCategory] = useState<ICategory[]>([]);
 
-  const CACHE_TTL = 2 * 60 * 60 * 1000; // 2 horas
-
   const getServices = async () => {
     try {
       // 1. Buscar a primeira página
