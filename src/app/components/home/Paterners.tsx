@@ -16,7 +16,7 @@ export function Paterners() {
         <Image src={Skylla} alt="Mata Svg" className="h-[25px] w-28" />
       </div>
 
-      <div className="w-full lg:mx-[132px] flex items-center justify-around gap-x-10">
+      <div className="w-full lg:mx-[132px] flex items-center justify-center gap-x-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
