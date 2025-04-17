@@ -11,8 +11,10 @@ interface ServiceCardProps extends IServices {
   categoryName: string;
 }
 export function ServiceCard({
+  id,
   name,
   price,
+  description,
   categoryName,
   reference,
 }: ServiceCardProps) {
@@ -22,7 +24,21 @@ export function ServiceCard({
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div className="cursor-pointer py-[13px] px-[9px] rounded-[7px] max-w-[195px] md:max-w-[258px] w-full h-[254px] md:h-[336px] border border-[#DEE2E7] bg-[#FFFFFF] ">
       <div
-        onClick={() => router.push("/services/details")}
+        // onClick={() => router.push(`/services/details?id=${id}`)}
+        onClick={() => {
+          sessionStorage.setItem(
+            "serviceDetails",
+            JSON.stringify({
+              id,
+              name,
+              price,
+              categoryName,
+              reference,
+              description,
+            })
+          );
+          router.push(`/services/details?id=${id}`);
+        }}
         className="relative flex justify-center items-center w-full h-[141px] md:h-[187px] bg-[#F8F8F8] rounded-[7px]"
       >
         {/* {!image ? (
