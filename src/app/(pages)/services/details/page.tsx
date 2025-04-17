@@ -1,5 +1,3 @@
-// Chat, como envio o name e a descricao
-
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -24,11 +22,18 @@ import ReportDialog from "@/app/components/services/report-dialog";
 // import axios from "axios";
 // import { useSearchParams } from "next/navigation";
 
+interface IServiceData {
+  id: string;
+  name: string;
+  description?: string;
+  price: number;
+}
+
 export default function Details() {
   // const searchParams = useSearchParams();
   // const id = searchParams.get("id");
   // const [services, setServices] = useState<IServices>();
-  const [serviceData, setServiceData] = useState<any>(null);
+  const [serviceData, setServiceData] = useState<IServiceData | null>(null);
 
   const data = [
     {
@@ -206,7 +211,7 @@ export default function Details() {
           {/* {serviceData?.description} */}
           <ListItems
             key={serviceData?.id}
-            title={serviceData?.name}
+            title={serviceData?.name || "Título não disponível"}
             subtitle="O que está Incluído"
             subtitlenotinclud="O que não está incluído"
             items={data?.flatMap((i) => i.items) || []}
@@ -255,7 +260,7 @@ export default function Details() {
                 Total
               </span>
               <span className="md:text-[15px] text-base text-[#000000] font-medium font-inter">
-                € {serviceData?.price + 83}
+                € {serviceData && serviceData?.price + 83}
               </span>
             </div>
           </div>
