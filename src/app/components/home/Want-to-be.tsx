@@ -1,8 +1,8 @@
 import { WeTake02, EquipeFh } from "@/app/assets/images";
-import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 export function WantToBe() {
   const t = useTranslations();
@@ -22,13 +22,15 @@ export function WantToBe() {
           <p className="mt-2 max-w-[508px] w-full text-white text-xs md:text-base text-center lg:text-left">
             {t("Home.Partners.description")}
           </p>
-          <Button
-            variant={"ghost"}
-            className="bg-white text-primaryColor mt-5 !h-8 !text-sm !rounded active:scale-95 transition-all mx-auto lg:ml-0"
+          <Link
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeTY-18Zi3QxhUQv7vWsIBlIh_IsdFWgge2rusq22paNvfKbQ/viewform"
+            // variant={"ghost"}
+            className="hover:bg-accent hover:text-accent-foreground rounded-[5px] w-[130px] bg-white flex flex-row items-center justify-around text-primaryColor mt-5 !h-8 !text-sm active:scale-95 transition-all mx-auto lg:ml-0"
           >
             {t("Home.Partners.button")}
-            <ArrowRightIcon />
-          </Button>
+            <ArrowRightIcon size={25} />
+          </Link>
         </div>
       </div>
       <div className="h-[357px] overflow-hidden hidden lg:block">

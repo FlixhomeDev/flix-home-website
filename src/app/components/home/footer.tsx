@@ -105,7 +105,8 @@ export function Footer() {
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link
-                    href="/"
+                    href={`https://wa.me/351939936372?text=Olá+gostaria+de+falar+com+a+Flix+Home+sobre+os+serviços+para+minha+casa.`}
+                    target="_blank"
                     className="text-gray-600 hover:text-gray-900 text-sm"
                   >
                     {t("Footer.three_section.second")}

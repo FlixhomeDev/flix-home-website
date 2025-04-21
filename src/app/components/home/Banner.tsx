@@ -1,11 +1,11 @@
 "use client";
 import { backgroundImage } from "@/app/assets/images";
-import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function Banner() {
   const t = useTranslations();
@@ -72,20 +72,22 @@ export function Banner() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex items-center gap-[7.5px] md:gap-[10px] mt-[10px] md:mt-5 mx-auto lg:mx-0"
         >
-          <Button
-            variant={"ghost"}
-            className="flex items-center gap-[5.44px] md:gap-[10px] py-[6px] px-[5.44px] md:px-[10px] md:py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-[9px] md:text-sm font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px] md:w-[280px] w-[180px] h-[23.25px] md:h-[41px]"
+          <Link
+            href="https://wa.me/message/PHDJAIL6RKWZC1"
+            target="_blank"
+            className="hover:bg-accent hover:text-accent-foreground rounded-[5px] flex items-center justify-center gap-[5.44px] md:gap-[10px] py-[6px] px-[5.44px] md:px-[10px] md:py-3 bg-[#3C91E6] border border-[#3C91E6] hover:bg-[#ffffff] hover:text-[#3C91E6] text-[#ffffff] text-[9px] md:text-sm font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px] md:w-[280px] w-[180px] h-[23.25px] md:h-[41px]"
           >
             {t("Home.Banner.request_a_service_now!")}
             <ArrowRightIcon size={2} />
-          </Button>
-          <Button
-            variant={"outline"}
-            className="md:w-[148px] w-[100.23px] h-[23.25px] md:h-[41px] py-[6px] px-[5px] md:py-auto md:px-auto border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 md:text-sm text-[9px] font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px]"
+          </Link>
+          <Link
+            href={`https://wa.me/351939936372?text=Olá+gostaria+de+falar+com+a+Flix+Home+sobre+os+serviços+para+minha+casa.`}
+            target="_blank"
+            className="flex flex-row items-center justify-around bg-background hover:bg-accent hover:text-accent-foreground rounded-[5px] md:w-[148px] w-[100.23px] h-[23.25px] md:h-[41px] py-[6px] px-[5px] md:py-auto md:px-auto border border-[#3C91E6] text-[#3C91E6] hover:text-[#3C91E6] hover:opacity-60 md:text-sm text-[9px] font-normal md:font-medium font-inter leading-[10.89px] md:leading-[16.94px]"
           >
             {t("Home.Banner.contact_us")}
             <ArrowRightIcon size={9} />
-          </Button>
+          </Link>
         </motion.div>
       </motion.div>
       <motion.div

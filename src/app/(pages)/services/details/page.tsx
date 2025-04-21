@@ -239,21 +239,19 @@ export default function Details() {
               </Link>
             </div>
             <div className="w-full flex items-center justify-between mt-[15px]">
-              <span className="text-[15px] text-[#000000] font-normal font-inter">
-                Serviço
-              </span>
+              <div className="flex flex-row items-center gap-2">
+                <span className="text-[15px] text-[#000000] font-normal font-inter">
+                  Serviço
+                </span>
+                <span className="text-[10px] text-[#c3c3c3] font-normal font-inter">
+                  (IVA incluído)
+                </span>
+              </div>
               <span className="text-[15px] text-[#000000] font-normal font-inter">
                 € {serviceData?.price}
               </span>
             </div>
-            <div className="w-full flex items-center justify-between mt-[7px]">
-              <span className="md:text-[15px] text-base text-[#000000] font-normal font-inter">
-                Deslocação
-              </span>
-              <span className="md:text-[15px] text-base text-[#000000] font-normal font-inter">
-                € 83
-              </span>
-            </div>
+
             <div className="w-full h-[1px] border border-[#E5E7EB] my-[15px]"></div>
             <div className="w-full flex items-center justify-between mt-[7px]">
               <span className="md:text-[15px] text-base text-[#000000] font-medium font-inter">
