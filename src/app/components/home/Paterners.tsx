@@ -20,34 +20,10 @@ export function Paterners() {
       style={{ scrollbarWidth: "none" }}
     >
       <div className="md:hidden w-full mx-[10px]  flex items-center justify-between gap-x-5">
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-          className="h-[25px] w-28"
-        >
-          <Image src={LogoWk} alt="ProSaas Svg" className="h-full w-full" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-          className="h-[25px] w-28"
-        >
-          <Image src={LogoWhite} alt="Nol City Svg" className="h-full w-full" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
-          className="h-[25px] w-28"
-        >
-          <Image src={Skylla} alt="Mata Svg" className="h-full w-full" />
-        </motion.div> */}
         <Swiper
           spaceBetween={12}
           slidesPerView={getAmount()}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 7000, disableOnInteraction: false }}
           speed={600}
           modules={[Pagination, Autoplay]}
           breakpoints={{
