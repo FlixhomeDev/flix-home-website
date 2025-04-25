@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import SwitchPrice from "@/app/components/plans/Switch-price";
 import PricingTable from "@/app/components/plans/Pricing-table";
 import PricingTableMobile from "@/app/components/plans/Pricing-table-mobile";
+import BenefitsSection from "@/app/components/plans/Benefits-section";
 
 export default function Plans() {
   const t = useTranslations();
@@ -244,12 +245,14 @@ export default function Plans() {
         </Swiper>
       </div>
       <div className="mt-10 md:mt-[70px] w-[340px] md:w-full self-center md:px-10">
-        {/* <PricingTable plans={dataPlans} showMonthly={showMonthly} /> */}
         {isMobile ? (
           <PricingTableMobile plans={dataPlans} showMonthly={showMonthly} />
         ) : (
           <PricingTable plans={dataPlans} showMonthly={showMonthly} />
         )}
+      </div>
+      <div className="mt-10 md:mt-[70px] w-[340px] md:w-full self-center">
+        <BenefitsSection />
       </div>
       <div className="mt-[70px] w-[340px] md:w-full self-center md:px-10">
         <FaqsPlans />
