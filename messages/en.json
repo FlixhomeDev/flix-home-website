@@ -119,6 +119,32 @@
         "button_free": "Start today for free",
         "link": "Learn how our plans help"
     },
+    "PricingTable": {
+        "compare_plans": "Compare all features",
+        "feature": "Feature",
+        "assets_covered": "Assets Covered",
+        "visits_per_year": "Visits per Year",
+        "on_demand_discount": "On-Demand Discount",
+        "maintenance_tips": "Maintenance Tips",
+        "via_whatsapp": "via whatsapp",
+        "monthly_personalized": "Monthly personalized",
+        "monthly_personalized_1_2": "1-2 personalized/month",
+        "monthly_personalized_2": "2 personalized/month",
+        "emergency_discount": "Emergency Discount",
+        "preventive_corrective_maintenance": "Preventive or Corrective Maintenance",
+        "replacement_parts": "Replacement Parts",
+        "can_be_acquired": "can be acquired separately",
+        "priority_support": "Priority Support",
+        "corrective_repairs": "Corrective Repairs",
+        "service_can_be_requested": "service can be requested separately",
+        "out_of_scope": "out of the scope of preventive maintenance",
+        "free": "Free",
+        "per_month_short": "/month",
+        "per_year_short": "/year",
+        "get_started": "Get Started",
+        "choose_plan": "Choose Plan",
+        "features": "Features"
+    },
     "Footer": {
         "description": "We simplify people's lives by offering high-quality domestic services with transparency and trust.",
         "second_section": {

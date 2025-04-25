@@ -11,12 +11,28 @@ import {
   PlanoFamiliar,
   PlanoFreemium,
 } from "@/app/assets/images";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SwitchPrice from "@/app/components/plans/Switch-price";
+import PricingTable from "@/app/components/plans/Pricing-table";
+import PricingTableMobile from "@/app/components/plans/Pricing-table-mobile";
 
 export default function Plans() {
   const t = useTranslations();
   const [showMonthly, setShowMonthly] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Defina o breakpoint desejado
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handlePriceToggle = (isMonthly: boolean) => {
     setShowMonthly(isMonthly);
@@ -226,6 +242,14 @@ export default function Plans() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="mt-10 md:mt-[70px] w-[340px] md:w-full self-center md:px-10">
+        {/* <PricingTable plans={dataPlans} showMonthly={showMonthly} /> */}
+        {isMobile ? (
+          <PricingTableMobile plans={dataPlans} showMonthly={showMonthly} />
+        ) : (
+          <PricingTable plans={dataPlans} showMonthly={showMonthly} />
+        )}
       </div>
       <div className="mt-[70px] w-[340px] md:w-full self-center md:px-10">
         <FaqsPlans />

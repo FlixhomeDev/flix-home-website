@@ -119,6 +119,32 @@
         "button_free": "Comece hoje gratuitamente",
         "link": "Saiba como os nossos planos ajudam"
     },
+    "PricingTable": {
+        "compare_plans": "Compare todos os recursos",
+        "feature": "Recurso",
+        "assets_covered": "Ativos Cobertos",
+        "visits_per_year": "Visitas por Ano",
+        "on_demand_discount": "Desconto On-Demand",
+        "maintenance_tips": "Dicas de Manutenção",
+        "via_whatsapp": "via whatsapp",
+        "monthly_personalized": "Personalizadas mensais",
+        "monthly_personalized_1_2": "1-2 personalizadas/mês",
+        "monthly_personalized_2": "2 personalizadas/mês",
+        "emergency_discount": "Desconto em Emergências",
+        "preventive_corrective_maintenance": "Manutenção Preventiva ou Corretiva",
+        "replacement_parts": "Peças de Reposição",
+        "can_be_acquired": "podem ser adquiridas separadamente",
+        "priority_support": "Atendimento Prioritário",
+        "corrective_repairs": "Reparos Corretivos",
+        "service_can_be_requested": "serviço pode ser solicitado à parte",
+        "out_of_scope": "fora do escopo da manutenção preventiva",
+        "free": "Gratuito",
+        "per_month_short": "/mês",
+        "per_year_short": "/ano",
+        "get_started": "Começar",
+        "choose_plan": "Escolher Plano",
+        "features": "Recursos"
+    },
     "Footer": {
         "description": "Simplificamos a vida das pessoas oferecendo serviços domésticos de qualidade com transparência e confiança.",
         "second_section": {
