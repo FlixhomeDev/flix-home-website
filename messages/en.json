@@ -145,6 +145,17 @@
         "choose_plan": "Choose Plan",
         "features": "Features"
     },
+    "Benefits": {
+        "why_choose_our_plans": "Why Choose Our Plans?",
+        "intelligent_prevention_title": "Intelligent Prevention",
+        "intelligent_prevention_description": "Avoid costly repairs with regular maintenance and personalized tips for your equipment.",
+        "fast_support_title": "Fast Support",
+        "fast_support_description": "Priority support via WhatsApp, with a response in 6-24h, and discounts on emergencies.",
+        "total_flexibility_title": "Total Flexibility",
+        "total_flexibility_description": "Choose between free or premium plans, with on-demand services and extra visits at €40.",
+        "simple_management_title": "Simple Management",
+        "simple_management_description": "Receive detailed checklists and notifications via WhatsApp to keep everything under control."
+    },
     "Footer": {
         "description": "We simplify people's lives by offering high-quality domestic services with transparency and trust.",
         "second_section": {

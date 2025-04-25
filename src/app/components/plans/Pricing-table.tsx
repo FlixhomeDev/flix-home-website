@@ -9,8 +9,16 @@ interface PlanFeature {
   premium?: string | number | boolean;
 }
 
+interface Plan {
+  id: string;
+  plan: string;
+  priceByMonth: number;
+  priceByYear: number;
+  link: string;
+}
+
 interface PricingTableProps {
-  plans: any[]; // Ajuste o tipo conforme a estrutura dos seus planos
+  plans: Plan[];
   showMonthly: boolean;
 }
 

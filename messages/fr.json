@@ -145,6 +145,17 @@
         "choose_plan": "Choisir un Plan",
         "features": "Fonctionnalités"
     },
+    "Benefits": {
+        "why_choose_our_plans": "Pourquoi Choisir Nos Plans ?",
+        "intelligent_prevention_title": "Prévention Intelligente",
+        "intelligent_prevention_description": "Évitez les réparations coûteuses grâce à un entretien régulier et des conseils personnalisés pour vos équipements.",
+        "fast_support_title": "Support Rapide",
+        "fast_support_description": "Assistance prioritaire via WhatsApp, avec une réponse sous 6 à 24 heures, et des réductions en cas d'urgence.",
+        "total_flexibility_title": "Flexibilité Totale",
+        "total_flexibility_description": "Choisissez entre des plans gratuits ou premium, avec des services à la demande et des visites supplémentaires à 40 €.",
+        "simple_management_title": "Gestion Simple",
+        "simple_management_description": "Recevez des checklists détaillées et des notifications via WhatsApp pour garder le contrôle sur tout."
+    },
     "Footer": {
         "description": "Nous simplifions la vie des gens en offrant des services domestiques de qualité avec transparence et confiance.",
         "second_section": {
