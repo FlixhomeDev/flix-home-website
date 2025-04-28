@@ -218,11 +218,26 @@ export default function Plans() {
       <div className="flex justify-center mt-4 md:mt-[127px]">
         <SwitchPrice onToggle={handlePriceToggle} />
       </div>
-      <div className="hidden mt-0 w-full h-[510px] md:h-[800px] md:px-0 md:flex items-center justify-center gap-5 mx-auto self-center">
-        {dataPlans.map((item) => (
-          <CardPlans key={item.id} planData={item} showMonthly={showMonthly} />
-        ))}
+      <div className="hidden md:flex flex-col items-center mt-10 w-full max-w-[1256px] md:px-0 mx-auto self-center">
+        <div className="flex items-center justify-between gap-5 w-full">
+          {dataPlans.slice(0, 3).map((item) => (
+            <CardPlans
+              key={item.id}
+              planData={item}
+              showMonthly={showMonthly}
+            />
+          ))}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <CardPlans
+            key={dataPlans[3].id}
+            planData={dataPlans[3]}
+            showMonthly={showMonthly}
+          />
+        </div>
       </div>
+
       <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
         <Swiper
           spaceBetween={12}

@@ -25,7 +25,7 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
   const price = showMonthly ? planData.priceByMonth : planData.priceByYear;
   const pricePeriod = showMonthly ? "por / mês" : "/ Ano";
   return (
-    <div className="w-[252px] h-[480px] md:w-[330px] md:h-[700px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
+    <div className="w-[252px] h-[480px] md:w-[380px] md:h-[700px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
       <div className="w-full h-[152px] rounded-t-[10px]">
         <Image
           src={planData.image}
@@ -86,7 +86,7 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
       <Link
         href={planData.link}
         target="_blank"
-        className="whitespace-nowrap w-[227px] h-[30px] md:w-[290px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter flex items-center justify-center px-8 mt-0"
+        className="whitespace-nowrap w-[227px] h-[30px] md:w-[347px] md:h-[48px] self-center bg-[#3C91E6] rounded-[8px] text-[8.19px] md:text-[13px] text-center text-[#FFFFFF] font-semibold font-inter flex items-center justify-center px-8 mt-0"
       >
         {planData.id === "1" ? t("Plans.button_free") : t("Plans.button")}
       </Link>
