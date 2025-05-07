@@ -207,11 +207,24 @@ export default function OurPlans() {
       <div className="flex justify-center mt-[50px]">
         <SwitchPrice onToggle={handlePriceToggle} />
       </div>
-      <div className="hidden mt-0 md:mt-[10px] w-full h-[510px] md:h-[800px] px-[14px] md:px-0 md:flex items-center justify-center gap-5 mx-auto">
+      {/* <div className="hidden mt-0 md:mt-[10px] w-full h-[510px] md:h-[800px] px-[14px] md:px-0 md:flex items-center justify-center gap-5 mx-auto">
         {dataPlans.map((item) => (
           <CardPlans key={item.id} planData={item} showMonthly={showMonthly} />
         ))}
+      </div> */}
+      <div className="hidden md:grid grid-cols-3 gap-6 mt-[10px] w-full max-w-[1256px] px-[14px] md:px-0 mx-auto">
+        {dataPlans.slice(0, 3).map((item) => (
+          <CardPlans key={item.id} planData={item} showMonthly={showMonthly} />
+        ))}
+        <div className="col-span-3 flex justify-center">
+          <CardPlans
+            key={dataPlans[3].id}
+            planData={dataPlans[3]}
+            showMonthly={showMonthly}
+          />
+        </div>
       </div>
+
       <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
         <Swiper
           spaceBetween={12}
