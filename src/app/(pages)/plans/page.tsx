@@ -266,7 +266,7 @@ export default function Plans() {
           <PricingTable plans={dataPlans} showMonthly={showMonthly} />
         )}
       </div>
-      <div className="mt-10 md:mt-[70px] w-[340px] md:w-full self-center">
+      <div className="mt-10 md:mt-[70px] w-[340px] bg-[#ecf6fb] md:w-full self-center">
         <BenefitsSection />
       </div>
       <div className="mt-[70px] w-[340px] md:w-full self-center md:px-10">

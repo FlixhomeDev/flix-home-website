@@ -34,7 +34,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-10 px-4 md:px-20 bg-white">
+    <section className="py-10 px-4 md:px-20">
       <h2 className="text-3xl font-bold text-center mb-8">
         {t("why_choose_our_plans")}
       </h2>
