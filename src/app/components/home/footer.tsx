@@ -163,7 +163,7 @@ export function Footer() {
                   >
                     <Image
                       src={social.icon}
-                      alt={social.name}
+                      alt={"Rede Social"}
                       width={16}
                       height={16}
                       className="w-4 h-4"
