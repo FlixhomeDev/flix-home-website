@@ -12,22 +12,42 @@ const BenefitsSection = () => {
 
   const benefits: Benefit[] = [
     {
-      icon: <Lightbulb className="w-12 h-12 mx-auto mb-4 text-flix-blue" />,
+      icon: (
+        <Lightbulb
+          className="w-10 h-10 mx-auto mb-4 text-flix-blue"
+          color="#4094e4"
+        />
+      ),
       title: t("intelligent_prevention_title"),
       description: t("intelligent_prevention_description"),
     },
     {
-      icon: <Clock className="w-12 h-12 mx-auto mb-4 text-flix-green" />,
+      icon: (
+        <Clock
+          className="w-10 h-10 mx-auto mb-4 text-flix-green"
+          color="#4094e4"
+        />
+      ),
       title: t("fast_support_title"),
       description: t("fast_support_description"),
     },
     {
-      icon: <CheckCircle className="w-12 h-12 mx-auto mb-4 text-flix-gold" />,
+      icon: (
+        <CheckCircle
+          className="w-10 h-10 mx-auto mb-4 text-flix-gold"
+          color="#4094e4"
+        />
+      ),
       title: t("total_flexibility_title"),
       description: t("total_flexibility_description"),
     },
     {
-      icon: <Settings className="w-12 h-12 mx-auto mb-4 text-flix-gray" />,
+      icon: (
+        <Settings
+          className="w-10 h-10 mx-auto mb-4 text-flix-gray"
+          color="#4094e4"
+        />
+      ),
       title: t("simple_management_title"),
       description: t("simple_management_description"),
     },
