@@ -1,8 +1,8 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, Pagination } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/pagination";
 import Image from "next/image";
 import { motion } from "motion/react";
 import React from "react";
@@ -11,7 +11,7 @@ import { LogoWhite, LogoWk, Skylla } from "@/app/assets/images";
 const logos = [LogoWk, LogoWhite, Skylla, LogoWk, LogoWhite, Skylla];
 
 // Função que retorna o número de slides no mobile
-const getAmount = () => 3;
+// const getAmount = () => 3;
 
 export function Paterners() {
   return (
@@ -20,7 +20,8 @@ export function Paterners() {
       style={{ scrollbarWidth: "none" }}
     >
       <div className="md:hidden w-full mx-[10px]  flex items-center justify-between gap-x-5">
-        <Swiper
+        {/* Carousel */}
+        {/* <Swiper
           spaceBetween={12}
           slidesPerView={getAmount()}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -48,7 +49,26 @@ export function Paterners() {
               </motion.div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <motion.div
+          className="flex gap-12 min-w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 20, // controle da velocidade
+            ease: "linear",
+          }}
+        >
+          {logos.map((logo, index) => (
+            <div key={index} className="h-[25px] w-36 flex-shrink-0">
+              <Image
+                src={logo}
+                alt={`Logo ${index}`}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       <div className="hidden w-full lg:mx-[132px] md:flex items-center justify-center gap-x-32">
