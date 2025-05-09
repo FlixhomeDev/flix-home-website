@@ -23,8 +23,8 @@ export function Paterners() {
         <Swiper
           spaceBetween={12}
           slidesPerView={getAmount()}
-          autoplay={{ delay: 7000, disableOnInteraction: false }}
-          speed={600}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={500}
           modules={[Pagination, Autoplay]}
           breakpoints={{
             768: { slidesPerView: 2 },
