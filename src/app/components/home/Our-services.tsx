@@ -90,6 +90,7 @@ export function OurServices() {
         });
       }
 
+      console.log(allItems)
       // 3. Salva no estado e no cache
       setServices(allItems);
     } catch (error) {
@@ -125,6 +126,8 @@ export function OurServices() {
         });
       }
 
+
+
       setCategory(allItems);
     } catch (error) {
       console.error("Erro ao buscar categorias:", error);
@@ -138,6 +141,9 @@ export function OurServices() {
   // Se nenhum serviço for encontrado, mostramos todos:
   const servicesToDisplay =
     filteredServices.length > 0 ? filteredServices : services;
+  console.log(filteredServices)
+  console.log(services)
+  console.log(servicesToDisplay)
 
   useEffect(() => {
     getServices();

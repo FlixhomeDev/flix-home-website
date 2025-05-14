@@ -23,7 +23,7 @@ interface CardPlansProps {
 export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
   const t = useTranslations();
   const price = showMonthly ? planData.priceByMonth : planData.priceByYear;
-  const pricePeriod = showMonthly ? "por / mês" : "/ Ano";
+  const pricePeriod = showMonthly ? "/ mês" : "/ Ano";
   return (
     <div className="w-[252px] h-[480px] md:w-[380px] md:h-[700px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
       <div className="w-full h-[152px] rounded-t-[10px]">
@@ -35,14 +35,12 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
       </div>
       <div className="mt-0 md:mt-5 ml-5 w-[230px] md:w-full flex items-center gap-[10px]">
         <div
-          className={`w-[90px] h-[23px] md:w-[150px] md:h-[36px] ${
-            planData.plan === "Premium" ? "bg-[#ECAB2A]" : "bg-[#3C91E6]"
-          } py-[9px] px-[13px] rounded-[8px] flex items-center justify-center`}
+          className={`w-[90px] h-[23px] md:w-[150px] md:h-[36px] ${planData.plan === "Premium" ? "bg-[#ECAB2A]" : "bg-[#3C91E6]"
+            } py-[9px] px-[13px] rounded-[8px] flex items-center justify-center`}
         >
           <span
-            className={`text-[8px] md:text-sm ${
-              planData.plan === "Premium" ? "text-[#0E0E0E]" : "text-[#FFFFFF]"
-            } font-medium font-inter`}
+            className={`text-[8px] md:text-sm ${planData.plan === "Premium" ? "text-[#0E0E0E]" : "text-[#FFFFFF]"
+              } font-medium font-inter`}
           >
             {planData.plan}
           </span>
@@ -54,14 +52,14 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
           {planData.id === "1" ? "Gratuito" : pricePeriod}
         </span>
       </div>
-      <div className="-mt-[6px] md:mt-[10px] ml-5 flex items-center gap-[3px]">
+      {/* <div className="-mt-[6px] md:mt-[10px] ml-5 flex items-center gap-[3px]">
         <span className="text-[8.82px] md:text-lg text-[#6F6F6F] font-bold font-inter">
           {planData.plan === "Freemium" ? "" : "€" + price}
         </span>
         <span className="text-[7.56px] md:text-base text-[#6F6F6F] font-medium font-inter">
           {planData.plan === "Freemium" ? "" : pricePeriod}
         </span>
-      </div>
+      </div> */}
       <span className="text-[8.82px] md:text-lg text-[#6F6F6F] font-normal font-inter -mt-[6px] md:mt-[10px] ml-5 w-auto md:w-[300px]">
         {planData.title}
       </span>

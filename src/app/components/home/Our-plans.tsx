@@ -212,8 +212,9 @@ export default function OurPlans() {
           <CardPlans key={item.id} planData={item} showMonthly={showMonthly} />
         ))}
       </div> */}
-      <div className="hidden md:grid grid-cols-3 gap-6 mt-[10px] w-full max-w-[1256px] px-[14px] md:px-0 mx-auto">
-        {dataPlans.slice(0, 3).map((item) => (
+      {/* <div className="hidden md:grid grid-cols-3 gap-6 mt-[10px] w-full bg-green-400 max-w-[1256px] px-[14px] md:px-0 mx-auto"> */}
+      <div className="hidden md:grid gap-6 mt-[10px] w-full max-w-[1256px] px-[14px] md:px-0 mx-auto">
+        {/* {dataPlans.slice(0, 3).map((item) => (
           <CardPlans key={item.id} planData={item} showMonthly={showMonthly} />
         ))}
         <div className="col-span-3 flex justify-center">
@@ -222,7 +223,25 @@ export default function OurPlans() {
             planData={dataPlans[3]}
             showMonthly={showMonthly}
           />
-        </div>
+        </div> */}
+        <Swiper
+          spaceBetween={5}
+          slidesPerView={3.2}
+          breakpoints={{
+            768: { slidesPerView: 2.5 },
+          }}
+          className="w-full"
+        >
+          {dataPlans.map((item) => (
+            <SwiperSlide key={item.id}>
+              <CardPlans
+                key={item.id}
+                planData={item}
+                showMonthly={showMonthly}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
