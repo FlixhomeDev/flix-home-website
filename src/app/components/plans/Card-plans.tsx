@@ -76,7 +76,7 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
               {/* <span className="mt-5 text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter"> */}
               <span className={`"text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter" ${category.example ? "mt-5" : "mt-0"} `} >
                 {category.title}
-                <span className="text-[6.50px] md:text-[10px] text-[#ccc] ml-1 font-normal font-inter">
+                <span className="text-[6.56px] md:text-[12px] text-[#ccc] ml-1 font-normal font-inter">
                   {category.example}
                 </span>
               </span>
