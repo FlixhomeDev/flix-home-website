@@ -36,8 +36,8 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "1 visita (levantamento)",
-          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
+          title: "1 visita",
+          example: "(ex: 1 Levantamento, Diagnósticos , Manutenção )",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -46,7 +46,7 @@ export default function OurPlans() {
         },
         {
           title:
-            "Notificações e alertas sobre boas práticas de manutenção dos seus ativos",
+            "Dicas sobre boas práticas de manutenção dos seus ativos",
           subtitle: "via whatsapp",
         },
       ],
@@ -80,8 +80,8 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "3 visitas/ano.",
-          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
+          title: "3 visitas/ano",
+          example: "(ex: 1 Levantamento, 1 Diagnósticos , 1 Manutenção ).",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -90,11 +90,15 @@ export default function OurPlans() {
         },
         {
           title:
-            "Dicas personalizadas mensais para aumentar a vida útil dos seus equipamentos.",
+            "Alertas e dicas personalizadas",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
           title: "5% desconto em emergências",
+          subtitle: "You’ll have the apartment to yourself",
+        },
+        {
+          title: "Relatórios e checklist detalhado.",
           subtitle: "You’ll have the apartment to yourself",
         },
       ],
@@ -129,8 +133,8 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "5 visitas/ano.",
-          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
+          title: "5 visitas/ano",
+          example: "(ex: 1 Levantamento, 1 Diagnósticos , 3 Manutenção ).",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -138,12 +142,16 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "1-2 dicas personalizadas/mês.",
+          title: "Alertas e dicas personalizadas.",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
           title: "10% desconto em emergências.",
           subtitle: "desconto especial para correções",
+        },
+        {
+          title: "Relatórios e checklist detalhado.",
+          subtitle: "You’ll have the apartment to yourself",
         },
       ],
       itemsnotinclud: [
@@ -172,8 +180,8 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "5 visitas/ano.",
-          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
+          title: "5 visitas/ano",
+          example: "(ex: 1 Levantamento, 1 Diagnósticos , 3 Manutenção ).",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -181,12 +189,16 @@ export default function OurPlans() {
           subtitle: "You’ll have the apartment to yourself",
         },
         {
-          title: "2 dicas personalizadas/mês.",
+          title: "Alertas e dicas personalizadas.",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
           title: "12% desconto em emergências.",
           subtitle: "desconto especial para correções",
+        },
+        {
+          title: "Relatórios e checklist detalhado.",
+          subtitle: "You’ll have the apartment to yourself",
         },
       ],
       itemsnotinclud: [
@@ -249,7 +261,7 @@ export default function OurPlans() {
         </Swiper>
       </div>
 
-      <div className="md:hidden mt-[10px] md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
+      <div className="md:hidden mt-[110px] md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
         <Swiper
           spaceBetween={12}
           slidesPerView={1.3}

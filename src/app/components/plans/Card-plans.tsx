@@ -25,7 +25,7 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
   const price = showMonthly ? planData.priceByMonth : planData.priceByYear;
   const pricePeriod = showMonthly ? "/ mês" : "/ Ano";
   return (
-    <div className="w-[252px] h-[480px] md:w-[380px] md:h-[700px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
+    <div className="w-[252px] h-[720px] md:w-[380px] md:h-[780px] rounded-[10px] border border-[#DEE2E7] flex flex-col gap-5 bg-[#FCFCFC]">
       <div className="w-full h-[152px] rounded-t-[10px]">
         <Image
           src={planData.image}
@@ -86,7 +86,8 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
                 </span> */}
             </div>
           ))
-          .slice(0, 4)}
+          // .slice(0, 5)
+        }
       </div>
 
       <Link
