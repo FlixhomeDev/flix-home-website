@@ -37,6 +37,7 @@ export default function OurPlans() {
         },
         {
           title: "1 visita (levantamento)",
+          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -80,6 +81,7 @@ export default function OurPlans() {
         },
         {
           title: "3 visitas/ano.",
+          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -128,6 +130,7 @@ export default function OurPlans() {
         },
         {
           title: "5 visitas/ano.",
+          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -170,6 +173,7 @@ export default function OurPlans() {
         },
         {
           title: "5 visitas/ano.",
+          example: "(ex: Levantamento, Diagnósticos , Manutenção )",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
