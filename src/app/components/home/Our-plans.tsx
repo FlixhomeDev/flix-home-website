@@ -204,7 +204,7 @@ export default function OurPlans() {
           {t("Plans.description_home")}
         </p>
       </div>
-      <div className="flex justify-center mt-[50px]">
+      <div className="flex justify-center mt-[50px] mb-[20px]">
         <SwitchPrice onToggle={handlePriceToggle} />
       </div>
       {/* <div className="hidden mt-0 md:mt-[10px] w-full h-[510px] md:h-[800px] px-[14px] md:px-0 md:flex items-center justify-center gap-5 mx-auto">
@@ -241,7 +241,7 @@ export default function OurPlans() {
         </Swiper>
       </div>
 
-      <div className="md:hidden mt-10 md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
+      <div className="md:hidden mt-[10px] md:mt-[127px] w-full h-[510px] md:h-[800px] px-[14px] md:px-10 md:self-center flex items-center gap-5  mx-auto">
         <Swiper
           spaceBetween={12}
           slidesPerView={1.3}
