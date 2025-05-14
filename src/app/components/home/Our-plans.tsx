@@ -227,9 +227,6 @@ export default function OurPlans() {
         <Swiper
           spaceBetween={5}
           slidesPerView={3.2}
-          breakpoints={{
-            768: { slidesPerView: 2.5 },
-          }}
           className="w-full"
         >
           {dataPlans.map((item) => (
