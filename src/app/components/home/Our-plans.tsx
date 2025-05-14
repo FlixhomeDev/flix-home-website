@@ -31,7 +31,8 @@ export default function OurPlans() {
       image: PlanoFreemium,
       items: [
         {
-          title: "Até 3 ativos cobertos (ex: AC, Geladeira, Eletrodomésticos)",
+          title: "Até 3 ativos cobertos",
+          example: "(ex: Ar-condicionado, Eletrodomésticos, Canais Hidráulicos)",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -73,7 +74,8 @@ export default function OurPlans() {
       image: PlanoEssencial,
       items: [
         {
-          title: "Até 5 ativos cobertos (ex: AC, Geladeira, Eletrodomésticos).",
+          title: "Até 5 ativos cobertos",
+          example: "(ex: Ar-condicionado, Eletrodomésticos, Canais Hidráulicos)",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -120,7 +122,8 @@ export default function OurPlans() {
       image: PlanoFamiliar,
       items: [
         {
-          title: "Até 10 ativos cobertos (ex: AC, Geladeira, Eletrodomésticos).",
+          title: "Até 10 ativos cobertos",
+          example: "(ex: Ar-condicionado, Eletrodomésticos, Canais Hidráulicos)",
           subtitle: "You’ll have the apartment to yourself",
         },
         {
@@ -161,7 +164,8 @@ export default function OurPlans() {
       image: PlanoFamiliar,
       items: [
         {
-          title: "Até 15 ativos cobertos (ex: AC, Geladeira, Eletrodomésticos).",
+          title: "Até 15 ativos cobertos",
+          example: "(ex: Ar-condicionado, Eletrodomésticos, Canais Hidráulicos)",
           subtitle: "You’ll have the apartment to yourself",
         },
         {

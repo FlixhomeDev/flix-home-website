@@ -11,7 +11,7 @@ interface PlanData {
   priceByYear: number;
   link: string;
   image: StaticImageData;
-  items: { title: string; subtitle?: string }[];
+  items: { title: string; example?: string; subtitle?: string }[];
   itemsnotinclud: { title: string; subtitle?: string }[];
 }
 
@@ -73,9 +73,17 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
                   color="#3C91E6"
                 />
               </div>
-              <span className="text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter">
+              {/* <span className="mt-5 text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter"> */}
+              <span className={`"text-[7.56px] md:text-base text-[#6F6F6F] font-normal font-inter" ${category.example ? "mt-5" : "mt-0"} `} >
                 {category.title}
+                <span className="text-[6.50px] md:text-[10px] text-[#ccc] ml-1 font-normal font-inter">
+                  {category.example}
+                </span>
               </span>
+
+              {/* <span className="text-[7.56px] md:text-[7.56px] text-[#6F6F6F] font-normal font-inter">
+                  {category.example}
+                </span> */}
             </div>
           ))
           .slice(0, 4)}
