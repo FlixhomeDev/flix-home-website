@@ -22,7 +22,8 @@ import { useTranslations } from "next-intl";
 
 export default function Details() {
   const t = useTranslations();
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string; name: string }>();
+
 
   const dataPlans = [
     {

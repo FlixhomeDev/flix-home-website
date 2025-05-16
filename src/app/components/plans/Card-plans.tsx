@@ -99,7 +99,8 @@ export default function CardPlans({ planData, showMonthly }: CardPlansProps) {
       </Link>
 
       <Link
-        href={`/plans/details/${planData.id}`}
+        href={`/plans/details/${encodeURIComponent(planData.plan.toLowerCase().replace(/\s+/g, "-"))}/${planData.id}`}
+        // href={`/plans/details/${planData.id}`}
         className="self-center underline text-[8.19px] md:text-[13px] text-center text-[#000] font-semibold font-inter py-2 px-8 -mt-3"
       >
         {t("Plans.link")}
