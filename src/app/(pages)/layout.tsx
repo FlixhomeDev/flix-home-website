@@ -3,7 +3,7 @@ import { Header } from '@/app/components/home/Header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FlixHome | Início',
+  title: 'Flix Home | Manutenção Preventiva e Serviços Residenciais em Portugal',
 }
 
 export default function RootLayout({

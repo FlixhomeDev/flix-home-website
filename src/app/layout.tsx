@@ -25,7 +25,7 @@ const interGoogle = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Flix Home",
+  title: "Flix Home | Manutenção Preventiva e Serviços Residenciais em Portugal",
   description:
     "A Flix Home é uma startup portuguesa dedicada a simplificar o cuidado com o lar. Oferecemos uma plataforma inovadora que conecta clientes a profissionais altamente qualificados, proporcionando serviços residenciais de qualidade, com preços fixos e total transparência.",
   icons: {
@@ -33,14 +33,19 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Serviços domésticos Portugal",
-    "Manutenção de casas",
+    "Manutenção preventiva residencial Portugal",
+    "Planos de manutenção",
+    "planos de manutenção casa Porto",
+    "Serviços domésticos rápidos",
     "Limpeza doméstica",
     "Reparações domésticas",
     "Jardinagem residencial",
     "Serviços domésticos em Porto",
     "Jardinagem em Porto",
-    "Limpeza doméstica Algarve",
-    "Reparação de canalização no Porto",
+    "Limpeza doméstica",
+    "Como evitar problemas na canalização",
+    "manutenção elétrica barata em Porto",
+    "diagnóstico grátis casa Portugal",
     "Assistência técnica ao domicílio no Porto",
     "Preços fixos para serviços domésticos",
     "Serviços de casa com profissionais confiáveis",
@@ -50,19 +55,19 @@ export const metadata: Metadata = {
     "Onde encontrar serviços domésticos confiáveis?",
     "Quanto custa contratar serviços de limpeza?",
   ],
-  authors: [{ name: "FlixHome", url: "https://flixhome.com" }],
+  authors: [{ name: "Flix Home", url: "https://flixhome.app" }],
   openGraph: {
-    title: "FlixHome",
+    title: "Flix Home | Manutenção Preventiva e Serviços Residenciais em Portugal",
     description:
       "Descubra serviços confiáveis para sua casa. De reparações a jardinagem, estamos prontos para ajudar.",
     url: "https://flixhome.com/servicos-domesticos-portugal",
-    siteName: "FlixHome",
+    siteName: "Flix Home | Manutenção Preventiva e Serviços Residenciais em Portugal",
     images: [
       {
         url: "https://drive.google.com/file/d/1idmo3JX_513cfMjMLcHxhP_5LgYXHB6o/view?usp=drive_link",
         width: 800,
         height: 600,
-        alt: "Imagem representando serviços domésticos",
+        alt: "Imagem representando serviço residencial",
       },
     ],
     locale: "pt_PT",
@@ -70,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Serviços Domésticos em Portugal | FlixHome",
+    title: "Serviços Residencial em Portugal | Flix Home",
     description:
       "Soluções práticas para cuidados com o lar. Agende serviços de limpeza, reparações e mais!",
     images: [

@@ -22,7 +22,7 @@ export default function AboutUs() {
         </h2>
 
         <p className="text-[#6F6F6F] text-xs md:text-lg font-normal font-inter leading-[14.52px] md:leading-[21.78px] mt-[10px] md:mt-[15px] px-[15px] md:px-[70px]">
-          A Flix Home é uma plataforma que simplifica o cuidado com o lar,
+          A Flix Home é uma startup que simplifica o cuidado com o lar,
           oferecendo serviços domésticos de forma confiável e acessível. Nosso
           objetivo é prevenir problemas antes que eles aconteçam, através de
           planos de manutenção preventiva, e também oferecer soluções rápidas e
